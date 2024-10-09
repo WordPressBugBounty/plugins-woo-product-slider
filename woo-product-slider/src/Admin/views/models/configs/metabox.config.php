@@ -406,7 +406,7 @@ SPF_WPSP::createSection(
 				'title'      => __( 'Show Variation as Individual Product', 'woo-product-slider' ),
 				'only_pro'   => true,
 				'subtitle'   => __( 'Select to show variation as individual product.', 'woo-product-slider' ),
-				'title_info' => __( '<div class="spwps-info-label">Show Variation as Individual Product</div>Here, "Show" option will present variations as individual products with their parent products and "Hide Parent" option will present variations as individual products without their parent products.', 'woo-product-slider' ),
+				'title_info' => '<div class="spwps-info-label">' . __( 'Show Variation as Individual Product', 'woo-product-slider' ) . '</div>' . __( 'Here, "Show" option will present variations as individual products with their parent products and "Hide Parent" option will present variations as individual products without their parent products.', 'woo-product-slider' ),
 				'options'    => array(
 					'show'        => array(
 						'name' => __( 'Show', 'woo-product-slider' ),
@@ -599,7 +599,7 @@ SPF_WPSP::createSection(
 								'text_off'   => __( 'Disabled', 'woo-product-slider' ),
 								'default'    => false,
 								'text_width' => 100,
-								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_ajax_product_search.svg' ) . '" alt="Ajax Product Search"></div><div class="spwps-info-label img">' . __( 'Ajax Product Search', 'woo-product-slider' ) . '</div>',
+								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_ajax_product_search.svg' ) . '" alt="' . __( 'Ajax Product Search', 'woo-product-slider' ) . '"></div><div class="spwps-info-label img">' . __( 'Ajax Product Search', 'woo-product-slider' ) . '</div>',
 							),
 							array(
 								'id'         => 'show_product_brands',
@@ -787,7 +787,7 @@ SPF_WPSP::createSection(
 								'text_off'   => __( 'Disabled', 'woo-product-slider' ),
 								'text_width' => 100,
 								'default'    => false,
-								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_equalize_products_height.svg' ) . '" alt="Equalize Products Height"></div><div class="spwps-info-label img">' . __( 'Equalize Products Height', 'woo-product-slider' ) . '</div>',
+								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_equalize_products_height.svg' ) . '" alt="' . __( 'Equalize Products Height', 'woo-product-slider' ) . '"></div><div class="spwps-info-label img">' . __( 'Equalize Products Height', 'woo-product-slider' ) . '</div>',
 								'dependency' => array( 'layout_preset', 'any', 'grid,slider', true ),
 							),
 						),
@@ -972,7 +972,7 @@ SPF_WPSP::createSection(
 								'text_off'   => __( 'Hide', 'woo-product-slider' ),
 								'text_width' => 80,
 								'default'    => true,
-								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_sale_ribbon.svg' ) . '" alt="Sale Ribbon"></div><div class="spwps-info-label img">' . __( 'Sale Ribbon', 'woo-product-slider' ) . '</div>',
+								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_sale_ribbon.svg' ) . '" alt="' . __( 'Sale Ribbon', 'woo-product-slider' ) . '"></div><div class="spwps-info-label img">' . __( 'Sale Ribbon', 'woo-product-slider' ) . '</div>',
 							),
 							array(
 								'id'      => 'show_on_sale_product_discount',
@@ -1123,7 +1123,7 @@ SPF_WPSP::createSection(
 									'load_more_btn'    => __( 'Ajax Load More Button (Pro)', 'woo-product-slider' ),
 									'load_more_scroll' => __( 'Ajax Load More on Scroll (Pro)', 'woo-product-slider' ),
 								),
-								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_pagination_type.svg' ) . '" alt="Pagination Type"></div><div class="spwps-info-label img">' . __( 'Pagination Type', 'woo-product-slider' ) . '</div>',
+								'title_info' => '<div class="spwps-img-tag"><img src="' . SPF_WPSP::include_plugin_url( 'assets/images/visual-preview/wps_pagination_type.svg' ) . '" alt="' . __( 'Pagination Type', 'woo-product-slider' ) . '"></div><div class="spwps-info-label img">' . __( 'Pagination Type', 'woo-product-slider' ) . '</div>',
 								'default'    => 'normal',
 								'dependency' => array( 'grid_pagination|layout_preset', '==|==', 'true|grid', true ),
 							),

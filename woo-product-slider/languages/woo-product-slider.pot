@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Slider for WooCommerce v2.8.0\n"
-"POT-Creation-Date: 2024-07-24 16:05+0600\n"
+"Project-Id-Version: Product Slider for WooCommerce v2.8.1\n"
+"POT-Creation-Date: 2024-09-30 12:11+0600\n"
 "PO-Revision-Date: 2024-07-24 16:05+0600\n"
 "Last-Translator: \n"
 "Language-Team: support@shapedplugin.com\n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;_n_noop;esc_html__;esc_attr__;"
 "esc_attr_e;esc_html_e;esc_attr_x;esc_html_x;number_format_i18n;date_i18n\n"
@@ -197,7 +197,7 @@ msgstr ""
 #: src/Admin/views/models/fields/button_set/button_set.php:87
 #: src/Admin/views/models/fields/checkbox/checkbox.php:105
 #: src/Admin/views/models/fields/radio/radio.php:103
-#: src/Admin/views/models/fields/select/select.php:149
+#: src/Admin/views/models/fields/select/select.php:148
 #: src/Admin/views/models/functions/actions.php:52
 msgid "No data available."
 msgstr ""
@@ -298,8 +298,8 @@ msgstr ""
 #: src/Admin/views/models/configs/metabox.config.php:204
 #, php-format
 msgid ""
-"To create eye-catching product layouts to attract your shop visitors and "
-"boost sales, %1$sUpgrade To Pro!%2$s"
+"To create eye-catching product layouts that engage your shop visitors and "
+"increase sales, %1$sUpgrade To Pro!%2$s"
 msgstr ""
 
 #: src/Admin/views/models/configs/metabox.config.php:216
@@ -456,1222 +456,1222 @@ msgstr ""
 msgid "Brand"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:392
+#: src/Admin/views/models/configs/metabox.config.php:376
 msgid "Product Data Type"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:393
+#: src/Admin/views/models/configs/metabox.config.php:377
 msgid "Select product type."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:396
+#: src/Admin/views/models/configs/metabox.config.php:380
 msgid "All Types"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:399
+#: src/Admin/views/models/configs/metabox.config.php:383
 msgid "Simple Product"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:403
+#: src/Admin/views/models/configs/metabox.config.php:387
 msgid "Grouped Product"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:407
+#: src/Admin/views/models/configs/metabox.config.php:391
 msgid "External/Affiliate Product"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:411
+#: src/Admin/views/models/configs/metabox.config.php:395
 msgid "Variable Product"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:426
+#: src/Admin/views/models/configs/metabox.config.php:406
+#: src/Admin/views/models/configs/metabox.config.php:409
 msgid "Show Variation as Individual Product"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:428
+#: src/Admin/views/models/configs/metabox.config.php:408
 msgid "Select to show variation as individual product."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:429
+#: src/Admin/views/models/configs/metabox.config.php:409
 msgid ""
-"<div class=\"spwps-info-label\">Show Variation as Individual Product</"
-"div>Here, \"Show\" option will present variations as individual products "
-"with their parent products and \"Hide Parent\" option will present "
-"variations as individual products without their parent products."
+"Here, \"Show\" option will present variations as individual products with "
+"their parent products and \"Hide Parent\" option will present variations as "
+"individual products without their parent products."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:432
-#: src/Admin/views/models/configs/metabox.config.php:633
-#: src/Admin/views/models/configs/metabox.config.php:691
-#: src/Admin/views/models/configs/metabox.config.php:708
-#: src/Admin/views/models/configs/metabox.config.php:886
-#: src/Admin/views/models/configs/metabox.config.php:966
-#: src/Admin/views/models/configs/metabox.config.php:976
-#: src/Admin/views/models/configs/metabox.config.php:994
-#: src/Admin/views/models/configs/metabox.config.php:1021
-#: src/Admin/views/models/configs/metabox.config.php:1049
-#: src/Admin/views/models/configs/metabox.config.php:1084
-#: src/Admin/views/models/configs/metabox.config.php:1116
-#: src/Admin/views/models/configs/metabox.config.php:1161
-#: src/Admin/views/models/configs/metabox.config.php:1265
-#: src/Admin/views/models/configs/metabox.config.php:1327
-#: src/Admin/views/models/configs/metabox.config.php:1735
-#: src/Admin/views/models/configs/metabox.config.php:1901
+#: src/Admin/views/models/configs/metabox.config.php:412
+#: src/Admin/views/models/configs/metabox.config.php:551
+#: src/Admin/views/models/configs/metabox.config.php:609
+#: src/Admin/views/models/configs/metabox.config.php:626
+#: src/Admin/views/models/configs/metabox.config.php:804
+#: src/Admin/views/models/configs/metabox.config.php:882
+#: src/Admin/views/models/configs/metabox.config.php:892
+#: src/Admin/views/models/configs/metabox.config.php:910
+#: src/Admin/views/models/configs/metabox.config.php:937
+#: src/Admin/views/models/configs/metabox.config.php:971
+#: src/Admin/views/models/configs/metabox.config.php:1006
+#: src/Admin/views/models/configs/metabox.config.php:1038
+#: src/Admin/views/models/configs/metabox.config.php:1083
+#: src/Admin/views/models/configs/metabox.config.php:1187
+#: src/Admin/views/models/configs/metabox.config.php:1215
+#: src/Admin/views/models/configs/metabox.config.php:1575
+#: src/Admin/views/models/configs/metabox.config.php:1751
 msgid "Show"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:435
+#: src/Admin/views/models/configs/metabox.config.php:415
 msgid "Hide Parent"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:439
+#: src/Admin/views/models/configs/metabox.config.php:419
 #: src/Admin/views/models/fields/border/border.php:91
 #: src/Admin/views/models/fields/typography/typography.php:242
 #: src/Admin/views/models/fields/typography/typography.php:262
 msgid "None"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:448
+#: src/Admin/views/models/configs/metabox.config.php:428
 msgid "Show Hidden Products"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:449
+#: src/Admin/views/models/configs/metabox.config.php:429
 msgid "Check to show hidden products."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:455
+#: src/Admin/views/models/configs/metabox.config.php:435
 msgid "Hide Out of Stock Products"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:456
+#: src/Admin/views/models/configs/metabox.config.php:436
 msgid "Check to hide out of stock products."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:462
+#: src/Admin/views/models/configs/metabox.config.php:442
 msgid "Hide On Sale Products"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:463
+#: src/Admin/views/models/configs/metabox.config.php:443
 msgid "Check to hide on sale products."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:469
+#: src/Admin/views/models/configs/metabox.config.php:449
 msgid "Hide Free Products"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:470
+#: src/Admin/views/models/configs/metabox.config.php:450
 msgid "Check to hide free product."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:476
+#: src/Admin/views/models/configs/metabox.config.php:456
 msgid "Hide Product without Thumbnail"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:477
+#: src/Admin/views/models/configs/metabox.config.php:457
 msgid "Hide product if featured image not exist"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:483
+#: src/Admin/views/models/configs/metabox.config.php:463
 msgid "Order By"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:484
+#: src/Admin/views/models/configs/metabox.config.php:464
 msgid "Set a order by option."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:487
+#: src/Admin/views/models/configs/metabox.config.php:467
 msgid "ID"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:490
+#: src/Admin/views/models/configs/metabox.config.php:470
 #: src/Includes/WooProductSlider.php:206
 msgid "Date"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:493
+#: src/Admin/views/models/configs/metabox.config.php:473
 msgid "Random"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:496
+#: src/Admin/views/models/configs/metabox.config.php:476
 msgid "Title"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:499
-#: src/Admin/views/models/configs/metabox.config.php:502
+#: src/Admin/views/models/configs/metabox.config.php:479
+#: src/Admin/views/models/configs/metabox.config.php:482
 msgid "Modified"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:505
+#: src/Admin/views/models/configs/metabox.config.php:485
 msgid "Price (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:509
+#: src/Admin/views/models/configs/metabox.config.php:489
 msgid "Drag and Drop (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:518
+#: src/Admin/views/models/configs/metabox.config.php:498
 msgid "Order"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:519
+#: src/Admin/views/models/configs/metabox.config.php:499
 msgid "Set product order."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:522
+#: src/Admin/views/models/configs/metabox.config.php:502
 msgid "Ascending"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:525
+#: src/Admin/views/models/configs/metabox.config.php:505
 msgid "Descending"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:533
+#: src/Admin/views/models/configs/metabox.config.php:513
 msgid "Limit"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:534
-msgid "Leave it empty to show the short/full description without limit."
+#: src/Admin/views/models/configs/metabox.config.php:514
+msgid "Set the total number of products to display."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:543
+#: src/Admin/views/models/configs/metabox.config.php:523
 #, php-format
 msgid ""
-"Want to increase your store sales by highlighting and filtering specific "
-"product types? %1$sUpgrade To Pro!%2$s"
+"Want to increase your store sales by %1$sHighlighting and Filtering%2$s "
+"specific product types? %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:617
+#: src/Admin/views/models/configs/metabox.config.php:535
 msgid "Display Settings"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:625
+#: src/Admin/views/models/configs/metabox.config.php:543
 msgid "Basic Preferences"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:631
+#: src/Admin/views/models/configs/metabox.config.php:549
 msgid "Section Title"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:632
+#: src/Admin/views/models/configs/metabox.config.php:550
 msgid "Show/Hide product section title."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:634
-#: src/Admin/views/models/configs/metabox.config.php:692
-#: src/Admin/views/models/configs/metabox.config.php:709
-#: src/Admin/views/models/configs/metabox.config.php:887
-#: src/Admin/views/models/configs/metabox.config.php:933
-#: src/Admin/views/models/configs/metabox.config.php:967
-#: src/Admin/views/models/configs/metabox.config.php:977
-#: src/Admin/views/models/configs/metabox.config.php:995
-#: src/Admin/views/models/configs/metabox.config.php:1022
-#: src/Admin/views/models/configs/metabox.config.php:1050
-#: src/Admin/views/models/configs/metabox.config.php:1085
-#: src/Admin/views/models/configs/metabox.config.php:1117
-#: src/Admin/views/models/configs/metabox.config.php:1162
-#: src/Admin/views/models/configs/metabox.config.php:1266
-#: src/Admin/views/models/configs/metabox.config.php:1328
-#: src/Admin/views/models/configs/metabox.config.php:1736
-#: src/Admin/views/models/configs/metabox.config.php:1902
+#: src/Admin/views/models/configs/metabox.config.php:552
+#: src/Admin/views/models/configs/metabox.config.php:610
+#: src/Admin/views/models/configs/metabox.config.php:627
+#: src/Admin/views/models/configs/metabox.config.php:805
+#: src/Admin/views/models/configs/metabox.config.php:849
+#: src/Admin/views/models/configs/metabox.config.php:883
+#: src/Admin/views/models/configs/metabox.config.php:893
+#: src/Admin/views/models/configs/metabox.config.php:911
+#: src/Admin/views/models/configs/metabox.config.php:938
+#: src/Admin/views/models/configs/metabox.config.php:972
+#: src/Admin/views/models/configs/metabox.config.php:1007
+#: src/Admin/views/models/configs/metabox.config.php:1039
+#: src/Admin/views/models/configs/metabox.config.php:1084
+#: src/Admin/views/models/configs/metabox.config.php:1188
+#: src/Admin/views/models/configs/metabox.config.php:1216
+#: src/Admin/views/models/configs/metabox.config.php:1576
+#: src/Admin/views/models/configs/metabox.config.php:1752
 msgid "Hide"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:641
+#: src/Admin/views/models/configs/metabox.config.php:559
 msgid "Columns"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:642
+#: src/Admin/views/models/configs/metabox.config.php:560
 msgid "Set products columns in different devices."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:655
+#: src/Admin/views/models/configs/metabox.config.php:573
 msgid "Space"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:656
+#: src/Admin/views/models/configs/metabox.config.php:574
 msgid "Set a space or margin between products."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:658
-#: src/Admin/views/models/configs/metabox.config.php:1395
-#: src/Admin/views/models/configs/metabox.config.php:1406
+#: src/Admin/views/models/configs/metabox.config.php:576
+#: src/Admin/views/models/configs/metabox.config.php:1282
+#: src/Admin/views/models/configs/metabox.config.php:1292
 msgid "px"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:672
+#: src/Admin/views/models/configs/metabox.config.php:590
 msgid "Space Between"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:678
-#: src/Admin/views/models/configs/metabox.config.php:684
+#: src/Admin/views/models/configs/metabox.config.php:596
+#: src/Admin/views/models/configs/metabox.config.php:602
 msgid "Ajax Product Search"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:679
+#: src/Admin/views/models/configs/metabox.config.php:597
 msgid "Enable/Disable ajax search for product."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:680
-#: src/Admin/views/models/configs/metabox.config.php:725
-#: src/Admin/views/models/configs/metabox.config.php:868
-#: src/Admin/views/models/configs/metabox.config.php:1184
-#: src/Admin/views/models/configs/metabox.config.php:1429
-#: src/Admin/views/models/configs/metabox.config.php:1440
-#: src/Admin/views/models/configs/metabox.config.php:1457
-#: src/Admin/views/models/configs/metabox.config.php:1586
-#: src/Admin/views/models/configs/metabox.config.php:1644
-#: src/Admin/views/models/configs/metabox.config.php:1654
-#: src/Admin/views/models/configs/metabox.config.php:1665
-#: src/Admin/views/models/configs/metabox.config.php:1692
-#: src/Admin/views/models/configs/metabox.config.php:1989
-#: src/Admin/views/models/configs/metabox.config.php:2000
-#: src/Admin/views/models/configs/metabox.config.php:2011
-#: src/Admin/views/models/configs/metabox.config.php:2027
-#: src/Admin/views/models/configs/metabox.config.php:2043
+#: src/Admin/views/models/configs/metabox.config.php:598
+#: src/Admin/views/models/configs/metabox.config.php:643
+#: src/Admin/views/models/configs/metabox.config.php:786
+#: src/Admin/views/models/configs/metabox.config.php:1106
+#: src/Admin/views/models/configs/metabox.config.php:1314
+#: src/Admin/views/models/configs/metabox.config.php:1325
+#: src/Admin/views/models/configs/metabox.config.php:1342
+#: src/Admin/views/models/configs/metabox.config.php:1441
+#: src/Admin/views/models/configs/metabox.config.php:1499
+#: src/Admin/views/models/configs/metabox.config.php:1509
+#: src/Admin/views/models/configs/metabox.config.php:1520
+#: src/Admin/views/models/configs/metabox.config.php:1547
+#: src/Admin/views/models/configs/metabox.config.php:1839
+#: src/Admin/views/models/configs/metabox.config.php:1850
+#: src/Admin/views/models/configs/metabox.config.php:1861
+#: src/Admin/views/models/configs/metabox.config.php:1877
+#: src/Admin/views/models/configs/metabox.config.php:1893
 msgid "Enabled"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:681
-#: src/Admin/views/models/configs/metabox.config.php:726
-#: src/Admin/views/models/configs/metabox.config.php:869
-#: src/Admin/views/models/configs/metabox.config.php:1185
-#: src/Admin/views/models/configs/metabox.config.php:1430
-#: src/Admin/views/models/configs/metabox.config.php:1441
-#: src/Admin/views/models/configs/metabox.config.php:1458
-#: src/Admin/views/models/configs/metabox.config.php:1587
-#: src/Admin/views/models/configs/metabox.config.php:1645
-#: src/Admin/views/models/configs/metabox.config.php:1655
-#: src/Admin/views/models/configs/metabox.config.php:1666
-#: src/Admin/views/models/configs/metabox.config.php:1693
-#: src/Admin/views/models/configs/metabox.config.php:1990
-#: src/Admin/views/models/configs/metabox.config.php:2001
-#: src/Admin/views/models/configs/metabox.config.php:2012
-#: src/Admin/views/models/configs/metabox.config.php:2028
-#: src/Admin/views/models/configs/metabox.config.php:2044
+#: src/Admin/views/models/configs/metabox.config.php:599
+#: src/Admin/views/models/configs/metabox.config.php:644
+#: src/Admin/views/models/configs/metabox.config.php:787
+#: src/Admin/views/models/configs/metabox.config.php:1107
+#: src/Admin/views/models/configs/metabox.config.php:1315
+#: src/Admin/views/models/configs/metabox.config.php:1326
+#: src/Admin/views/models/configs/metabox.config.php:1343
+#: src/Admin/views/models/configs/metabox.config.php:1442
+#: src/Admin/views/models/configs/metabox.config.php:1500
+#: src/Admin/views/models/configs/metabox.config.php:1510
+#: src/Admin/views/models/configs/metabox.config.php:1521
+#: src/Admin/views/models/configs/metabox.config.php:1548
+#: src/Admin/views/models/configs/metabox.config.php:1840
+#: src/Admin/views/models/configs/metabox.config.php:1851
+#: src/Admin/views/models/configs/metabox.config.php:1862
+#: src/Admin/views/models/configs/metabox.config.php:1878
+#: src/Admin/views/models/configs/metabox.config.php:1894
 msgid "Disabled"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:689
+#: src/Admin/views/models/configs/metabox.config.php:607
 msgid "Show Brands"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:690
+#: src/Admin/views/models/configs/metabox.config.php:608
 msgid "Show/Hide product brands."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:700
+#: src/Admin/views/models/configs/metabox.config.php:618
 #, php-format
 msgid ""
 "To Enable Product Brands feature, you must Install and Activate the "
 "%1$sSmart Brands for WooCommerce%2$s plugin."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:706
+#: src/Admin/views/models/configs/metabox.config.php:624
 msgid "Show Quick View Button"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:707
+#: src/Admin/views/models/configs/metabox.config.php:625
 msgid "Show/Hide quick view button."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:717
+#: src/Admin/views/models/configs/metabox.config.php:635
 #, php-format
 msgid ""
 "To Enable Quick view feature, you must Install and Activate the %1$sQuick "
 "View for WooCommerce%2$s plugin."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:723
+#: src/Admin/views/models/configs/metabox.config.php:641
 msgid "Preloader"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:724
+#: src/Admin/views/models/configs/metabox.config.php:642
 msgid "Products showcase will be hidden until page load completed."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:733
+#: src/Admin/views/models/configs/metabox.config.php:651
 #, php-format
 msgid ""
-"To show Ajax Product Search, Category, Description, Badge, Rating, and more, "
-"%1$sUpgrade To Pro!%2$s"
+"To display %1$sAjax Product Search, Category, Description, Badges,%2$s and "
+"more to increase sales, %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:738
+#: src/Admin/views/models/configs/metabox.config.php:656
 msgid "Template Styles"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:746
+#: src/Admin/views/models/configs/metabox.config.php:664
 msgid "Template Type"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:747
+#: src/Admin/views/models/configs/metabox.config.php:665
 msgid "Choose a template whether custom or pre-made."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:750
+#: src/Admin/views/models/configs/metabox.config.php:668
 msgid "Custom"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:753
+#: src/Admin/views/models/configs/metabox.config.php:671
 msgid "Pre-made Templates"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:763
+#: src/Admin/views/models/configs/metabox.config.php:681
 msgid "Template Style"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:765
+#: src/Admin/views/models/configs/metabox.config.php:683
 #, php-format
 msgid ""
 "Select which template style you want to display. See %1$stemplates%2$s at a "
 "glance!"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:767
+#: src/Admin/views/models/configs/metabox.config.php:685
 #, php-format
 msgid ""
 "To unlock %1$s28+ Pre-made beautiful templates%2$s, %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:770
+#: src/Admin/views/models/configs/metabox.config.php:688
 msgid "Template One"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:773
+#: src/Admin/views/models/configs/metabox.config.php:691
 msgid "Template Two"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:776
+#: src/Admin/views/models/configs/metabox.config.php:694
 msgid "Template Three"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:779
+#: src/Admin/views/models/configs/metabox.config.php:697
 msgid "28+ Templates (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:792
-#: src/Admin/views/models/configs/metabox.config.php:823
+#: src/Admin/views/models/configs/metabox.config.php:710
+#: src/Admin/views/models/configs/metabox.config.php:741
 msgid "Product Content Position"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:793
+#: src/Admin/views/models/configs/metabox.config.php:711
 msgid "Select a position for the product name, content, meta etc."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:798
+#: src/Admin/views/models/configs/metabox.config.php:716
 msgid "Bottom"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:802
+#: src/Admin/views/models/configs/metabox.config.php:720
 msgid "Top"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:807
+#: src/Admin/views/models/configs/metabox.config.php:725
 #: src/Admin/views/models/fields/typography/typography.php:204
 msgid "Right"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:812
+#: src/Admin/views/models/configs/metabox.config.php:730
 #: src/Admin/views/models/fields/typography/typography.php:202
 msgid "Left"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:817
+#: src/Admin/views/models/configs/metabox.config.php:735
 msgid "Overlay"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:822
+#: src/Admin/views/models/configs/metabox.config.php:740
 #, php-format
 msgid ""
 "To unlock amazing product styles and advanced customizations, %1$sUpgrade To "
 "Pro!%2$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:823
+#: src/Admin/views/models/configs/metabox.config.php:741
 msgid ""
 "This feature allows you to select the placement of the product content "
 "position."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:823
+#: src/Admin/views/models/configs/metabox.config.php:741
 #: src/Includes/WooProductSlider.php:177
 msgid "Live Demo"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:830
+#: src/Admin/views/models/configs/metabox.config.php:748
 msgid "Content Padding"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:831
+#: src/Admin/views/models/configs/metabox.config.php:749
 msgid "Set padding for the product content."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:850
-#: src/Admin/views/models/configs/metabox.config.php:1143
-#: src/Admin/views/models/configs/metabox.config.php:1226
-#: src/Admin/views/models/configs/metabox.config.php:1335
-#: src/Admin/views/models/configs/metabox.config.php:1845
+#: src/Admin/views/models/configs/metabox.config.php:768
+#: src/Admin/views/models/configs/metabox.config.php:1065
+#: src/Admin/views/models/configs/metabox.config.php:1148
+#: src/Admin/views/models/configs/metabox.config.php:1223
+#: src/Admin/views/models/configs/metabox.config.php:1685
 msgid "Border"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:851
+#: src/Admin/views/models/configs/metabox.config.php:769
 msgid "Set product border."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:866
-#: src/Admin/views/models/configs/metabox.config.php:872
+#: src/Admin/views/models/configs/metabox.config.php:784
+#: src/Admin/views/models/configs/metabox.config.php:790
 msgid "Equalize Products Height"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:867
+#: src/Admin/views/models/configs/metabox.config.php:785
 msgid "Enable to equalize products same height."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:878
+#: src/Admin/views/models/configs/metabox.config.php:796
 msgid "Product Information"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:884
+#: src/Admin/views/models/configs/metabox.config.php:802
 msgid "Product Name"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:885
+#: src/Admin/views/models/configs/metabox.config.php:803
 msgid "Show/Hide product name."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:895
+#: src/Admin/views/models/configs/metabox.config.php:813
 msgid "Name Length"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:896
+#: src/Admin/views/models/configs/metabox.config.php:814
 msgid "Leave it empty to show full product name."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:921
+#: src/Admin/views/models/configs/metabox.config.php:839
 msgid "Description Display Type"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:922
+#: src/Admin/views/models/configs/metabox.config.php:840
 msgid "Select a product description display type."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:925
+#: src/Admin/views/models/configs/metabox.config.php:843
 msgid "Short"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:929
+#: src/Admin/views/models/configs/metabox.config.php:846
 msgid "Full"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:942
+#: src/Admin/views/models/configs/metabox.config.php:858
 msgid "Description Length"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:943
+#: src/Admin/views/models/configs/metabox.config.php:859
 msgid "Leave it empty to show  the short/full description"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:964
+#: src/Admin/views/models/configs/metabox.config.php:880
 msgid "Read More Button"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:965
+#: src/Admin/views/models/configs/metabox.config.php:881
 msgid "Show/Hide product description read more button."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:974
+#: src/Admin/views/models/configs/metabox.config.php:890
 msgid "Price"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:975
+#: src/Admin/views/models/configs/metabox.config.php:891
 msgid "Show/Hide product price."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:984
+#: src/Admin/views/models/configs/metabox.config.php:900
 msgid "Discount Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:985
+#: src/Admin/views/models/configs/metabox.config.php:901
 msgid "Set discount price color."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:992
+#: src/Admin/views/models/configs/metabox.config.php:908
 msgid "Rating"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:993
+#: src/Admin/views/models/configs/metabox.config.php:909
 msgid "Show/Hide product rating."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1002
-#: src/Admin/views/models/configs/metabox.config.php:1124
-#: src/Admin/views/models/configs/metabox.config.php:1222
-#: src/Admin/views/models/configs/metabox.config.php:1863
-#: src/Admin/views/models/configs/metabox.config.php:1866
-#: src/Admin/views/models/configs/metabox.config.php:1956
-#: src/Admin/views/models/configs/metabox.config.php:1959
+#: src/Admin/views/models/configs/metabox.config.php:918
+#: src/Admin/views/models/configs/metabox.config.php:1046
+#: src/Admin/views/models/configs/metabox.config.php:1144
+#: src/Admin/views/models/configs/metabox.config.php:1708
+#: src/Admin/views/models/configs/metabox.config.php:1711
+#: src/Admin/views/models/configs/metabox.config.php:1806
+#: src/Admin/views/models/configs/metabox.config.php:1809
 #: src/Admin/views/models/fields/border/border.php:155
 msgid "Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1003
+#: src/Admin/views/models/configs/metabox.config.php:919
 msgid "Set rating star color."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1005
+#: src/Admin/views/models/configs/metabox.config.php:921
 msgid "Star Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1006
+#: src/Admin/views/models/configs/metabox.config.php:922
 msgid "Empty Star Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1019
+#: src/Admin/views/models/configs/metabox.config.php:935
 msgid "Show Category"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1020
+#: src/Admin/views/models/configs/metabox.config.php:936
 msgid "Show/Hide product category name with link."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1035
+#: src/Admin/views/models/configs/metabox.config.php:951
 msgid "Product Badge"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1041
+#: src/Admin/views/models/configs/metabox.config.php:958
 #, php-format
 msgid ""
-"To show Product Badge to attract customers and increase sales, %1$sUpgrade "
-"To Pro!%2$s"
+"To display attention-grabbing %1$sProduct Badges%2$s and increase your "
+"sales, %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1047
-#: src/Admin/views/models/configs/metabox.config.php:1053
+#: src/Admin/views/models/configs/metabox.config.php:969
+#: src/Admin/views/models/configs/metabox.config.php:975
 msgid "Sale Ribbon"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1048
+#: src/Admin/views/models/configs/metabox.config.php:970
 msgid "Show/Hide product sale ribbon."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1059
+#: src/Admin/views/models/configs/metabox.config.php:981
 msgid "Show Product Discount in Percentage(%) "
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1066
+#: src/Admin/views/models/configs/metabox.config.php:988
 msgid "Sale Label"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1067
+#: src/Admin/views/models/configs/metabox.config.php:989
 msgid "Set product sale ribbon label."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1074
-#: src/Admin/views/models/configs/metabox.config.php:1101
-#: src/Admin/views/models/configs/metabox.config.php:1129
-#: src/Admin/views/models/configs/metabox.config.php:1224
-#: src/Admin/views/models/configs/metabox.config.php:1868
+#: src/Admin/views/models/configs/metabox.config.php:996
+#: src/Admin/views/models/configs/metabox.config.php:1023
+#: src/Admin/views/models/configs/metabox.config.php:1051
+#: src/Admin/views/models/configs/metabox.config.php:1146
+#: src/Admin/views/models/configs/metabox.config.php:1713
 msgid "Background"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1075
+#: src/Admin/views/models/configs/metabox.config.php:997
 msgid "Set product sale ribbon background color."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1082
+#: src/Admin/views/models/configs/metabox.config.php:1004
 msgid "Out of Stock Ribbon"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1083
+#: src/Admin/views/models/configs/metabox.config.php:1005
 msgid "Show/Hide product out of stock ribbon."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1093
+#: src/Admin/views/models/configs/metabox.config.php:1015
 msgid "Out of Stock Label"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1094
+#: src/Admin/views/models/configs/metabox.config.php:1016
 msgid "Set product out of stock ribbon label."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1102
+#: src/Admin/views/models/configs/metabox.config.php:1024
 msgid "Set product out of stock ribbon background color."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1108
+#: src/Admin/views/models/configs/metabox.config.php:1030
 msgid "Add to cart button"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1114
+#: src/Admin/views/models/configs/metabox.config.php:1036
 msgid "Add to Cart Button"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1115
+#: src/Admin/views/models/configs/metabox.config.php:1037
 msgid "Show/Hide product add to cart button."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1125
+#: src/Admin/views/models/configs/metabox.config.php:1047
 msgid "Set product add to cart button color."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1127
+#: src/Admin/views/models/configs/metabox.config.php:1049
 msgid "Text Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1128
+#: src/Admin/views/models/configs/metabox.config.php:1050
 msgid "Text Hover"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1130
+#: src/Admin/views/models/configs/metabox.config.php:1052
 msgid "Hover BG"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1144
+#: src/Admin/views/models/configs/metabox.config.php:1066
 msgid "Set add to cart button border."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1159
+#: src/Admin/views/models/configs/metabox.config.php:1081
 msgid "Quantities"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1160
+#: src/Admin/views/models/configs/metabox.config.php:1082
 msgid "Show/hide quantities selector before the add to cart."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1175
+#: src/Admin/views/models/configs/metabox.config.php:1097
 msgid "Load More Pagination"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1182
-#: src/Admin/views/models/configs/metabox.config.php:1887
-#: src/Admin/views/models/configs/metabox.config.php:1898
+#: src/Admin/views/models/configs/metabox.config.php:1104
+#: src/Admin/views/models/configs/metabox.config.php:1737
+#: src/Admin/views/models/configs/metabox.config.php:1748
 msgid "Pagination"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1183
+#: src/Admin/views/models/configs/metabox.config.php:1105
 msgid "Enable/Disable pagination."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1194
-#: src/Admin/views/models/configs/metabox.config.php:1204
-#: src/Admin/views/models/configs/metabox.config.php:1921
+#: src/Admin/views/models/configs/metabox.config.php:1116
+#: src/Admin/views/models/configs/metabox.config.php:1126
+#: src/Admin/views/models/configs/metabox.config.php:1771
 msgid "Pagination Type"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1195
+#: src/Admin/views/models/configs/metabox.config.php:1117
 msgid "Choose a pagination type."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1197
+#: src/Admin/views/models/configs/metabox.config.php:1119
 #, php-format
 msgid ""
 "To unlock Ajax Number, Load More & Load More on Scroll, %1$sUpgrade To Pro!"
 "%2$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1199
-#: src/Admin/views/models/configs/metabox.config.php:1353
+#: src/Admin/views/models/configs/metabox.config.php:1121
+#: src/Admin/views/models/configs/metabox.config.php:1240
 #: src/Admin/views/models/fields/typography/typography.php:223
 msgid "Normal"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1200
+#: src/Admin/views/models/configs/metabox.config.php:1122
 msgid "Ajax Number (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1201
+#: src/Admin/views/models/configs/metabox.config.php:1123
 msgid "Ajax Load More Button (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1202
+#: src/Admin/views/models/configs/metabox.config.php:1124
 msgid "Ajax Load More on Scroll (Pro)"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1211
+#: src/Admin/views/models/configs/metabox.config.php:1133
 msgid "Product(s) To Show Per Page"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1212
+#: src/Admin/views/models/configs/metabox.config.php:1134
 msgid "Set number of product(s) to show in per page."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1219
+#: src/Admin/views/models/configs/metabox.config.php:1141
 msgid "Pagination Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1220
+#: src/Admin/views/models/configs/metabox.config.php:1142
 msgid "Set color for the pagination."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1223
-#: src/Admin/views/models/configs/metabox.config.php:1867
+#: src/Admin/views/models/configs/metabox.config.php:1145
+#: src/Admin/views/models/configs/metabox.config.php:1712
 #: src/Admin/views/models/fields/border/border.php:164
 msgid "Hover Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1225
-#: src/Admin/views/models/configs/metabox.config.php:1869
+#: src/Admin/views/models/configs/metabox.config.php:1147
+#: src/Admin/views/models/configs/metabox.config.php:1714
 msgid "Hover Background"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1227
+#: src/Admin/views/models/configs/metabox.config.php:1149
 msgid "Hover Border"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1242
+#: src/Admin/views/models/configs/metabox.config.php:1164
 msgid "Alignment"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1243
+#: src/Admin/views/models/configs/metabox.config.php:1165
 msgid "Select pagination alignment."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1263
+#: src/Admin/views/models/configs/metabox.config.php:1185
 msgid "Viewed Counter Message"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1264
+#: src/Admin/views/models/configs/metabox.config.php:1186
 msgid "Show/Hide load more viewed counter message."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1319
+#: src/Admin/views/models/configs/metabox.config.php:1207
 msgid "Image Settings"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1325
+#: src/Admin/views/models/configs/metabox.config.php:1213
 msgid "Product Image"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1326
+#: src/Admin/views/models/configs/metabox.config.php:1214
 msgid "Show/Hide product image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1336
+#: src/Admin/views/models/configs/metabox.config.php:1224
 msgid "Set product image border."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1350
+#: src/Admin/views/models/configs/metabox.config.php:1237
 msgid "Zoom Effect"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1351
+#: src/Admin/views/models/configs/metabox.config.php:1238
 msgid "Select a zoom effect for the product image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1354
+#: src/Admin/views/models/configs/metabox.config.php:1241
 msgid "Zoom In"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1355
+#: src/Admin/views/models/configs/metabox.config.php:1242
 msgid "Zoom Out"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1368
+#: src/Admin/views/models/configs/metabox.config.php:1255
 msgid "Dimensions"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1369
+#: src/Admin/views/models/configs/metabox.config.php:1256
 msgid "Select a size for product image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1381
+#: src/Admin/views/models/configs/metabox.config.php:1268
 msgid "Custom Dimensions"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1382
+#: src/Admin/views/models/configs/metabox.config.php:1269
 msgid "Set a custom width and height of the product image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1393
+#: src/Admin/views/models/configs/metabox.config.php:1280
 msgid "Width*"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1404
+#: src/Admin/views/models/configs/metabox.config.php:1290
 msgid "Height*"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1416
+#: src/Admin/views/models/configs/metabox.config.php:1301
 msgid "Hard Crop"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1417
+#: src/Admin/views/models/configs/metabox.config.php:1302
 msgid "Yes"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1418
+#: src/Admin/views/models/configs/metabox.config.php:1303
 msgid "No"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1427
+#: src/Admin/views/models/configs/metabox.config.php:1312
 msgid "Load 2x Resolution Image in Retina Display"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1428
+#: src/Admin/views/models/configs/metabox.config.php:1313
 msgid "You should upload 2x sized images to show in retina display."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1438
+#: src/Admin/views/models/configs/metabox.config.php:1323
 msgid "Image Flip"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1439
+#: src/Admin/views/models/configs/metabox.config.php:1324
 msgid ""
 "Enable/Disable product image flipping. Flipping image will be the first "
 "image of product gallery."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1455
+#: src/Admin/views/models/configs/metabox.config.php:1340
 msgid "Lightbox"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1456
+#: src/Admin/views/models/configs/metabox.config.php:1341
 msgid "Enable/Disable lightbox gallery for product image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1502
+#: src/Admin/views/models/configs/metabox.config.php:1357
 msgid "Image Mode"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1503
+#: src/Admin/views/models/configs/metabox.config.php:1358
 msgid "Set a mode for image."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1506
+#: src/Admin/views/models/configs/metabox.config.php:1361
 msgid "Original"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1509
+#: src/Admin/views/models/configs/metabox.config.php:1364
 msgid "Grayscale"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1513
+#: src/Admin/views/models/configs/metabox.config.php:1368
 msgid "Custom Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1528
+#: src/Admin/views/models/configs/metabox.config.php:1383
 msgid "Grayscale on Hover"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1529
+#: src/Admin/views/models/configs/metabox.config.php:1384
 msgid "Check to grayscale product image on hover."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1540
+#: src/Admin/views/models/configs/metabox.config.php:1395
 #, php-format
 msgid ""
-"Want to fine-tune control over product image dimensions, retina, flipping, "
-"lightbox, grayscale, and more?  %1$sUpgrade To Pro!%2$s"
+"Want to fine-tune control over %1$sProduct Image Dimensions, Retina, "
+"Flipping, Lightbox, Grayscale,%2$s and more?  %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1553
+#: src/Admin/views/models/configs/metabox.config.php:1408
 msgid "Slider Settings"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1561
+#: src/Admin/views/models/configs/metabox.config.php:1416
 msgid "General"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1567
+#: src/Admin/views/models/configs/metabox.config.php:1422
 msgid "Carousel Orientation"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1568
+#: src/Admin/views/models/configs/metabox.config.php:1423
 msgid "Choose a carousel orientation."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1571
+#: src/Admin/views/models/configs/metabox.config.php:1426
 msgid "Horizontal"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1574
+#: src/Admin/views/models/configs/metabox.config.php:1429
 msgid "Vertical"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1584
+#: src/Admin/views/models/configs/metabox.config.php:1439
 msgid "AutoPlay"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1585
+#: src/Admin/views/models/configs/metabox.config.php:1440
 msgid "Enable/Disable auto play."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1596
-#: src/Admin/views/models/configs/metabox.config.php:1603
+#: src/Admin/views/models/configs/metabox.config.php:1451
+#: src/Admin/views/models/configs/metabox.config.php:1458
 msgid "AutoPlay Delay Time"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1597
+#: src/Admin/views/models/configs/metabox.config.php:1452
 msgid "Set autoplay delay time in millisecond."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1598
-#: src/Admin/views/models/configs/metabox.config.php:1617
+#: src/Admin/views/models/configs/metabox.config.php:1453
+#: src/Admin/views/models/configs/metabox.config.php:1472
 msgid "ms"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1603
+#: src/Admin/views/models/configs/metabox.config.php:1458
 msgid ""
 "Set autoplay delay or interval time. The amount of time to delay between "
 "automatically cycling a product item. e.g. 1000 milliseconds(ms) = 1 second."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1615
+#: src/Admin/views/models/configs/metabox.config.php:1470
 msgid "Slider Speed"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1616
+#: src/Admin/views/models/configs/metabox.config.php:1471
 msgid "Set slider scroll speed. Default value is 600 milliseconds."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1622
+#: src/Admin/views/models/configs/metabox.config.php:1477
 msgid "Carousel Speed"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1622
+#: src/Admin/views/models/configs/metabox.config.php:1477
 msgid "Set carousel scrolling speed. e.g. 1000 milliseconds(ms) = 1 second."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1628
+#: src/Admin/views/models/configs/metabox.config.php:1483
 msgid "Slide To Scroll"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1630
+#: src/Admin/views/models/configs/metabox.config.php:1485
 msgid "Number of product(s) to scroll at a time."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1642
+#: src/Admin/views/models/configs/metabox.config.php:1497
 msgid "Pause on Hover"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1643
+#: src/Admin/views/models/configs/metabox.config.php:1498
 msgid "Enable/Disable pause on hover."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1652
+#: src/Admin/views/models/configs/metabox.config.php:1507
 msgid "Infinite Loop"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1653
+#: src/Admin/views/models/configs/metabox.config.php:1508
 msgid "Enable/Disable infinite loop mode."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1663
+#: src/Admin/views/models/configs/metabox.config.php:1518
 msgid "Adaptive Height"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1664
+#: src/Admin/views/models/configs/metabox.config.php:1519
 msgid "Enable/Disable adaptive height to set fixed height for the carousel."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1674
+#: src/Admin/views/models/configs/metabox.config.php:1529
 msgid "Slider Direction"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1675
+#: src/Admin/views/models/configs/metabox.config.php:1530
 msgid "Set slider direction as you need."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1678
+#: src/Admin/views/models/configs/metabox.config.php:1533
 msgid "Right to Left"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1681
+#: src/Admin/views/models/configs/metabox.config.php:1536
 msgid "Left to Right"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1689
+#: src/Admin/views/models/configs/metabox.config.php:1544
 msgid "Fade Effect"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1691
+#: src/Admin/views/models/configs/metabox.config.php:1546
 msgid "Enable/Disable fade effect for the carousel."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1716
+#: src/Admin/views/models/configs/metabox.config.php:1556
 #, php-format
 msgid ""
-"To unlock product Vertical Slider, Slide to Scroll, Fade Slide, and Multi-"
-"row Slider, %1$sUpgrade To Pro!%2$s"
+"To unlock product %1$sVertical Slider, Slide to Scroll, Fade Slide, Ticker, "
+"Multi-row Carousel,%2$s and more, %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1721
-#: src/Admin/views/models/configs/metabox.config.php:1732
+#: src/Admin/views/models/configs/metabox.config.php:1561
+#: src/Admin/views/models/configs/metabox.config.php:1572
 msgid "Navigation"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1734
-#: src/Admin/views/models/configs/metabox.config.php:1900
+#: src/Admin/views/models/configs/metabox.config.php:1574
+#: src/Admin/views/models/configs/metabox.config.php:1750
 msgid "Show/hide navigation."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1745
-#: src/Admin/views/models/configs/metabox.config.php:1911
+#: src/Admin/views/models/configs/metabox.config.php:1585
+#: src/Admin/views/models/configs/metabox.config.php:1761
 msgid "Hide on Mobile"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1755
+#: src/Admin/views/models/configs/metabox.config.php:1595
 msgid "Position"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1756
+#: src/Admin/views/models/configs/metabox.config.php:1596
 msgid "Position of the navigation arrows."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1759
+#: src/Admin/views/models/configs/metabox.config.php:1599
 msgid "Top Right"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1762
+#: src/Admin/views/models/configs/metabox.config.php:1602
 msgid "Top Center"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1765
+#: src/Admin/views/models/configs/metabox.config.php:1605
 msgid "Top Left"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1768
+#: src/Admin/views/models/configs/metabox.config.php:1608
 msgid "Bottom Left"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1771
+#: src/Admin/views/models/configs/metabox.config.php:1611
 msgid "Bottom Center"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1774
+#: src/Admin/views/models/configs/metabox.config.php:1614
 msgid "Bottom Right"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1777
+#: src/Admin/views/models/configs/metabox.config.php:1617
 msgid "Vertical Center"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1780
+#: src/Admin/views/models/configs/metabox.config.php:1620
 msgid "Vertical Outer"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1783
+#: src/Admin/views/models/configs/metabox.config.php:1623
 msgid "Vertical Inner"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1794
+#: src/Admin/views/models/configs/metabox.config.php:1634
 msgid "Visible On Hover"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1796
+#: src/Admin/views/models/configs/metabox.config.php:1636
 msgid "Check to show navigation on hover in the carousel or slider area."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1804
+#: src/Admin/views/models/configs/metabox.config.php:1644
 msgid "Arrow Icon Style"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1805
+#: src/Admin/views/models/configs/metabox.config.php:1645
 msgid "Choose a slider navigation arrow icon style."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1846
+#: src/Admin/views/models/configs/metabox.config.php:1686
 msgid "Set border for the navigation."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1864
+#: src/Admin/views/models/configs/metabox.config.php:1709
 msgid "Set color for the slider navigation."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1882
+#: src/Admin/views/models/configs/metabox.config.php:1732
 #, php-format
 msgid ""
-"Want even more fine-tuned control over the product slider navigation "
-"display? %1$sUpgrade To Pro!%2$s"
+"Want even more fine-tuned control over the product %1$sSlider Navigation%2$s "
+"display? %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1922
+#: src/Admin/views/models/configs/metabox.config.php:1772
 msgid "Select pagination type."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1927
+#: src/Admin/views/models/configs/metabox.config.php:1777
 msgid "Bullets"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1931
+#: src/Admin/views/models/configs/metabox.config.php:1781
 msgid "Dynamic"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1936
+#: src/Admin/views/models/configs/metabox.config.php:1786
 msgid "Strokes"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1941
+#: src/Admin/views/models/configs/metabox.config.php:1791
 msgid "Scrollbar"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1946
+#: src/Admin/views/models/configs/metabox.config.php:1796
 msgid "Numbers"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1957
+#: src/Admin/views/models/configs/metabox.config.php:1807
 msgid "Set color for the slider pagination dots and scrollbar."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1960
+#: src/Admin/views/models/configs/metabox.config.php:1810
 msgid "Active Color"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1976
+#: src/Admin/views/models/configs/metabox.config.php:1826
 #, php-format
 msgid ""
-"Want even more fine-tuned control over the product slider pagination "
-"display? %1$sUpgrade To Pro!%2$s"
+"Want even more fine-tuned control over the product %1$sSlider Pagination%2$s "
+"display? %3$sUpgrade To Pro!%4$s"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1981
+#: src/Admin/views/models/configs/metabox.config.php:1831
 msgid "Miscellaneous"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1987
+#: src/Admin/views/models/configs/metabox.config.php:1837
 msgid "Tab & Key Navigation"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1988
+#: src/Admin/views/models/configs/metabox.config.php:1838
 msgid "Enable/Disable carousel scroll with tab and keyboard."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1998
+#: src/Admin/views/models/configs/metabox.config.php:1848
 msgid "Touch Swipe"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:1999
+#: src/Admin/views/models/configs/metabox.config.php:1849
 msgid "Enable/Disable touch swipe mode."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2009
+#: src/Admin/views/models/configs/metabox.config.php:1859
 msgid "Mouse Wheel"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2010
+#: src/Admin/views/models/configs/metabox.config.php:1860
 msgid "Enable/Disable mouse wheel mode."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2025
+#: src/Admin/views/models/configs/metabox.config.php:1875
 msgid "Mouse Draggable"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2026
+#: src/Admin/views/models/configs/metabox.config.php:1876
 msgid "Enable/Disable mouse draggable mode."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2041
+#: src/Admin/views/models/configs/metabox.config.php:1891
 msgid "Free Mode"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2042
+#: src/Admin/views/models/configs/metabox.config.php:1892
 msgid "Enable/Disable free mode."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2068
+#: src/Admin/views/models/configs/metabox.config.php:1918
 msgid "Typography"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2074
+#: src/Admin/views/models/configs/metabox.config.php:1924
 #, php-format
 msgid ""
 "Want to customize everything %1$s(Colors and Typography)%2$s easily? "
@@ -1679,75 +1679,75 @@ msgid ""
 "Product Price Font size and color fields work in lite version."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2079
+#: src/Admin/views/models/configs/metabox.config.php:1929
 msgid "Slider Section Title Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2080
+#: src/Admin/views/models/configs/metabox.config.php:1930
 msgid "Set slider section title font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2097
+#: src/Admin/views/models/configs/metabox.config.php:1947
 msgid "Product Name Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2098
+#: src/Admin/views/models/configs/metabox.config.php:1948
 msgid "Set product name font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2117
+#: src/Admin/views/models/configs/metabox.config.php:1967
 msgid "Product Description Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2118
+#: src/Admin/views/models/configs/metabox.config.php:1968
 msgid "Set product description font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2135
+#: src/Admin/views/models/configs/metabox.config.php:1985
 msgid "Product Price Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2136
+#: src/Admin/views/models/configs/metabox.config.php:1986
 msgid "Set product price font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2153
+#: src/Admin/views/models/configs/metabox.config.php:2003
 msgid "Sale Ribbon Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2154
+#: src/Admin/views/models/configs/metabox.config.php:2004
 msgid "Set product sale ribbon font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2171
+#: src/Admin/views/models/configs/metabox.config.php:2021
 msgid "Out of Stock Ribbon Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2172
+#: src/Admin/views/models/configs/metabox.config.php:2022
 msgid "Set product out of stock ribbon font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2189
+#: src/Admin/views/models/configs/metabox.config.php:2039
 msgid "Product Category Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2190
+#: src/Admin/views/models/configs/metabox.config.php:2040
 msgid "Set product category font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2209
+#: src/Admin/views/models/configs/metabox.config.php:2059
 msgid "Compare & Wishlist Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2210
+#: src/Admin/views/models/configs/metabox.config.php:2060
 msgid "Set compare and wishlist font properties."
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2227
+#: src/Admin/views/models/configs/metabox.config.php:2077
 msgid "Add to Cart & View Details Font"
 msgstr ""
 
-#: src/Admin/views/models/configs/metabox.config.php:2228
+#: src/Admin/views/models/configs/metabox.config.php:2078
 msgid "Set add to cart and view details font properties."
 msgstr ""
 

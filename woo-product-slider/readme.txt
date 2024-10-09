@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, woocommerce product grid, woocommerce product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.6.1
+Tested up to: 6.6.2
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.1.4
-Stable tag: 2.8.0
+WC tested up to: 9.3.3
+Stable tag: 2.8.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,12 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.1 - Oct 09, 2024 =
+* Fix: A few strings were not translatable.
+* Updated: The language (.pot) file.
+* Tested: WordPress 6.6.2 compatibility.
+* Tested: WooCommerce 9.3.3 compatibility.
 
 = 2.8.0 - Aug 08, 2024 =
 * New: The Hide On Sale Products option.
