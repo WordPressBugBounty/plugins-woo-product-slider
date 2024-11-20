@@ -5,8 +5,8 @@ Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.3.3
-Stable tag: 2.8.2
+WC tested up to: 9.4.2
+Stable tag: 2.8.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,10 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.3 - Nov 20, 2024 =
+* Fix: The plugin style issue for RTL sites.
+* Tested: WooCommerce 9.4.2 compatibility.
 
 = 2.8.2 - Nov 10, 2024 =
 * Tested: WordPress 6.7 compatibility.
