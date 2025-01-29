@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Product Slider for WooCommerce v2.8.1\n"
-"POT-Creation-Date: 2024-09-30 12:11+0600\n"
+"POT-Creation-Date: 2025-01-23 16:42+0600\n"
 "PO-Revision-Date: 2024-07-24 16:05+0600\n"
 "Last-Translator: \n"
 "Language-Team: support@shapedplugin.com\n"
@@ -60,28 +61,8 @@ msgstr ""
 msgid "Product Slider for WooCommerce"
 msgstr ""
 
-#: src/Admin/Dashboard_Notice.php:54
-#, php-format
-msgid ""
-"Black Friday Deals - 30%% OFF the %1$sProduct Slider Pro for WooCommerce%2$s "
-"until November 30th!"
-msgstr ""
-
-#: src/Admin/Dashboard_Notice.php:56
-#, php-format
-msgid "Use this discount code on checkout page: %1$s"
-msgstr ""
-
-#: src/Admin/Dashboard_Notice.php:92
-msgid "Get it now!"
-msgstr ""
-
-#: src/Admin/Dashboard_Notice.php:165
-msgid "You have no permission to do that"
-msgstr ""
-
-#: src/Admin/Dashboard_Notice.php:169
-msgid "Invalid nonce"
+#: src/Admin/Dashboard_Notice.php:154
+msgid "Limited Time Offer, Upgrade Now!"
 msgstr ""
 
 #: src/Admin/ElementorAddons/Shortcode_Widget.php:45

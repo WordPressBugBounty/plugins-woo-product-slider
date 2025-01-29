@@ -2,6 +2,18 @@ jQuery(function ($) {
 
 	'use strict';
 
+	// smart-swatches plugin notice
+	jQuery(document).on('click', '.smart-swatches-notice .notice-dismiss', function () {
+		var nonce = $(this).parents('.smart-swatches-notice').data('nonce');
+		jQuery.ajax({
+			url: ajaxurl,
+			data: {
+				action: 'dismiss_smart_swatches_notice',
+				ajax_nonce: nonce
+			}
+		})
+	});
+
 	// WQV plugin notice
 	jQuery(document).on('click', '.wqv-notice .notice-dismiss', function () {
 		var nonce = $(this).parents('.wqv-notice').data('nonce');

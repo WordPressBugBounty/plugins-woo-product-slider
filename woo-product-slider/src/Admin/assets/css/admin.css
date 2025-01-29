@@ -68,6 +68,7 @@ img {
 }
 
 /* Gallery Slider and Quick View admin notice. */
+.smart-swatches-notice,
 .wqv-notice,
 .woogs-notice {
 	padding-left: 10px;
@@ -78,13 +79,14 @@ img {
 	overflow: hidden;
 }
 
+.smart-swatches-notice img,
 .wqv-notice img,
 .woogs-notice img {
 	float: left;
 	max-width: 48px;
 	margin-right: 12px;
 }
-
+.smart-swatches-notice .smart-swatches-activate-btn,
 .wqv-notice .wqv-activate-btn,
 .woogs-notice .woogs-activate-btn {
 	background: #2171B1;
@@ -97,22 +99,26 @@ img {
 	display: inline-block;
 }
 
+.smart-swatches-notice .smart-swatches-activate-btn:hover,
 .wqv-notice .wqv-activate-btn:hover,
 .woogs-notice .woogs-activate-btn:hover {
 	background: #135e96;
 }
 
+.smart-swatches-notice .smart-swatches-notice-text,
 .wqv-notice .wqv-notice-text,
 .woogs-notice .woogs-notice-text {
 	line-height: 48px;
 	font-size: 14px;
 }
 
+.smart-swatches-notice .notice-dismiss,
 .wqv-notice .notice-dismiss,
 .woogs-notice .notice-dismiss {
 	top: 14px;
 }
 
+.smart-swatches-demo-button,
 .woogs-demo-button,
 .wqv-demo-button {
 	display: inline-block;
@@ -126,6 +132,7 @@ img {
 	transition-timing-function: linear;
 }
 
+.smart-swatches-demo-button:hover,
 .woogs-demo-button:hover,
 .wqv-demo-button:hover {
 	background-color: #135e96;
@@ -133,6 +140,7 @@ img {
 	border-color: #135e96;
 }
 
+.smart-swatches-demo-button svg,
 .woogs-demo-button svg,
 .wqv-demo-button svg {
 	margin-left: 5px;
@@ -141,6 +149,7 @@ img {
 	transition: .2s linear;
 }
 
+.smart-swatches-demo-button:hover svg,
 .woogs-demo-button:hover svg,
 .wqv-demo-button:hover svg {
 	transform: translateX(5px);
@@ -149,11 +158,13 @@ img {
 
 @media screen and (max-width: 776px) {
 
+	.smart-swatches-notice .smart-swatches-notice-text,
 	.wqv-notice .wqv-notice-text,
 	.woogs-notice .woogs-notice-text {
 		line-height: 38px;
 	}
 }
+
 
 /* Live preview */
 #spwps-show-preview {
@@ -255,6 +266,9 @@ a.sp_woo_product_slider_block_edit_button {
 
 .block-editor-page .sp-wpsp-gutenberg-shortcode.editor-styles-wrapper {
 	padding-bottom: 0;
+}
+.sp-wpsp-gutenberg-shortcode.editor-styles-wrapper:after {
+	display: none;
 }
 .spwps-footer-text-star {
 	color: #dba617;

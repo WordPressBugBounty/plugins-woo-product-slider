@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, woocommerce product grid, woocommerce product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.7.1
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.4.2
-Stable tag: 2.8.3
+WC tested up to: 9.6.0
+Stable tag: 2.8.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,15 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.4 - Jan 29, 2025 =
+* New: Two hooks, 'sp_wpspro_before_product_title' and 'sp_wpspro_after_product_title', were added.
+* Fix: The shortcode select option gap issue was found in the gutenberg block.
+* Fix: The start rating alignment issue was found with the Astra theme.
+* Fix: The 404 issue for the recommended plugin's logo URL.
+* Updated: The language (.pot) file.
+* Tested: WordPress 6.7.1 compatibility.
+* Tested: WooCommerce 9.6.0 compatibility.
 
 = 2.8.3 - Nov 20, 2024 =
 * Fix: The plugin style issue for RTL sites.

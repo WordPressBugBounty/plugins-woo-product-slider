@@ -56,7 +56,7 @@ class Help_Page {
 	 *
 	 * @var array
 	 */
-	protected static $not_show_plugin_list = array( 'aitasi-coming-soon', 'latest-posts', 'widget-post-slider', 'easy-lightbox-wp' );
+	protected static $not_show_plugin_list = array( 'aitasi-coming-soon', 'latest-posts', 'widget-post-slider', 'easy-lightbox-wp', 'woo-product-slider' );
 
 	/**
 	 * Help Page construct function.
@@ -209,12 +209,15 @@ class Help_Page {
 						$image_type = 'jpg';
 						break;
 					case 'location-weather':
+					case 'testimonial-free':
+					case 'logo-carousel-free':
+					case 'easy-accordion-free':
 					case 'gallery-slider-for-woocommerce':
 						$image_type = 'gif';
 						break;
 				}
 
-				$details_link = network_admin_url( 'plugin-install.php?tab=plugin-information&amp;plugin=' . $plugin['slug'] . '&amp;TB_iframe=true&amp;width=600&amp;height=550' );
+				$details_link = network_admin_url( 'plugin-install.php?tab=plugin-information&amp;plugin=' . $plugin['slug'] . '&amp;TB_iframe=true&amp;width=772&amp;height=550' );
 				?>
 				<div class="plugin-card <?php echo esc_attr( $plugin_slug ); ?>" id="<?php echo esc_attr( $plugin_slug ); ?>">
 					<div class="plugin-card-top">
@@ -778,7 +781,7 @@ class Help_Page {
 					<div class="spwps-our-plugin-list">
 						<h3 class="spwps-section-title-help">Upgrade your Website with our High-quality Plugins!</h3>
 						<div class="spwps-our-plugin-list-wrap">
-							<a target="_blank" class="spwps-our-plugin-list-box" href="https://wordpresscarousel.com/">
+							<a target="_blank" class="spwps-our-plugin-list-box" href="https://wpcarousel.io/">
 								<i class="spwps-icon-button-arrow-icon"></i>
 								<img src="https://ps.w.org/wp-carousel-free/assets/icon-256x256.png" alt="">
 								<h4>WP Carousel</h4>
@@ -786,7 +789,7 @@ class Help_Page {
 							</a>
 							<a target="_blank" class="spwps-our-plugin-list-box" href="https://realtestimonials.io/">
 								<i class="spwps-icon-button-arrow-icon"></i>
-								<img src="https://ps.w.org/testimonial-free/assets/icon-256x256.png" alt="">
+								<img src="https://ps.w.org/testimonial-free/assets/icon-256x256.gif" alt="">
 								<h4>Real Testimonials</h4>
 								<p>Simply collect, manage, and display Testimonials on your website and boost conversions.</p>
 							</a>
@@ -802,10 +805,10 @@ class Help_Page {
 								<h4>Product Slider for WooCommerce</h4>
 								<p>Boost sales by interactive product Slider, Grid, and Table in your WooCommerce website or store.</p>
 							</a>
-							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/plugin/woocommerce-gallery-slider-pro/">
+							<a target="_blank" class="spwps-our-plugin-list-box" href="https://woogallery.io/">
 								<i class="spwps-icon-button-arrow-icon"></i>
-								<img src="https://ps.w.org/gallery-slider-for-woocommerce/assets/icon-256x256.png" alt="">
-								<h4>Gallery Slider for WooCommerce</h4>
+								<img src="https://ps.w.org/gallery-slider-for-woocommerce/assets/icon-256x256.gif" alt="">
+								<h4>WooGallery</h4>
 								<p>Product gallery slider and additional variation images gallery for WooCommerce and boost your sales.</p>
 							</a>
 							<a target="_blank" class="spwps-our-plugin-list-box" href="https://getwpteam.com/">
@@ -816,20 +819,20 @@ class Help_Page {
 							</a>
 							<a target="_blank" class="spwps-our-plugin-list-box" href="https://logocarousel.com/">
 								<i class="spwps-icon-button-arrow-icon"></i>
-								<img src="https://ps.w.org/logo-carousel-free/assets/icon-256x256.png" alt="">
+								<img src="https://ps.w.org/logo-carousel-free/assets/icon-256x256.gif" alt="">
 								<h4>Logo Carousel</h4>
 								<p>Showcase a group of logo images with Title, Description, Tooltips, Links, and Popup as a grid or in a carousel.</p>
 							</a>
 							<a target="_blank" class="spwps-our-plugin-list-box" href="https://easyaccordion.io/">
 								<i class="spwps-icon-button-arrow-icon"></i>
-								<img src="https://ps.w.org/easy-accordion-free/assets/icon-256x256.png" alt="">
+								<img src="https://ps.w.org/easy-accordion-free/assets/icon-256x256.gif" alt="">
 								<h4>Easy Accordion</h4>
 								<p>Minimize customer support by offering comprehensive FAQs and increasing conversions.</p>
 							</a>
-							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/plugin/woocommerce-category-slider-pro/">
+							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/woocategory/">
 								<i class="spwps-icon-button-arrow-icon"></i>
 								<img src="https://ps.w.org/woo-category-slider-grid/assets/icon-256x256.png" alt="">
-								<h4>Category Slider for WooCommerce</h4>
+								<h4>WooCategory</h4>
 								<p>Display by filtering the list of categories aesthetically and boosting sales.</p>
 							</a>
 							<a target="_blank" class="spwps-our-plugin-list-box" href="https://wptabs.com/">
@@ -838,13 +841,13 @@ class Help_Page {
 								<h4>WP Tabs</h4>
 								<p>Display tabbed content smartly & quickly on your WordPress site without coding skills.</p>
 							</a>
-							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/plugin/woocommerce-quick-view-pro/">
+							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/quick-view-for-woocommerce/">
 								<i class="spwps-icon-button-arrow-icon"></i>
 								<img src="https://ps.w.org/woo-quickview/assets/icon-256x256.png" alt="">
 								<h4>Quick View for WooCommerce</h4>
 								<p>Quickly view product information with smooth animation via AJAX in a nice Modal without opening the product page.</p>
 							</a>
-							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/plugin/smart-brands-for-woocommerce/">
+							<a target="_blank" class="spwps-our-plugin-list-box" href="https://shapedplugin.com/smart-brands/">
 								<i class="spwps-icon-button-arrow-icon"></i>
 								<img src="https://ps.w.org/smart-brands-for-woocommerce/assets/icon-256x256.png" alt="">
 								<h4>Smart Brands for WooCommerce</h4>
@@ -871,5 +874,4 @@ class Help_Page {
 		</div>
 		<?php
 	}
-
 }

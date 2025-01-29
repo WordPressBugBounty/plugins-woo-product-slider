@@ -251,6 +251,7 @@
 	line-height: 15px;
 	font-size: 15px;
 	width: 75px;
+	float: unset;
 }
 
 #wps-slider-section .wps-product-section .star-rating span {
@@ -384,7 +385,7 @@ html[dir="rtl"] #wps-slider-section .wpsf-product {
 
 #wps-slider-section.wps-slider-section .wps-product-section[data-layout="grid"] {
 	margin-left: -20px;
-	font-size: 0;
+	display: table;
 }
 
 /* col */

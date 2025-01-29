@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:     Product Slider for WooCommerce
- * Plugin URI:      https://wooproductslider.io/pricing/?ref=1
+ * Plugin URI:      https://wooproductslider.io/?ref=1
  * Description:     Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator. Highly customizable and No coding required!
- * Version:         2.8.3
+ * Version:         2.8.4
  * Author:          ShapedPlugin LLC
  * Author URI:      https://shapedplugin.com/
  * License:         GPLv3
@@ -12,7 +12,7 @@
  * Requires PHP: 5.6
  * Requires Plugins: woocommerce
  * WC requires at least: 4.5
- * WC tested up to: 9.4.2
+ * WC tested up to: 9.6.0
  * Text Domain:     woo-product-slider
  * Domain Path:     /languages
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'SP_WPS_NAME' ) ) {
 	define( 'SP_WPS_NAME', 'woo-product-slider' );
 }
 if ( ! defined( 'SP_WPS_VERSION' ) ) {
-	define( 'SP_WPS_VERSION', '2.8.3' );
+	define( 'SP_WPS_VERSION', '2.8.4' );
 }
 if ( ! defined( 'SP_WPS_PATH' ) ) {
 	define( 'SP_WPS_PATH', plugin_dir_path( __FILE__ ) . 'src/' );
@@ -66,7 +66,7 @@ if ( ! function_exists( 'woo_product_slider' ) ) {
 // Declare that the plugin is compatible with WooCommerce High-Performance order storage feature.
 add_action(
 	'before_woocommerce_init',
-	function() {
+	function () {
 		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
 			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
 		}
