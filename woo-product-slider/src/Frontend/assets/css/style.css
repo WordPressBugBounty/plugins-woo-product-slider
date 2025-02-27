@@ -264,7 +264,7 @@
 }
 
 #wps-slider-section .wps-product-section .star-rating:before {
-	content: "\f005\f005\f005\f005\f005";
+	content: "\f005\f005\f005\f005\f005" !important;
 	position: absolute;
 	color: #C8C8C8;
 	font-family: FontAwesome;
@@ -475,7 +475,7 @@ html[dir="rtl"] #wps-slider-section .wpsf-product {
 }
 
 .wps-pagination ul li {
-	list-style: none;
+	list-style: none !important;
 	margin: 0 4px 0 0;
 	float: left;
 }

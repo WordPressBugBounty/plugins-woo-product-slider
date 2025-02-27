@@ -385,9 +385,10 @@ class WooProductSlider {
 	 */
 	public function woo_gallery_slider_admin_notice() {
 
-		if ( is_plugin_active( 'gallery-slider-for-woocommerce/woo-gallery-slider.php' ) ) {
+		if ( is_plugin_active( 'gallery-slider-for-woocommerce/woo-gallery-slider.php' ) || is_plugin_active( 'woo-gallery-slider-pro/woo-gallery-slider-pro.php' ) ) {
 			return;
 		}
+
 		if ( get_option( 'sp-woogs-notice-dismissed' ) ) {
 			return;
 		}
@@ -436,9 +437,10 @@ class WooProductSlider {
 	 */
 	public function wqv_install_admin_notice() {
 
-		if ( is_plugin_active( 'woo-quickview/woo-quick-view.php' ) ) {
+		if ( is_plugin_active( 'woo-quickview/woo-quick-view.php' ) || is_plugin_active( 'woo-quick-view-pro/woo-quick-view-pro.php' ) ) {
 			return;
 		}
+
 		if ( get_option( 'sp-wqv-notice-dismissed' ) ) {
 			return;
 		}
@@ -488,9 +490,10 @@ class WooProductSlider {
 	 */
 	public function smart_swatches_install_admin_notice() {
 
-		if ( is_plugin_active( 'smart-swatches/smart-swatches.php' ) ) {
+		if ( is_plugin_active( 'smart-swatches/smart-swatches.php' ) || is_plugin_active( 'smart-swatches-pro/smart-swatches-pro.php' ) ) {
 			return;
 		}
+
 		if ( get_option( 'sp-smart-swatches-notice-dismissed' ) ) {
 			return;
 		}

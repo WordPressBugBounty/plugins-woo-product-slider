@@ -5,8 +5,8 @@ Requires at least: 5.0
 Tested up to: 6.7.1
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.6.0
-Stable tag: 2.8.4
+WC tested up to: 9.7.0
+Stable tag: 2.8.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,11 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.5 - Feb 27, 2025 =
+* New: A hook was added to make it compatible with the Smart Swatches plugin.
+* Fix: The star rating style issue with the Divi theme.
+* Tested: WooCommerce 9.7.0 compatibility.
 
 = 2.8.4 - Jan 29, 2025 =
 * New: Two hooks, 'sp_wpspro_before_product_title' and 'sp_wpspro_after_product_title', were added.
