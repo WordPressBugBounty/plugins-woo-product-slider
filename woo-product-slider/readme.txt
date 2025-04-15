@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, woocommerce product grid, woocommerce product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.7.1
+Tested up to: 6.8
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.7.0
-Stable tag: 2.8.5
+WC tested up to: 9.8.1
+Stable tag: 2.8.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,12 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.6 - Apr 15, 2025 =
+* Fix: The mismatched text domain issue.
+* Fix: The help page recommended plugins logo URL not found issue.
+* Tested: WordPress 6.8 compatibility.
+* Tested: WooCommerce 9.8.1 compatibility.
 
 = 2.8.5 - Feb 27, 2025 =
 * New: A hook was added to make it compatible with the Smart Swatches plugin.

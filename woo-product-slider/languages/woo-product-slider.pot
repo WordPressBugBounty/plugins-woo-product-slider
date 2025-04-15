@@ -1,8 +1,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Slider for WooCommerce v2.8.1\n"
-"POT-Creation-Date: 2025-01-23 16:42+0600\n"
+"Project-Id-Version: Product Slider for WooCommerce v2.8.6\n"
+"POT-Creation-Date: 2025-04-14 16:22+0600\n"
 "PO-Revision-Date: 2024-07-24 16:05+0600\n"
 "Last-Translator: \n"
 "Language-Team: support@shapedplugin.com\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Product Slider"
 msgstr ""
 
-#: src/Admin/Admin.php:63 src/Includes/WooProductSlider.php:155
+#: src/Admin/Admin.php:63 src/Includes/WooProductSlider.php:157
 msgid "Add New"
 msgstr ""
 
@@ -116,34 +116,35 @@ msgstr ""
 msgid "Get Help"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:241 src/Includes/WooProductSlider.php:408
-#: src/Includes/WooProductSlider.php:409 src/Includes/WooProductSlider.php:459
-#: src/Includes/WooProductSlider.php:460
+#: src/Admin/HelpPage/Help_Page.php:234 src/Includes/WooProductSlider.php:411
+#: src/Includes/WooProductSlider.php:412 src/Includes/WooProductSlider.php:463
+#: src/Includes/WooProductSlider.php:464 src/Includes/WooProductSlider.php:517
+#: src/Includes/WooProductSlider.php:518
 msgid "Activate"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:248 src/Includes/WooProductSlider.php:402
-#: src/Includes/WooProductSlider.php:453
+#: src/Admin/HelpPage/Help_Page.php:241 src/Includes/WooProductSlider.php:405
+#: src/Includes/WooProductSlider.php:457 src/Includes/WooProductSlider.php:511
 msgid "Install Now"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:254
+#: src/Admin/HelpPage/Help_Page.php:247
 msgid "More Details"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:286
+#: src/Admin/HelpPage/Help_Page.php:279
 msgid "Version:"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:295
+#: src/Admin/HelpPage/Help_Page.php:288
 msgid "+ Active Installations"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:303
+#: src/Admin/HelpPage/Help_Page.php:296
 msgid "Last Updated:"
 msgstr ""
 
-#: src/Admin/HelpPage/Help_Page.php:304
+#: src/Admin/HelpPage/Help_Page.php:297
 msgid "ago"
 msgstr ""
 
@@ -264,7 +265,7 @@ msgid "Page Builders"
 msgstr ""
 
 #: src/Admin/views/models/configs/metabox.config.php:100
-#: src/Includes/WooProductSlider.php:203
+#: src/Includes/WooProductSlider.php:205
 msgid "Layout"
 msgstr ""
 
@@ -565,7 +566,7 @@ msgid "ID"
 msgstr ""
 
 #: src/Admin/views/models/configs/metabox.config.php:470
-#: src/Includes/WooProductSlider.php:206
+#: src/Includes/WooProductSlider.php:208
 msgid "Date"
 msgstr ""
 
@@ -875,7 +876,7 @@ msgid ""
 msgstr ""
 
 #: src/Admin/views/models/configs/metabox.config.php:741
-#: src/Includes/WooProductSlider.php:177
+#: src/Includes/WooProductSlider.php:179
 msgid "Live Demo"
 msgstr ""
 
@@ -2121,15 +2122,15 @@ msgstr ""
 msgid "Custom Style"
 msgstr ""
 
-#: src/Admin/views/models/fields/typography/typography.php:459
+#: src/Admin/views/models/fields/typography/typography.php:457
 msgid "Custom Web Fonts"
 msgstr ""
 
-#: src/Admin/views/models/fields/typography/typography.php:465
+#: src/Admin/views/models/fields/typography/typography.php:463
 msgid "Safe Web Fonts"
 msgstr ""
 
-#: src/Admin/views/models/fields/typography/typography.php:488
+#: src/Admin/views/models/fields/typography/typography.php:486
 msgid "Google Web Fonts"
 msgstr ""
 
@@ -2188,38 +2189,40 @@ msgstr ""
 msgid "Nothing to import."
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:190
+#: src/Includes/WooProductSlider.php:192
 msgid "Shortcode Updated"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:191
+#: src/Includes/WooProductSlider.php:193
 msgid "Shortcode Published"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:202
+#: src/Includes/WooProductSlider.php:204
 msgid "Slider Title"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:204
+#: src/Includes/WooProductSlider.php:206
 msgid "Shortcode"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:248 src/Includes/WooProductSlider.php:267
+#: src/Includes/WooProductSlider.php:250 src/Includes/WooProductSlider.php:269
 msgid "No shortcode to duplicate has been supplied!"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:327
+#: src/Includes/WooProductSlider.php:329
 msgid "Shortcode creation failed, could not find original post: "
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:342
+#: src/Includes/WooProductSlider.php:344
 msgid "Duplicate"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:401 src/Includes/WooProductSlider.php:452
+#: src/Includes/WooProductSlider.php:404 src/Includes/WooProductSlider.php:456
+#: src/Includes/WooProductSlider.php:510
 msgid "Install"
 msgstr ""
 
-#: src/Includes/WooProductSlider.php:493 src/Includes/WooProductSlider.php:510
+#: src/Includes/WooProductSlider.php:551 src/Includes/WooProductSlider.php:568
+#: src/Includes/WooProductSlider.php:585
 msgid "Authorization failed!"
 msgstr ""

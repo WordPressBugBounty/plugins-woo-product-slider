@@ -151,7 +151,7 @@ class Dashboard_Notice {
 					</div>
 				<?php } ?>
 				<div class="sp_wps-offer-additional-text">
-					<span class="sp_wps-clock-icon">⏱</span><p><?php esc_html_e( 'Limited Time Offer, Upgrade Now!', 'wp-carousel-free' ); ?></p>
+					<span class="sp_wps-clock-icon">⏱</span><p><?php esc_html_e( 'Limited Time Offer, Upgrade Now!', 'woo-product-slider' ); ?></p>
 				</div>
 				<?php if ( ! empty( $action_url ) ) { ?>
 					<div class="sp_wps-banner-action-button">

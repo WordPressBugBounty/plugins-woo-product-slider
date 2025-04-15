@@ -32,6 +32,7 @@ class DBUpdates {
 		'2.6.8' => 'updates/update-2.6.8.php',
 		'2.7.0' => 'updates/update-2.7.0.php',
 		'2.8.0' => 'updates/update-2.8.0.php',
+		'2.8.6' => 'updates/update-2.8.6.php',
 	);
 
 	/**
@@ -102,7 +103,5 @@ class DBUpdates {
 		}
 
 		update_option( 'woo_product_slider_version', SP_WPS_VERSION );
-
 	}
-
 }

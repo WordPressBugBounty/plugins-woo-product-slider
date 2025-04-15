@@ -233,7 +233,7 @@ class WooProductSlider {
 				break;
 			case 'wps_layout':
 				$layout = ucwords( str_replace( '_layout', ' ', $layout_preset ) );
-				esc_html_e( $layout, 'woo-product-slider' );
+				echo esc_html( $layout );
 				break;
 			default:
 				break;
@@ -503,9 +503,9 @@ class WooProductSlider {
 
 		if ( current_user_can( 'install_plugins' ) && 'sp_wps_shortcodes' === $the_current_post_type ) {
 
-			$plugins     = array_keys( get_plugins() );
-			$slug        = 'smart-swatches';
-			$icon        = 'https://ps.w.org/smart-swatches/assets/icon-128x128.png';
+			$plugins = array_keys( get_plugins() );
+			$slug    = 'smart-swatches';
+			$icon    = 'https://ps.w.org/smart-swatches/assets/icon-128x128.gif';
 			// $icon        = SP_WPS_URL . 'Admin/assets/images/woo-quick-view-notice.svg';
 			$text        = esc_html__( 'Install', 'woo-product-slider' );
 			$button_text = esc_html__( 'Install Now', 'woo-product-slider' );

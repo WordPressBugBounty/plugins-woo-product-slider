@@ -81,7 +81,7 @@ if ( ! class_exists( 'SPF_WPSP_Field_typography' ) ) {
 					'text_decoration'    => false,
 					'custom_style'       => false,
 					'compact'            => false,
-					'exclude'            => '',
+					'exclude'            => '', // phpcs:ignore
 					'unit'               => 'px',
 					'margin_top'         => false,
 					'margin_right'       => false,
@@ -401,7 +401,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_typography' ) ) {
 			echo '</div>';
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
 
 		/**
@@ -438,7 +437,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_typography' ) ) {
 			$output .= '</select>';
 
 			return $output;
-
 		}
 
 		/**
@@ -530,7 +528,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_typography' ) ) {
 				);
 
 			}
-
 		}
 	}
 }
