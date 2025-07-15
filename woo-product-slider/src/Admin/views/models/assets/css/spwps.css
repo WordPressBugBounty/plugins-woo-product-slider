@@ -5208,3 +5208,126 @@ a.spwps-live-demo-icon:focus {
 #poststuff #sp_wps_layout_options .inside{
 	margin: 0;
 }
+
+/* Update to pro promotional notice */
+.sp_wpsp-notice-wrapper {
+	border-width: 1px;
+	border-radius: 5px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+#sp_wpsp_notice .wpcf-content .wpcf-section.hidden {
+	display: block;
+}
+
+#sp_wpsp_notice .postbox-header {
+	display: none;
+}
+
+#spwps_shortcode_option .postbox-header {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+div:is(#sp_wpsp_notice, #spwps_builder_option, #spwps_shortcode_option) .wpcf-sections,
+div:is(#sp_wpsp_notice, #spwps_builder_option, #spwps_shortcode_option).postbox {
+	border-radius: 3px;
+}
+
+.sp_wpsp-notice-wrapper {
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.sp_wpsp-notice-heading {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 1);
+}
+
+.sp_wpsp-notice-heading span {
+	color: #0C6E63;
+}
+
+.sp_wpsp-notice-desc {
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 20px;
+	color: rgba(101, 105, 118, 1);
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.sp_wpsp-notice-wrapper ul li {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 1);
+	display: inline-flex;
+	gap: 10px;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button {
+	position: relative;
+	font-size: 16px;
+	border-radius: 5px;
+	color: #ffffff;
+	border: 1px solid transparent;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 0;
+	transition: border-color 0.5s ease;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, #592664 0%, #9B438B 100%);
+	z-index: -1;
+	transition: opacity 0.6s ease;
+	opacity: 1;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, #9B438B 0%, #592664 100%);
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.6s ease;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button:hover::before,
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button:hover::after {
+	opacity: 1;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 14px 30px 14px 30px;
+	position: relative;
+	z-index: 1;
+}
+
+.sp_wpsp-notice-wrapper .sp_wpsp-notice-button a:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+.sp_wpsp-notice-button i {
+	font-size: 16px;
+}
+
+.sp_wpsp-notice-wrapper ul li i {
+	color: rgba(74, 184, 102, 1);
+	font-size: 11px;
+}

@@ -96,7 +96,12 @@ class Frontend {
 		}
 		wp_register_script( 'sp-wps-scripts', esc_url( SP_WPS_URL . 'Frontend/assets/js/scripts.min.js' ), array( 'jquery' ), SP_WPS_VERSION, false );
 
+		$custom_js = isset( $setting_options['custom_js'] ) ? html_entity_decode( $setting_options['custom_js'] ) : '';
+		if ( ! empty( $custom_js ) ) {
+			wp_add_inline_script( 'sp-wps-scripts', $custom_js );
+		}
 	}
+
 	/**
 	 * Delete page shortcode ids array option on save
 	 *
@@ -109,12 +114,9 @@ class Frontend {
 			if ( get_site_option( $option_key ) ) {
 				delete_site_option( $option_key );
 			}
-		} else {
-			if ( get_option( 'sp_product_slider_page_id' . $post_ID ) ) {
+		} elseif ( get_option( 'sp_product_slider_page_id' . $post_ID ) ) {
 				delete_option( 'sp_product_slider_page_id' . $post_ID );
-			}
 		}
-
 	}
 
 	/**

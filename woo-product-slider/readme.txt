@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, woocommerce product grid, woocommerce product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.8.1
 Requires PHP: 5.6
 WC requires at least: 4.5
-WC tested up to: 9.8.1
-Stable tag: 2.8.6
+WC tested up to: 9.9.5
+Stable tag: 2.8.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,11 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.7 - Jul 15, 2025 =
+* New: The Custom JS option.
+* Improved: The plugin setting page tab icons.
+* Tested: WooCommerce 9.9.5 compatibility.
 
 = 2.8.6 - Apr 15, 2025 =
 * Fix: The mismatched text domain issue.

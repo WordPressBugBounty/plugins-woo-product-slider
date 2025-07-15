@@ -47,7 +47,7 @@ SPF_WPSP::createSection(
 	array(
 		'id'     => 'advanced_settings',
 		'title'  => __( 'Advanced', 'woo-product-slider' ),
-		'icon'   => '<i class="spwps-tab-icon fa fa-wrench"></i>',
+		'icon'   => '<i class="spwps-tab-icon sp-wps-icon-advanced"></i>',
 		'fields' => array(
 			array(
 				'id'         => 'wpsp_delete_all_data',
@@ -134,8 +134,8 @@ SPF_WPSP::createSection(
 	$prefix,
 	array(
 		'id'     => 'custom_css_section',
-		'title'  => __( 'Additional CSS', 'woo-product-slider' ),
-		'icon'   => '<i class="spwps-tab-icon fa fa-file-code-o"></i>',
+		'title'  => __( 'Additional CSS & JS', 'woo-product-slider' ),
+		'icon'   => '<i class="spwps-tab-icon sp-wps-icon-code"></i>',
 		'fields' => array(
 			array(
 				'id'       => 'custom_css',
@@ -145,6 +145,15 @@ SPF_WPSP::createSection(
 				'settings' => array(
 					'theme' => 'dracula',
 					'mode'  => 'css',
+				),
+			),
+			array(
+				'id'       => 'custom_js',
+				'type'     => 'code_editor',
+				'title'    => __( 'Custom JS', 'woo-product-slider' ),
+				'settings' => array(
+					'theme' => 'monokai',
+					'mode'  => 'javascript',
 				),
 			),
 
@@ -159,7 +168,7 @@ SPF_WPSP::createSection(
 	array(
 		'id'     => 'license_key_section',
 		'title'  => __( 'License Key', 'woo-product-slider' ),
-		'icon'   => '<i class="spwps-tab-icon fa fa-key"></i>',
+		'icon'   => '<i class="spwps-tab-icon sp-wps-icon-key-01"></i>',
 		'fields' => array(
 			array(
 				'id'   => 'license_key',

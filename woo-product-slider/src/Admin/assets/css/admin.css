@@ -199,6 +199,10 @@ div#spwps-preview-box {
 	min-height: 200px;
 }
 
+#spwps-preview-box .spswp_variations_form.variations_form {
+    display: none;
+}
+
 .post-type-sp_wps_shortcodes .postbox-header .handle-actions .handle-order-lower,
 .post-type-sp_wps_shortcodes .postbox-header .handle-actions .handle-order-higher {
 	display: none;

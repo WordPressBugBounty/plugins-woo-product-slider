@@ -66,7 +66,7 @@ SPF_WPSP::createSection(
 		'fields' => array(
 			array(
 				'type'      => 'shortcode',
-				'shortcode' => true,
+				'shortcode' => 'shortcode',
 				'class'     => 'spwps-admin-sidebar',
 			),
 		),
@@ -88,6 +88,29 @@ SPF_WPSP::createSection(
 			array(
 				'type'      => 'shortcode',
 				'shortcode' => false,
+				'class'     => 'spwps-admin-sidebar',
+			),
+		),
+	)
+);
+
+SPF_WPSP::createMetabox(
+	'sp_wpsp_notice',
+	array(
+		'title'        => __( 'Unlock Pro Feature', 'wp-carousel-free' ),
+		'post_type'    => 'sp_wps_shortcodes',
+		'context'      => 'side',
+		'show_restore' => false,
+	)
+);
+
+SPF_WPSP::createSection(
+	'sp_wpsp_notice',
+	array(
+		'fields' => array(
+			array(
+				'type'      => 'shortcode',
+				'shortcode' => 'pro_notice',
 				'class'     => 'spwps-admin-sidebar',
 			),
 		),
