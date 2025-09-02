@@ -50,8 +50,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_text' ) ) {
 			echo '<input type="' . esc_attr( $type ) . '" name="' . esc_attr( $this->field_name() ) . '" value="' . esc_attr( $this->value ) . '"' . $this->field_attributes() . ' />';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
-
 	}
 }

@@ -1,7 +1,16 @@
 <?php
 /**
  * Update version.
-*/
+ *
+ * @package Woo Product Slider
+ * @subpackage Woo Product Slider/Admin
+ * @since 2.7.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 update_option( 'woo_product_slider_version', '2.7.0' );
 update_option( 'woo_product_slider_db_version', '2.7.0' );
 

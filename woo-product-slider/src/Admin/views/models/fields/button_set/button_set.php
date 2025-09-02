@@ -90,8 +90,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_button_set' ) ) {
 			}
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
-
 	}
 }

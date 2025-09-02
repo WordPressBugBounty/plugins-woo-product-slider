@@ -47,8 +47,8 @@ if ( ! class_exists( 'SPF_WPSP_Abstract' ) ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'collect_output_css_and_typography' ), 10 );
 				SPF_WPSP::$css = apply_filters( "spwps_{$this->unique}_output_css", SPF_WPSP::$css, $this );
 			}
-
 		}
+
 		/**
 		 * Add output CSS and typography.
 		 *
@@ -108,22 +108,15 @@ if ( ! class_exists( 'SPF_WPSP_Abstract' ) ) {
 							if ( method_exists( $field_class, 'output' ) || method_exists( $field_class, 'enqueue_google_fonts' ) ) {
 
 								$field_value = '';
-
 								if ( $field_check && ( 'options' === $this->abstract || 'customize' === $this->abstract ) ) {
-
 									if ( ! empty( $combine_field ) ) {
 
 										$field_value = ( isset( $this->options[ $combine_field['id'] ][ $field_id ] ) ) ? $this->options[ $combine_field['id'] ][ $field_id ] : '';
-
 									} else {
-
 										$field_value = ( isset( $this->options[ $field_id ] ) ) ? $this->options[ $field_id ] : '';
-
 									}
-								} elseif ( $field_check && ( 'metabox' === $this->abstract && is_singular() || 'taxonomy' === $this->abstract && is_archive() ) ) {
-
+								} elseif ( $field_check && ( ( 'metabox' === $this->abstract && is_singular() ) || ( 'taxonomy' === $this->abstract && is_archive() ) ) ) {
 									if ( ! empty( $combine_field ) ) {
-
 										$meta_value  = $this->get_meta_value( $combine_field );
 										$field_value = isset( $meta_value[ $field_id ] ) ? $meta_value[ $field_id ] : '';
 
@@ -141,14 +134,11 @@ if ( ! class_exists( 'SPF_WPSP_Abstract' ) ) {
 								}
 
 								unset( $instance );
-
 							}
 						}
 					}
 				}
 			}
-
 		}
-
 	}
 }

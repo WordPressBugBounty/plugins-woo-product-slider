@@ -50,6 +50,5 @@ if ( ! class_exists( 'SPF_WPSP_Field_subheading' ) ) {
 				echo ( ! empty( $this->field['content'] ) ) ? wp_kses_post( $this->field['content'] ) : '';
 			}
 		}
-
 	}
 }

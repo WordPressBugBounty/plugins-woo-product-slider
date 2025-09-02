@@ -63,8 +63,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_color_group' ) ) {
 			}
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
-
 	}
 }

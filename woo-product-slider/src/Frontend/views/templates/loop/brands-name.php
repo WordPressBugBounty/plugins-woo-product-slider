@@ -8,6 +8,9 @@
  * @subpackage woo-product-slider-pro/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
 $show_product_brands = isset( $shortcode_data['show_product_brands'] ) ? $shortcode_data['show_product_brands'] : false;
 
 if ( $show_product_brands ) {

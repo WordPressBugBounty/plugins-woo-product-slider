@@ -7,6 +7,10 @@
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 $slider_title            = isset( $shortcode_data['slider_title'] ) ? $shortcode_data['slider_title'] : false;
 $pagination_dots_bg      = isset( $shortcode_data['pagination_dots_color'] ) ? $shortcode_data['pagination_dots_color'] : array(
 	'color'        => '#cccccc',
@@ -324,4 +328,3 @@ if ( 'custom' === $template_style ) {
 					}';
 	}
 }
-

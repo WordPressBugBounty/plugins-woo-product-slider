@@ -7,6 +7,10 @@
  * @since 2.8.6
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 update_option( 'woo_product_slider_version', SP_WPS_VERSION );
 update_option( 'woo_product_slider_db_version', SP_WPS_VERSION );
 

@@ -11,6 +11,10 @@
  * @subpackage woo-product-slider/Frontend/views
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 if ( $preloader ) {
 	$preloader_style = ( $preloader ) ? '' : 'display: none;';
 	$preloader_image = apply_filters( 'sp_wps_product_preloader_img', SP_WPS_URL . 'Admin/assets/images/spinner.svg' );

@@ -1,0 +1,19 @@
+{
+  "name": "product-slider-free-gutenberg-shortcode-block",
+  "version": "2.8.1",
+  "private": true,
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "shapedplugin.com",
+  "dependencies": {
+    "@wordpress/block-editor": "^12.0.0",
+    "@wordpress/blocks": "^12.9.0",
+    "@wordpress/create-block": "^4.16.0",
+    "@wordpress/element": "^5.9.0",
+    "@wordpress/escape-html": "^2.32.0",
+    "@wordpress/i18n": "^4.32.0",
+    "@wordpress/scripts": "^26.3.0"
+  }
+}

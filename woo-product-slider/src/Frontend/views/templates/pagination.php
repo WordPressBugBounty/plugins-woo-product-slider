@@ -9,6 +9,10 @@
  * @subpackage woo-product-slider/Frontend/views/templates
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 $total_posts                    = $shortcode_query->found_posts;
 $total_posts                    = $number_of_total_products < $total_posts ? $number_of_total_products : $total_posts;
 $shortcode_query->max_num_pages = ceil( (int) $total_posts / (int) $products_per_page );
@@ -16,10 +20,11 @@ $big                            = 999999999;
 
 if ( ( $shortcode_query->max_num_pages > 1 && $grid_pagination ) ) {
 	$grid_pagination_data  = '<div class="wps-pagination ' . $grid_pagination_alignment . '">';
+	$current_page =  isset( $_GET[ "$paged_var" ] ) ? wp_unslash( $_GET[ "$paged_var" ] ) : 1; // phpcs:ignore -- WordPress.Security.NonceVerification -- read-only operation, so can safely ignore it.
 	$args                  = array(
 		'format'    => '?paged' . $post_id . '=%#%',
 		'total'     => $shortcode_query->max_num_pages,
-		'current'   => isset( $_GET[ "$paged_var" ] ) ? wp_unslash( $_GET[ "$paged_var" ] ) : 1,
+		'current'   => $current_page,
 		'prev_next' => true,
 		'type'      => 'array',
 		'next_text' => '<i class="fa fa-angle-right"></i>',

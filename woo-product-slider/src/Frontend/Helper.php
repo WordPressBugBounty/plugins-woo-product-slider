@@ -11,6 +11,10 @@
 
 namespace ShapedPlugin\WooProductSlider\Frontend;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 /**
  * Helper
  */
@@ -103,7 +107,7 @@ class Helper {
 			'order'          => 'DESC',
 			'fields'         => 'ids',
 			'posts_per_page' => $number_of_total_products,
-			'tax_query'      => array(
+			'tax_query'      => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query -- Intentional use of tax_query.
 				array(
 					'taxonomy' => 'product_visibility',
 					'field'    => 'term_taxonomy_id',
@@ -283,7 +287,7 @@ class Helper {
 		$product_image   = isset( $shortcode_data['product_image'] ) ? $shortcode_data['product_image'] : '';
 		$image_sizes     = isset( $shortcode_data['image_sizes'] ) ? $shortcode_data['image_sizes'] : 'full';
 		$paged_var       = 'paged' . $post_id;
-		$paged           = isset( $_GET[ "$paged_var" ] ) ? $_GET[ "$paged_var" ] : 1;
+		$paged           = isset( $_GET[ "$paged_var" ] ) ? $_GET[ "$paged_var" ] : 1; // phpcs:ignore -- WordPress.Security.NonceVerification -- read-only operation, so can safely ignore it.
 		$shortcode_query = self::spwps_product_query( $product_order_by, $product_type, $number_of_total_products, $hide_out_of_stock_product, $product_order, $grid_pagination, $grid_pagination_type, $layout_preset, $products_per_page, $post_id, $paged, $show_hidden_product, $hide_on_sale_product, $hide_free_product, $product_visibility );
 
 		$item_class = ( 'grid' === $layout_preset ) ? 'sp-wps-col-xl-' . $number_of_column['number1'] . ' sp-wps-col-lg-' . $number_of_column['number2'] . ' sp-wps-col-md-' . $number_of_column['number3'] . ' sp-wps-col-sm-' . $number_of_column['number4'] . '' : '';

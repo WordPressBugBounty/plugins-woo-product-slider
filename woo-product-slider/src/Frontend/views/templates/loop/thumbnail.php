@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 ?>
 <a href="<?php echo esc_url( get_the_permalink() ); ?>" class="wps-product-image">
 	<?php

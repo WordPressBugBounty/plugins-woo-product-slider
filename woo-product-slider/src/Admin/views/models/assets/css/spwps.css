@@ -4642,7 +4642,7 @@ div#spwps-preview-box {
 .pro_only_field .spwps-fieldset input,
 .spwps-field-typography .spwps--blocks.spwps--blocks-selects {
 	pointer-events: none;
-	opacity: 0.9;
+	opacity: 0.6;
 }
 
 .pro_only_field .spwps-fieldset div.wp-picker-container {

@@ -150,7 +150,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_select' ) ) {
 			}
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
 
 		/**
@@ -163,8 +162,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_select' ) ) {
 			if ( ! wp_script_is( 'jquery-ui-sortable' ) ) {
 				wp_enqueue_script( 'jquery-ui-sortable' );
 			}
-
 		}
-
 	}
 }

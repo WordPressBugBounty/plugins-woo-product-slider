@@ -100,7 +100,6 @@ class WooProductSlider {
 	 * @return void
 	 */
 	public function init_actions() {
-		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
 		add_action( 'manage_sp_wps_shortcodes_posts_custom_column', array( $this, 'add_shortcode_form' ), 10, 2 );
 		add_action( 'activated_plugin', array( $this, 'redirect_help_page' ) );
 		if ( ! is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) && ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true ) ) {
@@ -130,17 +129,6 @@ class WooProductSlider {
 		if ( ( is_plugin_active( 'elementor/elementor.php' ) || is_plugin_active_for_network( 'elementor/elementor.php' ) ) ) {
 			new Elementor_Addons();
 		}
-	}
-
-
-	/**
-	 * Load TextDomain for plugin.
-	 *
-	 * @since 2.0
-	 */
-	public function load_text_domain() {
-		load_textdomain( 'woo-product-slider', WP_LANG_DIR . '/woo-product-slider/languages/woo-product-slider-' . apply_filters( 'plugin_locale', get_locale(), 'woo-product-slider' ) . '.mo' );
-		load_plugin_textdomain( 'woo-product-slider', false, dirname( SP_WPS_BASENAME ) . '/languages/' );
 	}
 
 	/**

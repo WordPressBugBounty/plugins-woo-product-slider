@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 ?>
 <div id="wps-slider-section" class="wps-slider-section wps-slider-section-<?php echo esc_attr( $post_id ); ?>">
 	<?php

@@ -11,6 +11,10 @@
 
 namespace ShapedPlugin\WooProductSlider\Admin\Helper;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 /**
  * Product Slider for WooCommerce - SP_WPS_WQV class
  *
@@ -96,5 +100,4 @@ class SP_WPS_WQV {
 	public function show_activation_notice() {
 		echo '<div class="updated notice is-dismissible"><p>Plugin <strong>activated.</strong></p></div>';
 	}
-
 }

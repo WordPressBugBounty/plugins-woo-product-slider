@@ -1,80 +1,104 @@
-=== Product Carousel, Product Slider, Product Grid Gallery, and Product Table for WooCommerce – WooProduct Slider ===
+=== Product Slider, Product Carousel and Product Grid Gallery for WooCommerce – WooProduct Slider ===
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
-Tags: woocommerce product slider, woocommerce product grid, woocommerce product carousel, product table, product gallery
+Tags: woocommerce product slider, product grid, product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.8.1
-Requires PHP: 5.6
+Tested up to: 6.8
+Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 9.9.5
-Stable tag: 2.8.7
+WC tested up to: 10.1.2
+Stable tag: 2.8.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy Shortcode Generator. Customizable and No coding required!
+Display your WooCommerce products in a responsive Product Slider, Product Carousel, or Product Grid Gallery with easy customization.
 
 == Description ==
 
-[__Live Demo__](https://wooproductslider.io/lite-version-demo/) | [__Documentation__](https://docs.shapedplugin.com/docs/woocommerce-product-slider/overview/) | [__Upgrade to Pro!__](https://wooproductslider.io/pricing/?ref=1)
+## Responsive Product Slider, Carousel & Product Grid Gallery ##
 
-https://www.youtube.com/watch?v=GAxIh2a22r8&list=PLoUb-7uG-5jM6fpnrjHGUXkA9W6M2rzCG
+**Product Slider for WooCommerce** is a responsive and easy-to-use plugin that lets you display WooCommerce products in sliders, carousels, or grid galleries. You can place product sliders or grids anywhere on your site using a shortcode—inside pages, posts, custom templates, or widget areas.
 
+The plugin includes a built-in Shortcode Generator with a user-friendly interface, so you can quickly create and customize product sliders without coding.
 
-= Overview =
-
-**Product Slider for WooCommerce** is the best product slider carousel plugin to slide your WooCommerce Products in a tidy and professional way. It allows you to create easily attractive product slider carousel on your site or shop and increase conversions & sales. You can display product slider in pages, posts, custom template, and even widget. It comes with built-in intuitive Shortcode Generator to easily control the look and function of the product slider.
-
-It has an extremely user-friendly Shortcode Generator back-end interface that can help you to build a modern and versatile product slider carousel that cannot be missed in a professional site or shop.
+[youtube https://www.youtube.com/watch?v=GAxIh2a22r8&list=PLoUb-7uG-5jM6fpnrjHGUXkA9W6M2rzCG]
 
 
-= Why Product Slider for WooCommerce? =
-
-Product Sliders can make your shop or site show a large number of products in a tidy and professional way keeping your site fast. And it makes your site look much more professional, clean and sharp in your potential customers' eyes.
-
-A product slider is one of the best ways to highlight specific products and, if you are able to put in strategic spots, it will allow you to increase conversions and purchases in your shop.
+[__Live Demo__](https://wooproductslider.io/lite-version-demo/) | [__Documentation__](https://docs.shapedplugin.com/docs/woocommerce-product-slider/overview/) | [__Support__](https://shapedplugin.com/create-new-ticket) | [__Upgrade to Pro!__](https://wooproductslider.io/pricing/?ref=1)
 
 
-= Key Features =
+= Why use Product Slider for WooCommerce? =
 
-* Responsive and mobile friendly.
-* Beautiful, Lightweight, and Powerful.
-* Shortcode Generator.
-* 3 Pre-designed Ready Themes.
-* AutoPlay on/off.
-* Control AutoPlay speed.
-* Stop on hover slider.
-* Infinite loop for the slider.
-* Set a maximum number of products to show to the slider.
-* Multiple product sliders (supports more than one slider per page).
-* Show/hide Product name.
-* Change Product name font size, color, and hover color.
-* Show/hide Product price.
-* Set Product price & discount color.
-* Show/hide Product rating.
-* Show/hide Product add to cart button.
-* Set add to cart button color, border, background & hover color.
-* Show/hide Navigation arrows & Pagination dots.
-* Control slider pagination speed.
-* Show/hide a title for the slider.
-* Set slider title font size, & color.
-* Unlimited color (with color pickers) and Styling options.
-* Control number of product columns in different devices.
-* Product order & order by.
-* Insert the generated shortcode with TinyMCE button.
-* Touch swipe supported (on/off).
-* Mouse Draggable on/off.
-* Easy to customize and stylize.
-* Extremely easy and intuitive admin UI to stylize in your way.
-* Unique settings for every slider.
-* RTL Supported.
-* Translation Ready.
-* Compatible with any theme and WooCommerce plugins.
-* SEO friendly & optimized for speed.
-* Support all modern browsers: Firefox, Chrome, IE, Safari etc.
-* And much more options.
+Product sliders help you present more products in less space while keeping your shop organized and visually appealing. They can highlight featured or new products in key areas of your site, improving navigation and user experience.
+
+## MAIN FEATURES ##
+
+**Responsive and Mobile-Friendly:** The Product Slider for WooCommerce plugin is fully responsive and works seamlessly on all devices and screen sizes.
+
+**Beautiful Product Templates to Start:** The plugin has 3 beautiful pre-designed product templates to set up product sliders and grids quickly. You can also create your own custom template.
+
+**Create Unlimited Sliders or Grids:** Add multiple product sliders or grids on the same page with unique settings. So, there is no limit on the number of product sliders or grids you can create.
+
+**Display Newest & Featured Products:** Highlight the latest or featured products in your shop to attract your prospective customers.
+
+**Show Hidden Products:** You can easily hide the hidden products from the settings. The plugin has an option to include hidden products in the slider or grid.
+
+**Hide Out-of-Stock Products:** Automatically exclude out-of-stock items from the display, as it’s really essential that there are no products in your stock.
+
+**Hide On Sale and Free Products:** Flexible controls to exclude sale or free products.
+
+**Display Product Details:** Show product title, price, rating, and other details.
+
+**Customizable Add to Cart Button:** Adjust the text and style of the Add to Cart button to fit your store design.
+
+**Product Image Options:** Select image sizes, borders, and other visual preferences.
+
+**Powerful Slider Configurations:** The plugin has options for autoplay, speed, pause on hover, slide to scroll, infinite loop, adaptive height,  direction, and more.
+
+**Slider Navigation & Pagination:** Multiple styles for arrows, dots, and pagination controls.
+
+**Additional Slider Options:** Enable tab navigation, keyboard navigation, touch swipe, mouse wheel, draggable mode, free mode, and more.
+
+**Color and Styling Options:** Customize columns, spacing, colors, and layouts to match your site design.
+
+**Import and Export Sliders or Grids:** Easily back up or transfer slider and grid settings.
+
+
+= Support, Feature Requests, and Bug Reporting =
+
+If you need help, have a feature suggestion, or want to report a bug, please reach out to our [Support](https://shapedplugin.com/create-new-ticket). We’re happy to assist.
+
+
+= Product Slider for WooCommerce – Pro =
+
+>[__Product Slider for WooCommerce – Pro__](https://wooproductslider.io/?ref=1) is the premium version of the Product Slider for WooCommerce plugin, adding additional features and functionality. It includes a product ticker carousel, multi-row carousel, product category live filter, product list, masonry, advanced product grid gallery with AJAX load more, product table, and more.
+
+>The plugin supports 15+ additional modern layouts, offers extended customization and styling options, and includes 30+ pre-designed product templates. Learn more about [__Product Slider for WooCommerce Features__](https://wooproductslider.io/#features).
+
+
+= Multilingual Ready =
+	
+* [WPML](https://wpml.org/)
+* [Polylang](https://wordpress.org/plugins/polylang/)
+* [Loco Translate](https://wordpress.org/plugins/loco-translate/)
+* [qTranslate-x](https://wordpress.org/plugins/qtranslate-x/)
+* [GTranslate](https://wordpress.org/plugins/gtranslate/)
+* [Google Language Translator](https://wordpress.org/plugins/google-language-translator/)
+* [WPGlobus](https://wordpress.org/plugins/wpglobus/)
+
+= Page Builders Ready =
+* Gutenberg
+* Elementor
+* Divi Builder
+* WPBakery
+* BeaverBuilder
+* SiteOrgin
+* Fusion Builder
+* Genesis Framework
 
 
 = AUTHOR =
-Designed and Developed by **[ShapedPlugin](https://shapedplugin.com/)**
+
+The **Woo Product Slider** plugin is developed and maintained by [__ShapedPlugin LLC__](https://shapedplugin.com/)
 
 
 
@@ -112,42 +136,21 @@ The WordPress codex contains <a href="https://codex.wordpress.org/Managing_Plugi
 == Frequently Asked Questions ==
 
 = When can I use this plugin? =
-
 You can use this plugin only when you have installed the WooCommerce plugin.
 
 
 = How can I create Product Slider? =
-
 After activating the plugin, you will see the “Product Slider” menu on your WordPress admin panel.
 Go to Product Slider > and click “Add New” menu and you will find a Shortcode Generator Settings panel.
 The generator fields are highly customizable. Customize the carousel and publish. And then will see a generated Shortcode in the top section. You need to insert it into any page or post editor via TinyMCE button.
 
 For including on the template, copy and paste the PHP code into your template file.
 
-
 = Is the plugin compatible with all WordPress themes? =
-
 Product Slider for WooCommerce works with any theme if themes are developed according to WordPress standard and WooCommerce guidelines.
-
-
-= How can I get support if the plugin is not working? =
-
-If you face any problem with our plugin or something is not working as it should, first follow the preliminary steps:
-Test the plugin with a WordPress default theme, to be sure that the error is not caused by the theme you are currently using.
-Deactivate all plugins you are using and check if the problem is still occurring.
-Ensure that your plugin version, your theme version and your WordPress and WooCommerce version (if required) are updated and that the problem you are experiencing has not already been solved in a later plugin update.
-If none of the previous listed actions helps you solve the problem, then, submit a ticket in the forum and describe your problem accurately, specify WordPress and WooCommerce versions you are using and any other information that might help us solve your problem as quickly as possible.
-
-PRO version users <a href="https://shapedplugin.com/support/">Support</a> and Free or Lite Version <a href="https://shapedplugin.com/support/?user=lite">Support</a>.
-
 
 = How to Upgrade to PRO version? =
 Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
-
-= Do you want to encourage for future improvement? =
-Please give us <a href="https://wordpress.org/support/plugin/woo-product-slider/reviews/?filter=5#new-post">5 Star</a> rating the plugin.
-
-Thanks!
 
 
 
@@ -165,6 +168,11 @@ Thanks!
 
 
 == Changelog ==
+
+= 2.8.8 - Sep 02, 2025 =
+* Improved: Enhanced plugin security and data validation.
+* Improved: The Additional CSS and JS options.
+* Tested: WooCommerce 10.1.2 compatibility.
 
 = 2.8.7 - Jul 15, 2025 =
 * New: The Custom JS option.

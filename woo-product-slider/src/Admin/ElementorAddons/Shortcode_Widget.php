@@ -11,6 +11,9 @@
 
 namespace ShapedPlugin\WooProductSlider\Admin\ElementorAddons;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
 use ShapedPlugin\WooProductSlider\Frontend\Frontend;
 use ShapedPlugin\WooProductSlider\Frontend\Helper;
 
@@ -118,7 +121,6 @@ class Shortcode_Widget extends \Elementor\Widget_Base {
 		);
 
 		$this->end_controls_section();
-
 	}
 
 	/**
@@ -149,11 +151,9 @@ class Shortcode_Widget extends \Elementor\Widget_Base {
 
 			Helper::spwps_html_show( $post_id, $shortcode_data, $layout_data, $main_section_title );
 			?>
-			<script src="<?php echo esc_url( SP_WPS_URL . 'Frontend/assets/js/scripts.min.js' ); ?>" ></script>
 			<?php
 		} else {
 			echo do_shortcode( '[woo_product_slider id="' . $post_id . '"]' );
 		}
-
 	}
 }

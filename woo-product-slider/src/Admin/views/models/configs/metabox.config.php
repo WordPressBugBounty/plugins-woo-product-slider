@@ -44,7 +44,6 @@ $quick_view_plugin_data = SPF_WPSP::plugin_installation_activation(
 	'woo-quickview'
 );
 
-
 /**
  * Shortcode metabox.
  *
@@ -97,7 +96,7 @@ SPF_WPSP::createSection(
 SPF_WPSP::createMetabox(
 	'sp_wpsp_notice',
 	array(
-		'title'        => __( 'Unlock Pro Feature', 'wp-carousel-free' ),
+		'title'        => __( 'Unlock Pro Feature', 'woo-product-slider' ),
 		'post_type'    => 'sp_wps_shortcodes',
 		'context'      => 'side',
 		'show_restore' => false,
@@ -136,7 +135,7 @@ SPF_WPSP::createSection(
 				'type'  => 'heading',
 				'image' => esc_url( SP_WPS_URL ) . 'Admin/assets/images/wps-logo.svg',
 				'after' => '<i class="fa fa-life-ring"></i> Support',
-				'link'  => 'https://shapedplugin.com/support/?user=lite',
+				'link'  => 'https://shapedplugin.com/create-new-ticket',
 				'class' => 'spwps-admin-header',
 			),
 			array(

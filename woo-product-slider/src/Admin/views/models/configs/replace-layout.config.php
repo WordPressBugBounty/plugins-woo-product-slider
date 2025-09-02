@@ -1,4 +1,12 @@
 <?php
+/**
+ * Replace Layout Configs.
+ *
+ * @package    Woo_Product_Slider
+ * @subpackage Woo_Product_Slider/Admin/view
+ * @author     ShapedPlugin <support@shapedplugin.com>
+ */
+
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;
 
 if ( ! defined( 'ABSPATH' ) ) {

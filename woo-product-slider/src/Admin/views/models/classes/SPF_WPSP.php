@@ -11,6 +11,10 @@
 
 namespace ShapedPlugin\WooProductSlider\Admin\views\models\classes;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 /**
  *
  * Setup Class.
@@ -133,7 +137,6 @@ class SPF_WPSP {
 		}
 
 		return self::$instance;
-
 	}
 
 	/**
@@ -151,7 +154,6 @@ class SPF_WPSP {
 		add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_enqueue_scripts' ) );
 		add_action( 'wp_head', array( $this, 'add_custom_css' ), 80 );
 		add_filter( 'admin_body_class', array( $this, 'add_admin_body_class' ) );
-
 	}
 
 
@@ -260,7 +262,6 @@ class SPF_WPSP {
 		}
 
 		do_action( 'spwps_loaded' );
-
 	}
 
 	/**
@@ -318,7 +319,6 @@ class SPF_WPSP {
 
 		self::$dir = $dirname;
 		self::$url = $directory_uri . $foldername;
-
 	}
 
 	/**
@@ -361,7 +361,6 @@ class SPF_WPSP {
 			return self::$dir . '/' . $file;
 
 		}
-
 	}
 
 	/**
@@ -425,7 +424,6 @@ class SPF_WPSP {
 				'column',
 				'fieldset',
 				'heading',
-				'license',
 				'spinner',
 				'spacing',
 				'switcher',
@@ -455,7 +453,6 @@ class SPF_WPSP {
 				}
 			}
 		}
-
 	}
 
 	/**
@@ -487,7 +484,6 @@ class SPF_WPSP {
 				}
 			}
 		}
-
 	}
 
 	/**
@@ -529,14 +525,6 @@ class SPF_WPSP {
 			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'wp-color-picker' );
 
-			// Font awesome 4 and 5 loader.
-			if ( apply_filters( 'spwps_fa4', true ) ) {
-				wp_enqueue_style( 'spwps-fa', 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome' . $min . '.css', array(), '4.7.0', 'all' );
-			} else {
-				wp_enqueue_style( 'spwps-fa5', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all' . $min . '.css', array(), '5.15.5', 'all' );
-				wp_enqueue_style( 'spwps-fa5-v4-shims', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/v4-shims' . $min . '.css', array(), '5.15.5', 'all' );
-			}
-
 			// Main style.
 			wp_enqueue_style( 'spwps', self::include_plugin_url( 'assets/css/spwps.css' ), array(), self::$version, 'all' );
 
@@ -557,6 +545,7 @@ class SPF_WPSP {
 					'color_palette' => apply_filters( 'spwps_color_palette', array() ),
 					'i18n'          => array(
 						'confirm'         => esc_html__( 'Are you sure?', 'woo-product-slider' ),
+						/* translators: %s: minimum number of characters required */
 						'typing_text'     => esc_html__( 'Please enter %s or more characters', 'woo-product-slider' ),
 						'searching_text'  => esc_html__( 'Searching...', 'woo-product-slider' ),
 						'no_results_text' => esc_html__( 'No results found.', 'woo-product-slider' ),
@@ -598,7 +587,6 @@ class SPF_WPSP {
 		}
 
 		return $classes;
-
 	}
 
 	/**
@@ -609,9 +597,8 @@ class SPF_WPSP {
 	public static function add_custom_css() {
 
 		if ( ! empty( self::$css ) ) {
-			echo '<style type="text/css">' . wp_strip_all_tags( self::$css ) . '</style>';
+			echo '<style type="text/css">' . wp_strip_all_tags( self::$css ) . '</style>'; // phpcs:ignore
 		}
-
 	}
 
 	/**
@@ -716,7 +703,6 @@ class SPF_WPSP {
 		echo '<div class="clear"></div>';
 		echo '</div>';
 	}
-
 }
 
 SPF_WPSP::init( __FILE__ );

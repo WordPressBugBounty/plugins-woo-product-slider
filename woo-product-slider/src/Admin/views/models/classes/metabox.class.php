@@ -125,7 +125,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 
 			// wp enqeueu for typography and output css.
 			parent::__construct();
-
 		}
 
 		/**
@@ -157,7 +156,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			}
 
 			return $result;
-
 		}
 		/**
 		 * Add metabox classes.
@@ -213,7 +211,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			}
 
 			return $classes;
-
 		}
 
 		/**
@@ -226,7 +223,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			if ( ! in_array( $post_type, $this->args['exclude_post_types'] ) ) {
 				add_meta_box( $this->unique, $this->args['title'], array( $this, 'add_meta_box_content' ), $this->post_type, $this->args['context'], $this->args['priority'], $this->args );
 			}
-
 		}
 
 			/**
@@ -241,7 +237,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			$default = ( isset( $this->args['defaults'][ $field['id'] ] ) ) ? $this->args['defaults'][ $field['id'] ] : $default;
 
 			return $default;
-
 		}
 
 		/**
@@ -273,7 +268,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			$value   = ( isset( $value ) ) ? $value : $default;
 
 			return $value;
-
 		}
 
 		/**
@@ -350,7 +344,7 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 
 					echo '<li><a href="#" data-section="' . esc_attr( $this->unique . '_' . $tab_key ) . '">' . wp_kses_post( $tab_icon . $section['title'] . $tab_error ) . '</a></li>';
 
-					$tab_key++;
+					++$tab_key;
 
 				}
 
@@ -405,8 +399,7 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 
 				echo '</div>';
 
-				$section_key++;
-
+				++$section_key;
 			}
 
 			echo '</div>';
@@ -433,7 +426,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			echo '</div>';
 
 			echo '</div>';
-
 		}
 
 		/**
@@ -464,7 +456,7 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 							$this->process_field( $field, $request, $count, $data, $errors );
 						}
 					}
-					$count++;
+					++$count;
 				}
 			}
 
@@ -499,7 +491,6 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 			do_action( "spwps_{$this->unique}_saved", $data, $post_id, $this );
 
 			do_action( "spwps_{$this->unique}_save_after", $data, $post_id, $this );
-
 		}
 
 		/**

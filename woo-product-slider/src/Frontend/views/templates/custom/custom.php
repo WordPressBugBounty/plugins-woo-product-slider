@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 ?> 
 <div class="wpsf-product <?php echo esc_attr( $class . $item_class ); ?>">
 <div class="wps-product-data">

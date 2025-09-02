@@ -143,7 +143,7 @@ SPF_WPSP::createSection(
 				'title'    => __( 'Custom CSS', 'woo-product-slider' ),
 				'sanitize' => 'wp_strip_all_tags',
 				'settings' => array(
-					'theme' => 'dracula',
+					'theme' => 'default',
 					'mode'  => 'css',
 				),
 			),
@@ -152,27 +152,9 @@ SPF_WPSP::createSection(
 				'type'     => 'code_editor',
 				'title'    => __( 'Custom JS', 'woo-product-slider' ),
 				'settings' => array(
-					'theme' => 'monokai',
+					'theme' => 'default',
 					'mode'  => 'javascript',
 				),
-			),
-
-		),
-	)
-);
-//
-// License key section.
-//
-SPF_WPSP::createSection(
-	$prefix,
-	array(
-		'id'     => 'license_key_section',
-		'title'  => __( 'License Key', 'woo-product-slider' ),
-		'icon'   => '<i class="spwps-tab-icon sp-wps-icon-key-01"></i>',
-		'fields' => array(
-			array(
-				'id'   => 'license_key',
-				'type' => 'license',
 			),
 
 		),

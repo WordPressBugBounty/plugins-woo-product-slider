@@ -125,6 +125,5 @@ if ( ! class_exists( 'SPF_WPSP_Field_image_sizes' ) ) {
 			}
 			echo wp_kses_post( $this->field_after() );
 		}
-
 	}
 }

@@ -39,12 +39,11 @@ function sp_wpsf_delete_plugin_data() {
 	delete_post_meta_by_key( 'sp_wps_shortcode_options' );
 }
 
-	// Load WPSF file.
-	require plugin_dir_path( __FILE__ ) . '/main.php';
-	$wps_options     = get_option( 'sp_woo_product_slider_options' );
-	$wps_plugin_data = isset( $wps_options['wpsp_delete_all_data'] ) ? $wps_options['wpsp_delete_all_data'] : false;
+// Load WPSF file.
+require plugin_dir_path( __FILE__ ) . '/main.php';
+$wps_options     = get_option( 'sp_woo_product_slider_options' );
+$wps_plugin_data = isset( $wps_options['wpsp_delete_all_data'] ) ? $wps_options['wpsp_delete_all_data'] : false;
 
 if ( $wps_plugin_data ) {
 	sp_wpsf_delete_plugin_data();
 }
-

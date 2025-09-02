@@ -57,7 +57,7 @@ if ( ! class_exists( 'SPF_WPSP_Field_tabbed' ) ) {
 				$tabbed_active = ( empty( $key ) ) ? ' class="spwps-tabbed-active"' : '';
 				$tabbed_class  = ( ! empty( $tab['class'] ) ) ? $tab['class'] : '';
 
-				echo '<a href="#" class="' . esc_attr( $tabbed_class . $tabbed_active ) . '">' . $tabbed_icon . wp_kses_post( $tab['title'] ) . '</a>';
+				echo '<a href="#" class="' . esc_attr( $tabbed_class . $tabbed_active ) . '">' . wp_kses_post( $tabbed_icon . $tab['title'] ) . '</a>';
 
 			}
 			echo '</div>';
@@ -88,8 +88,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_tabbed' ) ) {
 			echo '</div>';
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
-
 	}
 }

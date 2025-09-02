@@ -99,8 +99,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_column' ) ) {
 			echo '</div>';
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
-
 	}
 }

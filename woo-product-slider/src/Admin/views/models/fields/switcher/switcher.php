@@ -63,6 +63,5 @@ if ( ! class_exists( 'SPF_WPSP_Field_switcher' ) ) {
 			echo ( ! empty( $this->field['label'] ) ) ? '<span class="spwps--label">' . esc_attr( $this->field['label'] ) . '</span>' : '';
 			echo wp_kses_post( $this->field_after() );
 		}
-
 	}
 }

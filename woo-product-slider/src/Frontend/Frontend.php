@@ -9,6 +9,10 @@
 
 namespace ShapedPlugin\WooProductSlider\Frontend;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 use ShapedPlugin\WooProductSlider\Frontend\Helper;
 
 /**

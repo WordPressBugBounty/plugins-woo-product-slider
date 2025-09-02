@@ -44,7 +44,7 @@ class Gutenberg_Init {
 	public function woo_product_slider_free_block_editor_assets() {
 		wp_enqueue_script(
 			'woo-product-slider-free-shortcode-block',
-			plugins_url( '/GutenbergBlock/build/index.js', dirname( __FILE__ ) ),
+			plugins_url( '/GutenbergBlock/build/index.js', __DIR__ ),
 			array( 'jquery' ),
 			SP_WPS_VERSION,
 			true

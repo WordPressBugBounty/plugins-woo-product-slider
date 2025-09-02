@@ -113,6 +113,5 @@ if ( ! class_exists( 'SPF_WPSP_Field_radio' ) ) {
 			}
 			echo wp_kses_post( $this->field_after() );
 		}
-
 	}
 }

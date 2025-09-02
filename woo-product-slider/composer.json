@@ -1,0 +1,19 @@
+{
+    "name": "shapedplugin/woo-product-slider",
+    "description": "Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator. Highly customizable and No coding required!",
+    "type": "plugin",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "ShapedPlugin",
+            "email": "hello@shapedplugin.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShapedPlugin\\WooProductSlider\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

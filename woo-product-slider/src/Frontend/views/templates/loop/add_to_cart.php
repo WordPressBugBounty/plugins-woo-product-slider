@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 if ( $add_to_cart_button ) {
 	?>
 	<div class="wpsf-cart-button"><?php echo do_shortcode( '[add_to_cart id="' . get_the_ID() . '" show_price="false"]' ); ?></div>

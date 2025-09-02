@@ -39,10 +39,8 @@ if ( ! function_exists( 'spwps_sanitize_number_array_field' ) ) {
 		foreach ( $array as $key => $value ) {
 			if ( 'unit' === $key ) {
 				$array[ $key ] = wp_filter_nohtml_kses( $value );
-			} else {
-				if ( ! empty( $value ) ) {
+			} elseif ( ! empty( $value ) ) {
 					$array[ $key ] = intval( $value );
-				}
 			}
 		}
 		return $array;

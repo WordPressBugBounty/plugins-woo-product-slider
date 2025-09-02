@@ -25,7 +25,6 @@ if ( ! function_exists( 'spwps_validate_email' ) ) {
 		if ( ! filter_var( $value, FILTER_VALIDATE_EMAIL ) ) {
 			return esc_html__( 'Please enter a valid email address.', 'woo-product-slider' );
 		}
-
 	}
 }
 
@@ -44,7 +43,6 @@ if ( ! function_exists( 'spwps_validate_numeric' ) ) {
 		if ( ! is_numeric( $value ) ) {
 			return esc_html__( 'Please enter a valid number.', 'woo-product-slider' );
 		}
-
 	}
 }
 
@@ -62,7 +60,6 @@ if ( ! function_exists( 'spwps_validate_required' ) ) {
 		if ( empty( $value ) ) {
 			return esc_html__( 'This field is required.', 'woo-product-slider' );
 		}
-
 	}
 }
 
@@ -81,7 +78,6 @@ if ( ! function_exists( 'spwps_validate_url' ) ) {
 		if ( ! filter_var( $value, FILTER_VALIDATE_URL ) ) {
 			return esc_html__( 'Please enter a valid URL.', 'woo-product-slider' );
 		}
-
 	}
 }
 
@@ -104,7 +100,6 @@ if ( ! function_exists( 'spwps_customize_validate_email' ) ) {
 		}
 
 		return $validity;
-
 	}
 }
 
@@ -126,7 +121,6 @@ if ( ! function_exists( 'spwps_customize_validate_numeric' ) ) {
 		}
 
 		return $validity;
-
 	}
 }
 
@@ -148,7 +142,6 @@ if ( ! function_exists( 'spwps_customize_validate_required' ) ) {
 		}
 
 		return $validity;
-
 	}
 }
 
@@ -170,6 +163,5 @@ if ( ! function_exists( 'spwps_customize_validate_url' ) ) {
 		}
 
 		return $validity;
-
 	}
 }

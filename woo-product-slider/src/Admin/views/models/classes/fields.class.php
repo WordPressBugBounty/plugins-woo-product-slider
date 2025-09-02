@@ -125,7 +125,6 @@ if ( ! class_exists( 'SPF_WPSP_Fields' ) ) {
 			}
 
 			return $atts;
-
 		}
 		/**
 		 * Field before.
@@ -148,7 +147,6 @@ if ( ! class_exists( 'SPF_WPSP_Fields' ) ) {
 			$output .= ( ! empty( $this->field['_error'] ) ) ? '<div class="spwps-error-text">' . $this->field['_error'] . '</div>' : '';
 
 			return $output;
-
 		}
 		/**
 		 * Field Data.
@@ -348,7 +346,6 @@ if ( ! class_exists( 'SPF_WPSP_Fields' ) ) {
 			}
 
 			return $options;
-
 		}
 		/**
 		 * WP Query data title
@@ -448,8 +445,6 @@ if ( ! class_exists( 'SPF_WPSP_Fields' ) ) {
 			}
 
 			return $options;
-
 		}
-
 	}
 }

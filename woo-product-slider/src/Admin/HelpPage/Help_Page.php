@@ -206,7 +206,6 @@ class Help_Page {
 					$plugin_file = $plugin_slug . '.php';
 				}
 
-
 				$details_link = network_admin_url( 'plugin-install.php?tab=plugin-information&amp;plugin=' . $plugin['slug'] . '&amp;TB_iframe=true&amp;width=772&amp;height=550' );
 				?>
 				<div class="plugin-card <?php echo esc_attr( $plugin_slug ); ?>" id="<?php echo esc_attr( $plugin_slug ); ?>">
@@ -764,7 +763,7 @@ class Help_Page {
 							</div>
 						</div>
 						<div class="spwps-about-img">
-							<img src="https://shapedplugin.com/wp-content/uploads/2024/01/shapedplugin-team.jpg" alt="">
+							<img src="<?php echo esc_url( SP_WPS_URL . 'Admin/HelpPage/img/shapedplugin-team.jpg' ); ?>" alt="ShapedPlugin Team">
 							<span>Team ShapedPlugin LLC at WordCamp Sylhet</span>
 						</div>
 					</div>

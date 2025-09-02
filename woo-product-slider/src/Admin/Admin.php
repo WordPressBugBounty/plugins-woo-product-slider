@@ -9,6 +9,10 @@
 
 namespace ShapedPlugin\WooProductSlider\Admin;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;
 use ShapedPlugin\WooProductSlider\Admin\Dashboard_Notice;
 use ShapedPlugin\WooProductSlider\Admin\DBUpdates;

@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 if ( class_exists( 'WooCommerce' ) && $product_rating ) {
 	$average = $product->get_average_rating();
 	if ( $average > 0 ) {

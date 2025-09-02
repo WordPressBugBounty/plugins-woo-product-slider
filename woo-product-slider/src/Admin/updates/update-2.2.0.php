@@ -2,8 +2,14 @@
 /**
  * Update version.
  *
- * @package Woo_Product_Slider
+ * @package Woo Product Slider
+ * @subpackage Woo Product Slider/Admin
+ * @since 2.2.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
 
 update_option( 'woo_product_slider_version', SP_WPS_VERSION );
 update_option( 'woo_product_slider_db_version', SP_WPS_VERSION );

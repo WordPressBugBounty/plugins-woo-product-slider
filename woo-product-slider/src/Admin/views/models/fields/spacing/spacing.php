@@ -150,10 +150,8 @@ if ( ! class_exists( 'SPF_WPSP_Field_spacing' ) ) {
 				echo '<select name="' . esc_attr( $this->field_name( '[unit]' ) ) . '">';
 				// $first = true; // Flag to check if it's the first iteration.
 				foreach ( $args['units'] as $unit ) {
-					$selected     = ( $value['unit'] === $unit ) ? ' selected' : '';
-					// $disabledAttr = ! $first ? $disabled : '';
-					echo '<option' . $disabled . ' value="' . esc_attr( $unit ) . '"' . esc_attr( $selected ) . '>' . esc_attr( $unit ) . '</option>';
-					// $first = false; // After the first iteration, set the flag to. false
+					$selected = ( $value['unit'] === $unit ) ? ' selected' : '';
+					echo '<option' . wp_kses_post( $disabled ) . ' value="' . esc_attr( $unit ) . '"' . esc_attr( $selected ) . '>' . esc_attr( $unit ) . '</option>';
 				}
 				echo '</select>';
 				echo '</div>';
@@ -162,7 +160,6 @@ if ( ! class_exists( 'SPF_WPSP_Field_spacing' ) ) {
 			echo '</div>';
 
 			echo wp_kses_post( $this->field_after() );
-
 		}
 	}
 }

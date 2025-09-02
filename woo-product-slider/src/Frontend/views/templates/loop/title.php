@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 if ( $product_name ) {
 	do_action( 'sp_wpspro_before_product_title', $post_id ); // $post_id is shortcode id.
 	?>

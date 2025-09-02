@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 } // Cannot access directly.
 
-
 if ( ! function_exists( 'spwps_array_search' ) ) {
 	/**
 	 * Array search key & value
@@ -36,10 +35,8 @@ if ( ! function_exists( 'spwps_array_search' ) ) {
 		}
 
 		return $results;
-
 	}
 }
-
 
 if ( ! function_exists( 'spwps_timeout' ) ) {
 	/**

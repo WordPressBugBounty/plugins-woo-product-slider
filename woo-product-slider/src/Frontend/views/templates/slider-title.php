@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend/views
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 if ( $slider_title ) {
 	?>
 	<h2 class="sp-woo-product-slider-section-title"> <?php echo wp_kses_post( $main_section_title ); ?> </h2>

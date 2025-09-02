@@ -13,7 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 } // Cannot access directly.
 
-
 if ( ! function_exists( 'spwps_get_icons' ) ) {
 	/**
 	 *
@@ -55,7 +54,6 @@ if ( ! function_exists( 'spwps_get_icons' ) ) {
 		$content = ob_get_clean();
 
 		wp_send_json_success( array( 'content' => $content ) );
-
 	}
 	add_action( 'wp_ajax_spwps-get-icons', 'spwps_get_icons' );
 }
@@ -82,11 +80,9 @@ if ( ! function_exists( 'spwps_reset_ajax' ) ) {
 		delete_option( $unique );
 
 		wp_send_json_success();
-
 	}
 	add_action( 'wp_ajax_spwps-reset', 'spwps_reset_ajax' );
 }
-
 
 if ( ! function_exists( 'spwps_chosen_ajax' ) ) {
 	/**
@@ -123,7 +119,6 @@ if ( ! function_exists( 'spwps_chosen_ajax' ) ) {
 		$options = SPF_WPSP_Fields::field_data( $type, $term, $query );
 
 		wp_send_json_success( $options );
-
 	}
 	add_action( 'wp_ajax_spwps-chosen', 'spwps_chosen_ajax' );
 }

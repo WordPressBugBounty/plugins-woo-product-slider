@@ -463,54 +463,28 @@
 	//
 	$.fn.spwps_field_code_editor = function () {
 		return this.each(function () {
-
-			if (typeof CodeMirror !== 'function') { return; }
+			if (typeof wp === 'undefined' || typeof wp.codeEditor === 'undefined') {
+				return;
+			}
 
 			var $this = $(this),
 				$textarea = $this.find('textarea'),
-				$inited = $this.find('.CodeMirror'),
-				data_editor = $textarea.data('editor');
+				settings = $textarea.data('editor') || {};
 
-			if ($inited.length) {
-				$inited.remove();
-			}
+			// Merge with WP defaults
+			var editorSettings = wp.codeEditor.defaultSettings ? _.clone(wp.codeEditor.defaultSettings) : {};
+			editorSettings.codemirror = _.extend(
+				{},
+				editorSettings.codemirror,
+				settings
+			);
 
-			var interval = setInterval(function () {
-				if ($this.is(':visible')) {
-
-					var code_editor = CodeMirror.fromTextArea($textarea[0], data_editor);
-
-					// load code-mirror theme css.
-					if (data_editor.theme !== 'default' && SPF_WPSP.vars.code_themes.indexOf(data_editor.theme) === -1) {
-
-						var $cssLink = $('<link>');
-
-						$('#spwps-codemirror-css').after($cssLink);
-
-						$cssLink.attr({
-							rel: 'stylesheet',
-							id: 'spwps-codemirror-' + data_editor.theme + '-css',
-							href: data_editor.cdnURL + '/theme/' + data_editor.theme + '.min.css',
-							type: 'text/css',
-							media: 'all'
-						});
-
-						SPF_WPSP.vars.code_themes.push(data_editor.theme);
-
-					}
-
-					CodeMirror.modeURL = data_editor.cdnURL + '/mode/%N/%N.min.js';
-					CodeMirror.autoLoadMode(code_editor, data_editor.mode);
-
-					code_editor.on('change', function (editor, event) {
-						$textarea.val(code_editor.getValue()).trigger('change');
-					});
-
-					clearInterval(interval);
-
-				}
+			// Initialize editor
+			var editor = wp.codeEditor.initialize($textarea[0], editorSettings);
+			// Sync changes back to textarea
+			editor.codemirror.on('change', function () {
+				$textarea.val(editor.codemirror.getValue()).trigger('change');
 			});
-
 		});
 	};
 
@@ -650,426 +624,6 @@
 
 		});
 	};
-	//
-	// Field: typography
-	//
-	$.fn.spwps_field_typography = function () {
-		return this.each(function () {
-
-			var base = this;
-			var $this = $(this);
-			var loaded_fonts = [];
-			var webfonts = spwps_typography_json.webfonts;
-			var googlestyles = spwps_typography_json.googlestyles;
-			var defaultstyles = spwps_typography_json.defaultstyles;
-
-			//
-			//
-			// Sanitize google font subset
-			base.sanitize_subset = function (subset) {
-				subset = subset.replace('-ext', ' Extended');
-				subset = subset.charAt(0).toUpperCase() + subset.slice(1);
-				return subset;
-			};
-
-			//
-			//
-			// Sanitize google font styles (weight and style)
-			base.sanitize_style = function (style) {
-				return googlestyles[style] ? googlestyles[style] : style;
-			};
-
-			//
-			//
-			// Load google font
-			base.load_google_font = function (font_family, weight, style) {
-
-				if (font_family && typeof WebFont === 'object') {
-
-					weight = weight ? weight.replace('normal', '') : '';
-					style = style ? style.replace('normal', '') : '';
-
-					if (weight || style) {
-						font_family = font_family + ':' + weight + style;
-					}
-
-					if (loaded_fonts.indexOf(font_family) === -1) {
-						WebFont.load({ google: { families: [font_family] } });
-					}
-
-					loaded_fonts.push(font_family);
-
-				}
-
-			};
-
-			//
-			//
-			// Append select options
-			base.append_select_options = function ($select, options, condition, type, is_multi) {
-
-				$select.find('option').not(':first').remove();
-
-				var opts = '';
-
-				$.each(options, function (key, value) {
-
-					var selected;
-					var name = value;
-
-					// is_multi
-					if (is_multi) {
-						selected = (condition && condition.indexOf(value) !== -1) ? ' selected' : '';
-					} else {
-						selected = (condition && condition === value) ? ' selected' : '';
-					}
-
-					if (type === 'subset') {
-						name = base.sanitize_subset(value);
-					} else if (type === 'style') {
-						name = base.sanitize_style(value);
-					}
-
-					opts += '<option value="' + value + '"' + selected + '>' + name + '</option>';
-
-				});
-
-				$select.append(opts).trigger('spwps.change').trigger('chosen:updated');
-
-			};
-
-			base.init = function () {
-
-				//
-				//
-				// Constants
-				var selected_styles = [];
-				var $typography = $this.find('.spwps--typography');
-				var $type = $this.find('.spwps--type');
-				var $styles = $this.find('.spwps--block-font-style');
-				var unit = $typography.data('unit');
-				var line_height_unit = $typography.data('line-height-unit');
-				var exclude_fonts = $typography.data('exclude') ? $typography.data('exclude').split(',') : [];
-
-				//
-				//
-				// Chosen init
-				if ($this.find('.spwps--chosen').length) {
-
-					var $chosen_selects = $this.find('select');
-
-					$chosen_selects.each(function () {
-
-						var $chosen_select = $(this),
-							$chosen_inited = $chosen_select.parent().find('.chosen-container');
-
-						if ($chosen_inited.length) {
-							$chosen_inited.remove();
-						}
-
-						$chosen_select.chosen({
-							allow_single_deselect: true,
-							disable_search_threshold: 15,
-							width: '100%'
-						});
-
-					});
-
-				}
-
-				//
-				//
-				// Font family select
-				var $font_family_select = $this.find('.spwps--font-family');
-				var first_font_family = $font_family_select.val();
-
-				// Clear default font family select options
-				$font_family_select.find('option').not(':first-child').remove();
-
-				var opts = '';
-
-				$.each(webfonts, function (type, group) {
-
-					// Check for exclude fonts
-					if (exclude_fonts && exclude_fonts.indexOf(type) !== -1) { return; }
-
-					opts += '<optgroup label="' + group.label + '">';
-
-					$.each(group.fonts, function (key, value) {
-
-						// use key if value is object
-						value = (typeof value === 'object') ? key : value;
-						var selected = (value === first_font_family) ? ' selected' : '';
-						opts += '<option value="' + value + '" data-type="' + type + '"' + selected + '>' + value + '</option>';
-
-					});
-
-					opts += '</optgroup>';
-
-				});
-
-				// Append google font select options
-				$font_family_select.append(opts).trigger('chosen:updated');
-
-				//
-				//
-				// Font style select
-				var $font_style_block = $this.find('.spwps--block-font-style');
-
-				if ($font_style_block.length) {
-
-					var $font_style_select = $this.find('.spwps--font-style-select');
-					var first_style_value = $font_style_select.val() ? $font_style_select.val().replace(/normal/g, '') : '';
-
-					//
-					// Font Style on on change listener
-					$font_style_select.on('change spwps.change', function (event) {
-
-						var style_value = $font_style_select.val();
-
-						// set a default value
-						if (!style_value && selected_styles && selected_styles.indexOf('normal') === -1) {
-							style_value = selected_styles[0];
-						}
-
-						// set font weight, for eg. replacing 800italic to 800
-						var font_normal = (style_value && style_value !== 'italic' && style_value === 'normal') ? 'normal' : '';
-						var font_weight = (style_value && style_value !== 'italic' && style_value !== 'normal') ? style_value.replace('italic', '') : font_normal;
-						var font_style = (style_value && style_value.substr(-6) === 'italic') ? 'italic' : '';
-
-						$this.find('.spwps--font-weight').val(font_weight);
-						$this.find('.spwps--font-style').val(font_style);
-
-					});
-
-					//
-					//
-					// Extra font style select
-					var $extra_font_style_block = $this.find('.spwps--block-extra-styles');
-
-					if ($extra_font_style_block.length) {
-						var $extra_font_style_select = $this.find('.spwps--extra-styles');
-						var first_extra_style_value = $extra_font_style_select.val();
-					}
-
-				}
-
-				//
-				//
-				// Subsets select
-				var $subset_block = $this.find('.spwps--block-subset');
-				if ($subset_block.length) {
-					var $subset_select = $this.find('.spwps--subset');
-					var first_subset_select_value = $subset_select.val();
-					var subset_multi_select = $subset_select.data('multiple') || false;
-				}
-
-				//
-				//
-				// Backup font family
-				var $backup_font_family_block = $this.find('.spwps--block-backup-font-family');
-
-				//
-				//
-				// Font Family on Change Listener
-				$font_family_select.on('change spwps.change', function (event) {
-
-					// Hide subsets on change
-					if ($subset_block.length) {
-						$subset_block.addClass('hidden');
-					}
-
-					// Hide extra font style on change
-					if ($extra_font_style_block.length) {
-						$extra_font_style_block.addClass('hidden');
-					}
-
-					// Hide backup font family on change
-					if ($backup_font_family_block.length) {
-						$backup_font_family_block.addClass('hidden');
-					}
-
-					var $selected = $font_family_select.find(':selected');
-					var value = $selected.val();
-					var type = $selected.data('type');
-
-					if (type && value) {
-
-						// Show backup fonts if font type google or custom
-						if ((type === 'google' || type === 'custom') && $backup_font_family_block.length) {
-							$backup_font_family_block.removeClass('hidden');
-						}
-
-						// Appending font style select options
-						if ($font_style_block.length) {
-
-							// set styles for multi and normal style selectors
-							var styles = defaultstyles;
-
-							// Custom or gogle font styles
-							if (type === 'google' && webfonts[type].fonts[value][0]) {
-								styles = webfonts[type].fonts[value][0];
-							} else if (type === 'custom' && webfonts[type].fonts[value]) {
-								styles = webfonts[type].fonts[value];
-							}
-
-							selected_styles = styles;
-
-							// Set selected style value for avoid load errors
-							var set_auto_style = (styles.indexOf('normal') !== -1) ? 'normal' : styles[0];
-							var set_style_value = (first_style_value && styles.indexOf(first_style_value) !== -1) ? first_style_value : set_auto_style;
-
-							// Append style select options
-							base.append_select_options($font_style_select, styles, set_style_value, 'style');
-
-							// Clear first value
-							first_style_value = false;
-
-							// Show style select after appended
-							$font_style_block.removeClass('hidden');
-
-							// Appending extra font style select options
-							if (type === 'google' && $extra_font_style_block.length && styles.length > 1) {
-
-								// Append extra-style select options
-								base.append_select_options($extra_font_style_select, styles, first_extra_style_value, 'style', true);
-
-								// Clear first value
-								first_extra_style_value = false;
-
-								// Show style select after appended
-								$extra_font_style_block.removeClass('hidden');
-
-							}
-
-						}
-
-						// Appending google fonts subsets select options
-						if (type === 'google' && $subset_block.length && webfonts[type].fonts[value][1]) {
-
-							var subsets = webfonts[type].fonts[value][1];
-							var set_auto_subset = (subsets.length < 2 && subsets[0] !== 'latin') ? subsets[0] : '';
-							var set_subset_value = (first_subset_select_value && subsets.indexOf(first_subset_select_value) !== -1) ? first_subset_select_value : set_auto_subset;
-
-							// check for multiple subset select
-							set_subset_value = (subset_multi_select && first_subset_select_value) ? first_subset_select_value : set_subset_value;
-
-							base.append_select_options($subset_select, subsets, set_subset_value, 'subset', subset_multi_select);
-
-							first_subset_select_value = false;
-
-							$subset_block.removeClass('hidden');
-
-						}
-
-					} else {
-
-						// Clear Styles
-						$styles.find(':input').val('');
-
-						// Clear subsets options if type and value empty
-						if ($subset_block.length) {
-							$subset_select.find('option').not(':first-child').remove();
-							$subset_select.trigger('chosen:updated');
-						}
-
-						// Clear font styles options if type and value empty
-						if ($font_style_block.length) {
-							$font_style_select.find('option').not(':first-child').remove();
-							$font_style_select.trigger('chosen:updated');
-						}
-
-					}
-
-					// Update font type input value
-					$type.val(type);
-
-				}).trigger('spwps.change');
-
-				//
-				//
-				// Preview
-				var $preview_block = $this.find('.spwps--block-preview');
-
-				if ($preview_block.length) {
-
-					var $preview = $this.find('.spwps--preview');
-
-					// Set preview styles on change
-					$this.on('change', SPF_WPSP.helper.debounce(function (event) {
-
-						$preview_block.removeClass('hidden');
-
-						var font_family = $font_family_select.val(),
-							font_weight = $this.find('.spwps--font-weight').val(),
-							font_style = $this.find('.spwps--font-style').val(),
-							font_size = $this.find('.spwps--font-size').val(),
-							font_variant = $this.find('.spwps--font-variant').val(),
-							line_height = $this.find('.spwps--line-height').val(),
-							text_align = $this.find('.spwps--text-align').val(),
-							text_transform = $this.find('.spwps--text-transform').val(),
-							text_decoration = $this.find('.spwps--text-decoration').val(),
-							text_color = $this.find('.spwps--color').val(),
-							word_spacing = $this.find('.spwps--word-spacing').val(),
-							letter_spacing = $this.find('.spwps--letter-spacing').val(),
-							custom_style = $this.find('.spwps--custom-style').val(),
-							type = $this.find('.spwps--type').val();
-
-						if (type === 'google') {
-							base.load_google_font(font_family, font_weight, font_style);
-						}
-
-						var properties = {};
-
-						if (font_family) { properties.fontFamily = font_family; }
-						if (font_weight) { properties.fontWeight = font_weight; }
-						if (font_style) { properties.fontStyle = font_style; }
-						if (font_variant) { properties.fontVariant = font_variant; }
-						if (font_size) { properties.fontSize = font_size + unit; }
-						if (line_height) { properties.lineHeight = line_height + line_height_unit; }
-						if (letter_spacing) { properties.letterSpacing = letter_spacing + unit; }
-						if (word_spacing) { properties.wordSpacing = word_spacing + unit; }
-						if (text_align) { properties.textAlign = text_align; }
-						if (text_transform) { properties.textTransform = text_transform; }
-						if (text_decoration) { properties.textDecoration = text_decoration; }
-						if (text_color) { properties.color = text_color; }
-
-						$preview.removeAttr('style');
-
-						// Customs style attribute
-						if (custom_style) { $preview.attr('style', custom_style); }
-
-						$preview.css(properties);
-
-					}, 100));
-
-					// Preview black and white backgrounds trigger
-					$preview_block.on('click', function () {
-
-						$preview.toggleClass('spwps--black-background');
-
-						var $toggle = $preview_block.find('.spwps--toggle');
-
-						if ($toggle.hasClass('fa-toggle-off')) {
-							$toggle.removeClass('fa-toggle-off').addClass('fa-toggle-on');
-						} else {
-							$toggle.removeClass('fa-toggle-on').addClass('fa-toggle-off');
-						}
-
-					});
-
-					if (!$preview_block.hasClass('hidden')) {
-						$this.trigger('change');
-					}
-
-				}
-
-			};
-
-			base.init();
-
-		});
-	};
 
 	//
 	// Confirm
@@ -1139,7 +693,8 @@
 						$buttons.prop('disabled', true);
 
 						window.wp.ajax.post('spwps_' + $panel.data('unique') + '_ajax_save', {
-							data: $('#spwps-form').serializeJSONSPF_WPSP()
+							data: $('#spwps-form').serializeJSONSPF_WPSP(),
+							nonce: $('#spwps_options_nonce' + $panel.data('unique')).val(),
 						})
 							.done(function (response) {
 
@@ -1703,9 +1258,7 @@
 
 				$this.children('.spwps-field-spinner').spwps_field_spinner();
 				$this.children('.spwps-field-switcher').spwps_field_switcher();
-				$this.children('.spwps-field-typography').spwps_field_typography();
-
-
+				// $this.children('.spwps-field-typography').spwps_field_typography();
 
 				// Field colors
 				$this.children('.spwps-field-border').find('.spwps-color').spwps_color();

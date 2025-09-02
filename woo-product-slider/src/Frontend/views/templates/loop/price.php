@@ -8,6 +8,10 @@
  * @subpackage woo-product-slider/Frontend
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die; // Cannot access directly.
+}
+
 $price_html = $product->get_price_html();
 if ( $product_price && class_exists( 'WooCommerce' ) && $price_html ) {
 	do_action( 'sp_wpsf_before_product_price', $post_id );
