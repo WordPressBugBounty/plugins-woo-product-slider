@@ -200,7 +200,7 @@ div#spwps-preview-box {
 }
 
 #spwps-preview-box .spswp_variations_form.variations_form {
-    display: none;
+	display: none;
 }
 
 .post-type-sp_wps_shortcodes .postbox-header .handle-actions .handle-order-lower,
@@ -295,4 +295,31 @@ a.sp_woo_product_slider_block_edit_button {
 
 .block-editor-page .spswp_variations_form.variations_form {
 	display: none;
+}
+
+/* Admin offer banner */
+#shapedplugin-offer-banner {
+	padding: 0;
+	border: 0;
+	line-height: 0;
+	background: transparent;
+}
+
+#shapedplugin-offer-banner a:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+#shapedplugin-offer-banner .notice-dismiss:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+#shapedplugin-offer-banner button.shapedplugin-offer-banner-dismiss:before {
+	color: #fff;
+	font-size: 22px;
+}
+
+#shapedplugin-offer-banner button.shapedplugin-offer-banner-dismiss:hover:before {
+	color: #f30808;
 }

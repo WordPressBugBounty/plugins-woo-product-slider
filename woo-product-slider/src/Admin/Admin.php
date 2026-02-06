@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;
-use ShapedPlugin\WooProductSlider\Admin\Dashboard_Notice;
+use ShapedPlugin\WooProductSlider\Admin\Notices\Dashboard_Notice;
 use ShapedPlugin\WooProductSlider\Admin\DBUpdates;
 use ShapedPlugin\WooProductSlider\Admin\HelpPage\Help_Page;
 use ShapedPlugin\WooProductSlider\Admin\Helper\SP_WPS_WQV;
@@ -98,5 +98,4 @@ class Admin {
 
 		register_post_type( 'sp_wps_shortcodes', $args );
 	}
-
 }

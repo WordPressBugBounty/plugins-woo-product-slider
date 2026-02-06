@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, product grid, product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.1.2
-Stable tag: 2.8.8
+WC tested up to: 10.4.3
+Stable tag: 2.8.10
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,7 +14,7 @@ Display your WooCommerce products in a responsive Product Slider, Product Carous
 
 == Description ==
 
-## Responsive Product Slider, Carousel & Product Grid Gallery ##
+### Responsive Product Slider, Carousel & Product Grid Gallery ###
 
 **Product Slider for WooCommerce** is a responsive and easy-to-use plugin that lets you display WooCommerce products in sliders, carousels, or grid galleries. You can place product sliders or grids anywhere on your site using a shortcode—inside pages, posts, custom templates, or widget areas.
 
@@ -30,7 +30,7 @@ The plugin includes a built-in Shortcode Generator with a user-friendly interfac
 
 Product sliders help you present more products in less space while keeping your shop organized and visually appealing. They can highlight featured or new products in key areas of your site, improving navigation and user experience.
 
-## MAIN FEATURES ##
+### MAIN FEATURES ###
 
 **Responsive and Mobile-Friendly:** The Product Slider for WooCommerce plugin is fully responsive and works seamlessly on all devices and screen sizes.
 
@@ -168,6 +168,14 @@ Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
 
 
 == Changelog ==
+
+= 2.8.10 - Dec 26, 2025 =
+* Improved: Plugin detection logic optimized for better clarity and reliability.
+* Tested: WooCommerce 10.4.3 compatibility.
+
+= 2.8.9 - Nov 25, 2025 =
+* Tested: WordPress 6.9 compatibility.
+* Tested: WooCommerce 10.3.5 compatibility.
 
 = 2.8.8 - Sep 02, 2025 =
 * Improved: Enhanced plugin security and data validation.
