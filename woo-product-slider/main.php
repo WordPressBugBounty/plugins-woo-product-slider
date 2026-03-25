@@ -3,7 +3,7 @@
  * Plugin Name:     Product Slider for WooCommerce
  * Plugin URI:      https://wooproductslider.io/?ref=1
  * Description:     Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator.
- * Version:         2.8.10
+ * Version:         2.8.11
  * Author:          ShapedPlugin LLC
  * Author URI:      https://shapedplugin.com/
  * License:         GPLv3
@@ -12,7 +12,7 @@
  * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * WC requires at least: 4.5
- * WC tested up to: 10.4.3
+ * WC tested up to: 10.6.1
  * Text Domain:     woo-product-slider
  * Domain Path:     /languages
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'SP_WPS_NAME' ) ) {
 	define( 'SP_WPS_NAME', 'woo-product-slider' );
 }
 if ( ! defined( 'SP_WPS_VERSION' ) ) {
-	define( 'SP_WPS_VERSION', '2.8.10' );
+	define( 'SP_WPS_VERSION', '2.8.11' );
 }
 if ( ! defined( 'SP_WPS_PATH' ) ) {
 	define( 'SP_WPS_PATH', plugin_dir_path( __FILE__ ) . 'src/' );

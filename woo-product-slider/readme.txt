@@ -5,8 +5,8 @@ Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.4.3
-Stable tag: 2.8.10
+WC tested up to: 10.6.1
+Stable tag: 2.8.11
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,10 @@ Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
 
 
 == Changelog ==
+
+= 2.8.11 - Mar 25, 2026 =
+* Improved: Ensured the product limit option cannot be less than 1.
+* Tested: WooCommerce 10.6.1 compatibility.
 
 = 2.8.10 - Dec 26, 2025 =
 * Improved: Plugin detection logic optimized for better clarity and reliability.

@@ -537,7 +537,7 @@ SPF_WPSP::createSection(
 				'sanitize' => 'spwps_sanitize_number_field',
 				'default'  => 16,
 				'max'      => 60000,
-				'min'      => -1,
+				'min'      => 1,
 			),
 			array(
 				'type'    => 'notice',
