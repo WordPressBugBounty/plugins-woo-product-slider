@@ -458,8 +458,8 @@ class Help_Page {
 								<div class="spwps-info-box-title">
 									<h4><i class="spwps-icon-team-icon"></i> Join The Community</h4>
 								</div>
-								<span class='spwps-normal-paragraph'>Join the official ShapedPlugin Facebook group to share your experiences, thoughts, and ideas.</span>
-								<a target="_blank" class='spwps-small-btn' href="https://www.facebook.com/groups/ShapedPlugin/">Join Now</a>
+								<span class='spwps-normal-paragraph'>Join the official ShapedPlugin community to share your experiences, thoughts, and ideas.</span>
+								<a target="_blank" class='spwps-small-btn' href="https://community.shapedplugin.com/portal/">Join Now</a>
 							</div>
 						</div>
 					</div>

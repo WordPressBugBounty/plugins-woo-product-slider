@@ -36,7 +36,7 @@ class SPF_WPSP {
 	 *
 	 * @var string
 	 */
-	public static $version = '2.8.6'; // It must be same as plugin version.
+	public static $version = '2.8.12'; // It must be same as plugin version.
 	/**
 	 * Dir.
 	 *

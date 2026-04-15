@@ -2,11 +2,11 @@
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, product grid, product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.6.1
-Stable tag: 2.8.11
+WC tested up to: 10.7.0
+Stable tag: 2.8.12
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,11 @@ Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
 
 
 == Changelog ==
+
+= 2.8.12 - Apr 15, 2026 =
+* Fix: Resolved styling issues in certain options with WordPress 7.0.
+* Tested: WordPress 7.0 compatibility.
+* Tested: WooCommerce 10.7.0 compatibility.
 
 = 2.8.11 - Mar 25, 2026 =
 * Improved: Ensured the product limit option cannot be less than 1.
