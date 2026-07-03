@@ -142,6 +142,9 @@ class Dashboard_Notice {
 		if ( ! isset( $post_data['nonce'] ) || ! wp_verify_nonce( sanitize_key( $post_data['nonce'] ), 'sp_wps_review_notice' ) ) {
 			return;
 		}
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 		$review = get_option( 'sp_woo_product_slider_review_notice_dismiss' );
 		if ( ! $review ) {
 			$review = array();

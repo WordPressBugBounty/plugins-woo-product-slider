@@ -458,7 +458,10 @@ if ( ! class_exists( 'SPF_WPSP_Options' ) ) {
 				$nonce = sanitize_text_field( wp_unslash( $_POST[ 'spwps_options_nonce' . $this->unique ] ) );
 			}
 
-			if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'spwps_options_nonce' ) ) {
+			$capability        = apply_filters( 'sp_wps_shortcodes_ui_permission', 'manage_options' );
+			$sp_wps_is_capable = current_user_can( $capability ) ? true : false;
+
+			if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'spwps_options_nonce' ) || ! $sp_wps_is_capable ) {
 				return false;
 			}
 

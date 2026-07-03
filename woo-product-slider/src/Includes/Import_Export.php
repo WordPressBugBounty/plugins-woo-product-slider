@@ -132,10 +132,15 @@ class Import_Export {
 
 				if ( isset( $shortcode['meta'] ) && is_array( $shortcode['meta'] ) ) {
 					foreach ( $shortcode['meta'] as $key => $value ) {
+						$value = str_replace( '{#ID#}', $new_shortcode_id, $value );
+
+						if ( is_serialized( $value ) ) {
+							$value = unserialize( $value, ['allowed_classes' => false] ); // phpcs:ignore -- no classes allowed.
+						}
 						update_post_meta(
 							$new_shortcode_id,
 							$key,
-							maybe_unserialize( str_replace( '{#ID#}', $new_shortcode_id, $value ) )
+							$value
 						);
 					}
 				}

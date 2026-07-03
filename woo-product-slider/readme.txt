@@ -5,8 +5,8 @@ Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.7.0
-Stable tag: 2.8.12
+WC tested up to: 10.9.1
+Stable tag: 2.8.13
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,11 @@ Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
 
 
 == Changelog ==
+
+= 2.8.13 – Jul 03, 2026 =
+* Improved: The recommended plugins section now uses the plugins_api function for more reliable data.
+* Improved: Hardened plugin security with proper capability checks.
+* Tested: Compatibility confirmed with WooCommerce 10.9.1.
 
 = 2.8.12 - Apr 15, 2026 =
 * Fix: Resolved styling issues in certain options with WordPress 7.0.
