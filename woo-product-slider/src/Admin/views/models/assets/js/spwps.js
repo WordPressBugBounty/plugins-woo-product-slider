@@ -1595,7 +1595,7 @@ jQuery(function ($) {
 		if (type.includes(str)) {
 			$(selector + ' .wps-pro-notice').hide();
 		} else {
-			var noticeText = "This is a <a href='https://wooproductslider.io/pricing/?ref=1' target='_blank'>Pro Feature!</a>";
+			var noticeText = "This is a <a href='https://renoproductslider.com/pricing/?ref=1' target='_blank'>Pro Feature!</a>";
 			$(selector + ' .wps-pro-notice').html(noticeText).show();
 		}
 	}

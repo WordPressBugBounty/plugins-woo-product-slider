@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;
 use ShapedPlugin\WooProductSlider\Admin\Notices\Dashboard_Notice;
+use ShapedPlugin\WooProductSlider\Admin\Notices\Rebrand_Notice;
 use ShapedPlugin\WooProductSlider\Admin\DBUpdates;
 use ShapedPlugin\WooProductSlider\Admin\HelpPage\Help_Page;
 use ShapedPlugin\WooProductSlider\Admin\Helper\SP_WPS_WQV;
@@ -31,6 +32,7 @@ class Admin {
 	public function __construct() {
 		new SPF_WPSP();
 		new Dashboard_Notice();
+		Rebrand_Notice::instance();
 		new DBUpdates();
 		new Help_Page();
 		new SP_WPS_WQV();
@@ -82,7 +84,7 @@ class Admin {
 			array(
 				'labels'          => $labels,
 				'hierarchical'    => false,
-				'description'     => esc_html__( 'Product Slider for WooCommerce', 'woo-product-slider' ),
+				'description'     => esc_html__( 'Reno Product Slider', 'woo-product-slider' ),
 				'public'          => false,
 				'show_ui'         => $show_ui,
 				'show_in_menu'    => $show_ui,

@@ -41,6 +41,11 @@ function sp_wpsf_delete_plugin_data() {
 	// Delete offer banner related option keys.
 	delete_option( 'shapedplugin_offer_banner_dismissed_black_friday_2025' );
 	delete_option( 'shapedplugin_offer_banner_dismissed_new_year_2026' );
+
+	/*
+	 * Delete the rebrand notice dismissal flag.
+	 */
+	delete_option( 'sp_wps_rebrand_notice_dismissed' );
 }
 
 // Load WPSF file.

@@ -1,0 +1,136 @@
+/* Rebrand announcement notice. */
+.wps-rebrand-notice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    /* A flex container makes its own formatting context, so it would sit
+       beside the right-floated Screen Options / Help tabs instead of
+       spanning past them. */
+    clear: both;
+    min-height: 40px;
+    padding: 10px 48px;
+    /* Bleed past the 20px left padding on #wpcontent so the bar spans the
+       full width of the screen, from the admin menu to the viewport edge. */
+    margin: 0px 0 0px -20px;
+    background-color: #148652;
+}
+
+.wps-rebrand-notice-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.wps-rebrand-notice-icon {
+    display: block;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.wps-rebrand-notice-text {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.wps-rebrand-notice-text strong {
+    font-weight: 700;
+}
+
+/* Carries the visible "Why we rebranded" label, so it sizes to its content
+   instead of being an icon-only 20px hit area. */
+.wps-rebrand-notice-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 4px;
+    margin-left: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: underline;
+    opacity: .9;
+    transition: opacity .2s linear;
+}
+
+.wps-rebrand-notice-link svg {
+    flex-shrink: 0;
+}
+
+.wps-rebrand-notice-link:hover,
+.wps-rebrand-notice-link:focus {
+    color: #fff;
+    opacity: 1;
+    outline: 0;
+    box-shadow: none;
+}
+
+.wps-rebrand-notice-dismiss {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    opacity: .85;
+    transition: opacity .2s linear;
+}
+
+.wps-rebrand-notice-dismiss:hover,
+.wps-rebrand-notice-dismiss:focus {
+    opacity: 1;
+    outline: 0;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 782px) {
+    .wps-rebrand-notice {
+        padding: 10px 44px 10px 12px;
+        /* #wpcontent drops to 10px of left padding on small screens. */
+        margin: 10px 0 15px -10px;
+    }
+
+    .wps-rebrand-notice-content {
+        align-items: flex-start;
+    }
+
+    .wps-rebrand-notice-text {
+        text-align: left;
+    }
+}
+
+.rtl .wps-rebrand-notice {
+    margin: 10px -20px 15px 0;
+}
+
+.rtl .wps-rebrand-notice-dismiss {
+    right: auto;
+    left: 12px;
+}
+
+@media screen and (max-width: 782px) {
+    .rtl .wps-rebrand-notice {
+        padding: 10px 12px 10px 44px;
+        margin: 10px -10px 15px 0;
+    }
+
+    .rtl .wps-rebrand-notice-text {
+        text-align: right;
+    }
+}

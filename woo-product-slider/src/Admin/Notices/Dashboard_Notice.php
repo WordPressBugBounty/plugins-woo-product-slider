@@ -5,8 +5,8 @@
  * For displaying limited time promotion in admin panel
  *
  * @since      2.2.0
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Admin/Notices
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Admin/Notices
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 
@@ -84,11 +84,11 @@ class Dashboard_Notice {
 		?>
 		<div id="sp-wps-review-notice" class="sp-wps-review-notice">
 			<div class="sp-wps-plugin-icon">
-				<img src="<?php echo esc_url( SP_WPS_URL . 'Admin/assets/images/product-review-notice.svg' ); ?>" alt="Product Slider for Woocommerce">
+				<img src="<?php echo esc_url( SP_WPS_URL . 'Admin/assets/images/product-review-notice.svg' ); ?>" alt="Reno Product Slider">
 			</div>
 			<div class="sp-wps-notice-text">
-				<h3>Enjoying <strong>Product Slider for Woocommerce</strong>?</h3>
-				<p>We hope you had a wonderful experience using <strong>Woo Product Slider</strong>. Please take a moment to leave a review on <a href="https://wordpress.org/support/plugin/woo-product-slider/reviews/" target="_blank"><strong>WordPress.org</strong></a>. Your positive review will help us improve. Thanks! 😊</p>
+				<h3>Enjoying <strong>Reno Product Slider</strong>?</h3>
+				<p>We hope you had a wonderful experience using <strong>Reno Product Slider</strong>. Please take a moment to leave a review on <a href="https://wordpress.org/support/plugin/woo-product-slider/reviews/" target="_blank"><strong>WordPress.org</strong></a>. Your positive review will help us improve. Thanks! 😊</p>
 
 				<p class="sp-wps-review-actions">
 					<a href="https://wordpress.org/support/plugin/woo-product-slider/reviews/" target="_blank" class="button button-primary notice-dismissed rate-woo-product-slider">Ok, you deserve ★★★★★</a>
@@ -176,13 +176,34 @@ class Dashboard_Notice {
 	 */
 	public function admin_footer( $text ) {
 		$screen = get_current_screen();
+
+		if ( ! $screen ) {
+			return $text;
+		}
+
+		// The Get Started page ships its own footer with a "Rate us!" link, so keep this one empty there.
+		if ( $this->is_help_page() ) {
+			return '';
+		}
+
 		if ( 'sp_wps_shortcodes' === $screen->post_type || 'sp_wps_shortcodes_page_wps_settings' === $screen->id ) {
 
 			$url  = 'https://wordpress.org/support/plugin/woo-product-slider/reviews/';
-			$text = sprintf( wp_kses_post( 'Enjoying <strong>Product Slider for WooCommerce?</strong> Please rate us <span class="spwps-footer-text-star">★★★★★</span> <a href="%s" target="_blank">WordPress.org</a>. Your positive feedback will help us grow more. Thank you! 😊', 'woo-product-slider' ), $url );
+			$text = sprintf( wp_kses_post( 'Enjoying <strong>Reno Product Slider?</strong> Please rate us <span class="spwps-footer-text-star">★★★★★</span> <a href="%s" target="_blank">WordPress.org</a>. Your positive feedback will help us grow more. Thank you! 😊', 'woo-product-slider' ), $url );
 		}
 
 		return $text;
+	}
+
+	/**
+	 * Whether the current request is the plugin's Get Started (help) page.
+	 *
+	 * @return boolean
+	 */
+	private function is_help_page() {
+		$page = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		return 'wps_help' === $page;
 	}
 	/**
 	 * Footer version Text
@@ -193,8 +214,18 @@ class Dashboard_Notice {
 	 */
 	public function admin_footer_version( $text ) {
 		$screen = get_current_screen();
+
+		if ( ! $screen ) {
+			return $text;
+		}
+
+		// The Get Started page shows the version in its own header badge.
+		if ( $this->is_help_page() ) {
+			return '';
+		}
+
 		if ( 'sp_wps_shortcodes' === $screen->post_type ) {
-			$text = 'Woo Product Slider ' . SP_WPS_VERSION;
+			$text = 'Reno Product Slider ' . SP_WPS_VERSION;
 		}
 
 		return $text;

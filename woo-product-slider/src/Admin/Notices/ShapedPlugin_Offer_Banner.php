@@ -3,8 +3,8 @@
  * Plugin offer banner.
  *
  * @since      2.8.8
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Admin/Noticies
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Admin/Noticies
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 
@@ -65,14 +65,14 @@ class ShapedPlugin_Offer_Banner {
 				'start' => strtotime( '2025-11-18 00:00:00' ),
 				'end'   => strtotime( '2025-12-14 23:59:59' ),
 				'image' => SP_WPS_URL . 'Admin/assets/images/offer-banner/bfcm-offer-banner.svg',
-				'link'  => 'https://wooproductslider.io/pricing/?campaign=woops&ref=423',
+				'link'  => 'https://renoproductslider.com/pricing/?campaign=woops&ref=423',
 			),
 			'new_year'     => array(
 				'id'    => 'new_year_2026',
 				'start' => strtotime( '2025-12-26 00:00:00' ),
 				'end'   => strtotime( '2026-01-14 23:59:59' ),
 				'image' => SP_WPS_URL . 'Admin/assets/images/offer-banner/new-year-offer-banner.svg',
-				'link'  => 'https://wooproductslider.io/pricing/?campaign=woops&ref=423',
+				'link'  => 'https://renoproductslider.com/pricing/?campaign=woops&ref=423',
 			),
 		);
 

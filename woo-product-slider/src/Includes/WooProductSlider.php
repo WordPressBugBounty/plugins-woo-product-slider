@@ -107,9 +107,9 @@ class WooProductSlider {
 		}
 		add_action( 'admin_action_sp_wps_duplicate_shortcode', array( $this, 'sp_wps_duplicate_shortcode' ) );
 		add_filter( 'post_row_actions', array( $this, 'sp_wps_duplicate_shortcode_link' ), 10, 2 );
-		add_action( 'admin_notices', array( $this, 'woo_gallery_slider_admin_notice' ) );
+		// add_action( 'admin_notices', array( $this, 'woo_gallery_slider_admin_notice' ) );
 		// add_action( 'admin_notices', array( $this, 'wqv_install_admin_notice' ) );
-		add_action( 'admin_notices', array( $this, 'smart_swatches_install_admin_notice' ) );
+		// add_action( 'admin_notices', array( $this, 'smart_swatches_install_admin_notice' ) );
 		add_action( 'wp_ajax_dismiss_smart_swatches_notice', array( $this, 'dismiss_smart_swatches_notice' ) );
 		add_action( 'wp_ajax_dismiss_wqv_notice', array( $this, 'dismiss_wqv_notice' ) );
 		add_action( 'wp_ajax_dismiss_woo_gallery_slider_notice', array( $this, 'dismiss_woo_gallery_slider_notice' ) );
@@ -146,7 +146,7 @@ class WooProductSlider {
 
 			array_unshift( $links, $new_links );
 
-			$links['go_pro'] = sprintf( '<a target="_blank" href="%1$s" style="color: #35b747; font-weight: 700;">Go Pro!</a>', 'https://wooproductslider.io/pricing/?ref=1' );
+			$links['go_pro'] = sprintf( '<a target="_blank" href="%1$s" style="color: #35b747; font-weight: 700;">Go Pro!</a>', 'https://renoproductslider.com/pricing/?ref=1' );
 		}
 
 		return $links;
@@ -164,7 +164,7 @@ class WooProductSlider {
 	 */
 	public function after_woo_product_slider_row_meta( $plugin_meta, $file ) {
 		if ( SP_WPS_BASENAME === $file ) {
-			$plugin_meta[] = '<a href="https://wooproductslider.io/lite-version-demo/" target="_blank">' . __( 'Live Demo', 'woo-product-slider' ) . '</a>';
+			$plugin_meta[] = '<a href="https://demo.renoproductslider.com/lite-version-demo/" target="_blank">' . __( 'Live Demo', 'woo-product-slider' ) . '</a>';
 		}
 
 		return $plugin_meta;
@@ -216,7 +216,7 @@ class WooProductSlider {
 					'readonly' => array(),
 					'value'    => array(),
 				);
-				$column_field       = '<div class="wpspro-after-copy-text"><i class="fa fa-check-circle"></i>  Shortcode  Copied to Clipboard! </div><input style="width: 270px;padding: 6px;cursor:pointer;" type="text" readonly="readonly" value="[woo_product_slider id=&quot;' . $post_id . '&quot;]"/>';
+				$column_field       = '<div class="wpspro-after-copy-text"><i class="fa fa-check-circle"></i>  Shortcode  Copied to Clipboard! </div><input style="width: 270px;padding: 6px;cursor:pointer;" type="text" readonly="readonly" value="[reno_product_slider id=&quot;' . $post_id . '&quot;]"/>';
 				echo wp_kses( $column_field, $input_tag );
 				break;
 			case 'wps_layout':
@@ -365,7 +365,7 @@ class WooProductSlider {
 				admin_url( 'plugin-install.php' )
 			)
 		);
-		$outline = '<div class="error"><p>You must install and activate <a class="thickbox open-plugin-details-modal" href="' . $link . '"><strong>WooCommerce</strong></a> plugin to make the <strong>Product Slider for WooCommerce</strong> work.</p></div>';
+		$outline = '<div class="error"><p>You must install and activate <a class="thickbox open-plugin-details-modal" href="' . $link . '"><strong>WooCommerce</strong></a> plugin to make the <strong>Reno Product Slider</strong> work.</p></div>';
 		echo wp_kses_post( $outline );
 	}
 
@@ -418,7 +418,7 @@ class WooProductSlider {
 			);
 			$nonce     = wp_create_nonce( 'woogs-notice' );
 
-			echo sprintf( '<div class="woogs-notice notice is-dismissible" data-nonce="%7$s"><img src="%1$s"/><div class="woogs-notice-text">To Enable the <strong> Single Product Image Gallery Slider</strong>, %4$s <a href="%2$s" class="thickbox open-plugin-details-modal"><strong>WooGallery</strong></a> and <strong>Boost Sales!</strong> &nbsp;&nbsp; <a href="%3$s" rel="noopener" class="woogs-activate-btn">%5$s</a><a href="https://demo.woogallery.io/thumbnails-bottom/product/air-max-plus/" target="_blank" class="woogs-demo-button">See How It Works<span>%6$s</span></a></div></div>', esc_url( $icon ), esc_url( $popup_url ), esc_url( $install_url ), esc_html( $text ), esc_html( $button_text ), $arrow, $nonce ); // phpcs:ignore
+			echo sprintf( '<div class="woogs-notice notice is-dismissible" data-nonce="%7$s"><img src="%1$s"/><div class="woogs-notice-text">To Enable the <strong> Single Product Image Gallery Slider</strong>, %4$s <a href="%2$s" class="thickbox open-plugin-details-modal"><strong>Reno Product Gallery</strong></a> and <strong>Boost Sales!</strong> &nbsp;&nbsp; <a href="%3$s" rel="noopener" class="woogs-activate-btn">%5$s</a><a href="https://demo.woogallery.io/thumbnails-bottom/product/air-max-plus/" target="_blank" class="woogs-demo-button">See How It Works<span>%6$s</span></a></div></div>', esc_url( $icon ), esc_url( $popup_url ), esc_url( $install_url ), esc_html( $text ), esc_html( $button_text ), $arrow, $nonce ); // phpcs:ignore
 		}
 	}
 	/**
@@ -470,7 +470,7 @@ class WooProductSlider {
 			);
 
 			$nonce = wp_create_nonce( 'wqv-notice' );
-			echo sprintf( '<div class="wqv-notice notice is-dismissible" data-nonce="%7$s"><img src="%1$s"/><div class="wqv-notice-text">To Allow the Customers to <strong>Have a Quick View of Products</strong>, %4$s <a href="%2$s" class="thickbox open-plugin-details-modal"><strong>Quick View for WooCommerce</strong></a> and <strong>Boost Sales!</strong> &nbsp;&nbsp; <a href="%3$s" rel="noopener" class="wqv-activate-btn">%5$s</a><a href="https://demo.shapedplugin.com/woocommerce-quick-view/" target="_blank" class="wqv-demo-button">See How It Works<span>%6$s</span></a></div></div>', esc_url( $icon ), esc_url( $popup_url ), esc_url( $install_url ), esc_html( $text ), esc_html( $button_text ), $arrow, $nonce ); // phpcs:ignore
+			echo sprintf( '<div class="wqv-notice notice is-dismissible" data-nonce="%7$s"><img src="%1$s"/><div class="wqv-notice-text">To Allow the Customers to <strong>Have a Quick View of Products</strong>, %4$s <a href="%2$s" class="thickbox open-plugin-details-modal"><strong>Reno Quick View</strong></a> and <strong>Boost Sales!</strong> &nbsp;&nbsp; <a href="%3$s" rel="noopener" class="wqv-activate-btn">%5$s</a><a href="https://demo.shapedplugin.com/woocommerce-quick-view/" target="_blank" class="wqv-demo-button">See How It Works<span>%6$s</span></a></div></div>', esc_url( $icon ), esc_url( $popup_url ), esc_url( $install_url ), esc_html( $text ), esc_html( $button_text ), $arrow, $nonce ); // phpcs:ignore
 		}
 	}
 
@@ -496,7 +496,7 @@ class WooProductSlider {
 
 			$plugins = array_keys( get_plugins() );
 			$slug    = 'smart-swatches';
-			$icon    = 'https://ps.w.org/smart-swatches/assets/icon-128x128.gif';
+			$icon    = SP_WPS_URL . 'Admin/assets/images/smart-swatches-notice.svg';
 			// $icon        = SP_WPS_URL . 'Admin/assets/images/woo-quick-view-notice.svg';
 			$text        = esc_html__( 'Install', 'woo-product-slider' );
 			$button_text = esc_html__( 'Install Now', 'woo-product-slider' );

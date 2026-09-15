@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:     Product Slider for WooCommerce
- * Plugin URI:      https://wooproductslider.io/?ref=1
+ * Plugin Name:     Reno Product Slider (formerly Product Slider for WooCommerce)
+ * Plugin URI:      https://renoproductslider.com/?ref=1
  * Description:     Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator.
- * Version:         2.8.13
+ * Version:         2.9.0
  * Author:          ShapedPlugin LLC
  * Author URI:      https://shapedplugin.com/
  * License:         GPLv3
@@ -12,11 +12,11 @@
  * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * WC requires at least: 4.5
- * WC tested up to: 10.9.1
+ * WC tested up to: 11.1.0
  * Text Domain:     woo-product-slider
  * Domain Path:     /languages
  *
- * @package         Woo_Product_Slider
+ * @package         Reno_Product_Slider
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,7 +27,7 @@ if ( ! defined( 'SP_WPS_NAME' ) ) {
 	define( 'SP_WPS_NAME', 'woo-product-slider' );
 }
 if ( ! defined( 'SP_WPS_VERSION' ) ) {
-	define( 'SP_WPS_VERSION', '2.8.13' );
+	define( 'SP_WPS_VERSION', '2.9.0' );
 }
 if ( ! defined( 'SP_WPS_PATH' ) ) {
 	define( 'SP_WPS_PATH', plugin_dir_path( __FILE__ ) . 'src/' );
@@ -39,19 +39,54 @@ if ( ! defined( 'SP_WPS_BASENAME' ) ) {
 	define( 'SP_WPS_BASENAME', plugin_basename( __FILE__ ) );
 }
 
+// Load the shared "Variation Gallery Onboarding" module. Self-registers and, via
+// a version-guarded bootstrap, boots only once even if several ShapedPlugin
+// plugins bundle their own copy.
+//
+// Gated here as well as inside load.php: the loader's boot callback is defined by
+// whichever bundled copy is included first (function_exists guard), so a sibling
+// plugin shipping an older, ungated copy would otherwise boot the module on
+// frontend, REST and cron requests regardless of this copy's own gate. Every hook
+// the module registers is admin-only. is_admin() is true for admin-ajax.php, which
+// the install/activate handlers need.
+if ( is_admin() ) {
+	require_once SP_WPS_PATH . 'Admin/VariationGalleryOnboarding/load.php';
+}
+
 /**
  * Pro version check.
+ *
+ * Detection is independent of the Pro plugin's folder and main-file names:
+ * a hardcoded "woo-product-slider-pro/woo-product-slider-pro.php" match breaks
+ * whenever the Pro plugin is installed under a different directory (e.g. a
+ * GitHub/branch ZIP that extracts as "woo-product-slider-pro-<branch>"). We
+ * detect Pro by its runtime footprint first, then fall back to matching the
+ * Pro main-file basename anywhere in the active-plugins list.
  *
  * @return boolean
  */
 function is_woo_product_slider_pro_active() {
-	require_once ABSPATH . 'wp-admin/includes/plugin.php';
-
-	if (
-		is_plugin_active( 'woo-product-slider-pro/woo-product-slider-pro.php' ) ||
-		is_plugin_active_for_network( 'woo-product-slider-pro/woo-product-slider-pro.php' )
-	) {
+	// Fast, name-independent path: the Pro plugin defines this constant (and the
+	// function below) the moment its main file loads. Pro is sorted before the
+	// free plugin in the active-plugins list, so it is already loaded here.
+	if ( defined( 'SP_WPSPRO_VERSION' ) || function_exists( 'sp_woo_product_slider_pro' ) ) {
 		return true;
+	}
+
+	// Load-order- and folder-name-independent fallback: scan every active plugin
+	// (per-site + network) and match the Pro main-file basename regardless of the
+	// directory that wraps it. The options are read directly rather than through
+	// is_plugin_active(), so wp-admin/includes/plugin.php is deliberately not
+	// loaded here — this function runs on every frontend request.
+	$active = (array) get_option( 'active_plugins', array() );
+	if ( is_multisite() ) {
+		$active = array_merge( $active, array_keys( (array) get_site_option( 'active_sitewide_plugins', array() ) ) );
+	}
+
+	foreach ( $active as $plugin_file ) {
+		if ( 'woo-product-slider-pro.php' === basename( $plugin_file ) ) {
+			return true;
+		}
 	}
 
 	return false;
@@ -65,7 +100,7 @@ if ( ! function_exists( 'woo_product_slider' ) ) {
 	 * @return void
 	 */
 	function woo_product_slider( $id ) {
-		echo do_shortcode( '[woo_product_slider id="' . $id . '"]' );
+		echo do_shortcode( '[reno_product_slider id="' . $id . '"]' );
 	}
 }
 

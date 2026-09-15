@@ -5,8 +5,8 @@
  * @link https://shapedplugin.com
  * @since 2.0.0
  *
- * @package Woo_Product_Slider.
- * @subpackage Woo_Product_Slider/Admin.
+ * @package Reno_Product_Slider.
+ * @subpackage Reno_Product_Slider/Admin.
  */
 
 namespace ShapedPlugin\WooProductSlider\Admin\views\models\classes;
@@ -36,7 +36,7 @@ class SPF_WPSP {
 	 *
 	 * @var string
 	 */
-	public static $version = '2.8.13'; // It must be same as plugin version.
+	public static $version = '2.9.0'; // It must be same as plugin version.
 	/**
 	 * Dir.
 	 *

@@ -5050,14 +5050,14 @@ div#spwps_live_preview::after {
 span.spwps-shortcode-selectable {
 	background-color: #F6EBF3;
 	;
-	padding: 10px 15px 10px 30px;
+	padding: 10px 12px 10px 30px;
 	display: inline-block;
 	border: 1px solid #E0CDDD;
 	cursor: pointer;
 	border-radius: 3px;
 	word-break: break-word;
 	position: relative;
-	width: 80%;
+	width: 82%;
 }
 
 .spwps-scode-wrap-side p {

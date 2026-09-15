@@ -1,12 +1,12 @@
 <?php
 /**
- * Product Slider for WooCommerce - SP_WPS_WQV class file.
+ * Reno Product Slider - SP_WPS_WQV class file.
  *
  * @link https://shapedplugin.com
  * @since 2.0.0
  *
- * @package Woo_Product_Slider.
- * @subpackage Woo_Product_Slider/Admin/views.
+ * @package Reno_Product_Slider.
+ * @subpackage Reno_Product_Slider/Admin/views.
  */
 
 namespace ShapedPlugin\WooProductSlider\Admin\Helper;
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Product Slider for WooCommerce - SP_WPS_WQV class
+ * Reno Product Slider - SP_WPS_WQV class
  *
  * @since 2.0
  */

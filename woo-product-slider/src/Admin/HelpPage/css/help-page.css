@@ -4,7 +4,9 @@
 .spwps__help.lite-to-pro-page *,
 .spwps__help.start-page *,
 .spwps__help.about-page *,
-.spwps__help.header * {
+.spwps-rebrand-notice *,
+.spwps-topbar *,
+.spwps-footer * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,11 +19,17 @@
   outline: none;
 }
 .sp-woo-product-slider-help {
-  margin-left: -20px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 32px);
+  margin: 0 0 -65px -20px;
+  background-color: #f6f7f7;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  color: #2f2f2f;
 }
 .sp-woo-product-slider-help .spwps-container {
-  padding: 0 15px;
-  max-width: 1240px;
+  padding: 0;
+  max-width: 1304px;
   margin: auto;
 }
 /*----------------------------------------*/
@@ -82,10 +90,69 @@
 .sp-woo-product-slider-help .spwps-big-btn-border {
   padding: 16px 30px;
 }
-.sp-woo-product-slider-help .spwps-info-box-title{
-  font-size: 18px;
+.sp-woo-product-slider-help .spwps-live-pro-demo {
+  color: #7728A8;
+  border-color: #7728A8;
+}
+.sp-woo-product-slider-help .spwps-big-btn-border:hover,
+.sp-woo-product-slider-help .spwps-medium-btn:hover,
+.sp-woo-product-slider-help .spwps-small-btn:hover {
+  color: #fff;
+  background-color: #7728A8;
+  border-color: transparent;
+}
+.sp-woo-product-slider-help .spwps-about-btn a:nth-child(1):hover {
+  background-color: #6624a0;
+}
+/*----------------------------------------*/
+/*  Buttons (Figma design system)
+/*----------------------------------------*/
+.sp-woo-product-slider-help .spwps-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 17px 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
   font-weight: 600;
-  color: #1D2327;
+  line-height: 20px;
+  transition: .2s linear;
+}
+.sp-woo-product-slider-help .spwps-btn img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+.sp-woo-product-slider-help .spwps-btn--primary {
+  background-color: #a82899;
+  color: #fff;
+}
+.sp-woo-product-slider-help .spwps-btn--primary:hover {
+  background-color: #8a1d8c;
+  color: #fff;
+}
+.sp-woo-product-slider-help .spwps-btn--outline {
+  padding: 17px 28px;
+  background-color: #fff;
+  border-color: #a82899;
+  color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-btn--outline:hover {
+  background-color: #a82899;
+  color: #fff;
+}
+.sp-woo-product-slider-help .spwps-btn--ghost {
+  padding: 12px 16px;
+  background-color: #fff;
+  border-color: #949494;
+  color: #757575;
+  font-size: 14px;
+}
+.sp-woo-product-slider-help .spwps-btn--ghost:hover {
+  border-color: #a82899;
+  color: #a82899;
 }
 .sp-woo-product-slider-help .spwps-close-icon,
 .sp-woo-product-slider-help .spwps-check-icon{
@@ -117,169 +184,323 @@
   background-color: #EC2121;
 }
 /*----------------------------------------*/
-/*  Header style
+/*  Rebranding notice bar
 /*----------------------------------------*/
-.sp-woo-product-slider-help .spwps-header-area-top {
-  text-align: center;
-  background-color: #05AA64;
-  padding: 16px 0;
+.sp-woo-product-slider-help .spwps-rebrand-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 40px;
+  padding: 10px 16px;
+  background-color: #148652;
+  overflow: hidden;
 }
-.sp-woo-product-slider-help .spwps-header-area-top a,
-.sp-woo-product-slider-help .spwps-header-area-top p {
+.sp-woo-product-slider-help .spwps-rebrand-notice__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+}
+.sp-woo-product-slider-help .spwps-rebrand-notice p {
   color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
 }
-.sp-woo-product-slider-help .spwps-header-area-top a{
-  text-decoration: underline;
-}
-.sp-woo-product-slider-help .spwps-header-area {
-  position: relative;
-  background-color: #ffffff;
-  padding: 45px 0 25px;
-}
-.sp-woo-product-slider-help .spwps-header-logo {
-  position: relative;
-  display: inline-block;
-}
-.sp-woo-product-slider-help .spwps-header-logo span{
-  position: absolute;
-  top: -15px;
-  right: -55px;
-  display: inline-block;
-  color: #4B4744;
-  background: #F7EBFE;
-  padding: 3px 10px;
-  font-size: 13px;
+.sp-woo-product-slider-help .spwps-rebrand-notice p strong {
   font-weight: 700;
-  border-radius: 4px;
-  border: 1px solid #D89BFD;
 }
-.sp-woo-product-slider-help .spwps-header-logo-shape {
-  position: absolute;
-  right: 20px;
-  top: 30px;
-}
-.sp-woo-product-slider-help .spwps-header-nav {
+/*----------------------------------------*/
+/*  Top bar (brand, tab nav, get help)
+/*----------------------------------------*/
+/* The bar itself bleeds the full width; its row shares the content column's
+   box (see .spwps-help-content) so the brand, tabs and support link line up
+   with the cards below on wide screens. */
+.sp-woo-product-slider-help .spwps-topbar {
+  padding: 0;
   background-color: #fff;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #ddd;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul{
+.sp-woo-product-slider-help .spwps-topbar__inner {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 64px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 48px;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul li{
+.sp-woo-product-slider-help .spwps-topbar__start {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.sp-woo-product-slider-help .spwps-topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sp-woo-product-slider-help .spwps-topbar__logo {
+  display: block;
+  width: 122px;
+  height: 24px;
+}
+.sp-woo-product-slider-help .spwps-topbar__version {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 17px;
+  color: #2f2f2f;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+.sp-woo-product-slider-help .spwps-topbar__version img {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.sp-woo-product-slider-help .spwps-header-nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   list-style: none;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul li a{
-  padding: 14px 18px;
-  display: inline-block;
-  color: #4B4744;
-  border: 1px solid transparent;
-  border-bottom: 0;
-  border-radius: 4px 4px 0 0;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: .3px;
+.sp-woo-product-slider-help .spwps-header-nav-menu__separator {
+  width: 1px;
+  height: 20px;
+  background-color: #bbb;
+  border-radius: 1px;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul li a.active {
-  background-color: #f0f0f1;
-  border-color: #7728A8;
-  color: #7728A8;
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a {
   position: relative;
-  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 64px;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color .2s linear;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul li a:focus{
-  box-shadow: none;
-  outline: none;
+/* Nav icons are masked so they can recolour on hover/active like the label. */
+.sp-woo-product-slider-help .spwps-nav-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #2f2f2f;
+  transition: background-color .2s linear;
 }
-.sp-woo-product-slider-help .spwps-header-nav-menu ul li a.active::before{
-  position: absolute;
+.sp-woo-product-slider-help .spwps-nav-icon--plugins {
+  -webkit-mask: url(../img/our-plugins-icon.svg) center center / contain no-repeat;
+  mask: url(../img/our-plugins-icon.svg) center center / contain no-repeat;
+}
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a:hover,
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a.active {
+  color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a:hover .spwps-nav-icon,
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a.active .spwps-nav-icon {
+  background-color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-header-nav-menu ul li a.active::after {
   content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f1;
-  top: 10px;
+  position: absolute;
   left: 0;
-  z-index: -1;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-topbar__support {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #2f2f2f;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  transition: color .2s linear;
+}
+.sp-woo-product-slider-help .spwps-topbar__support:hover {
+  color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-topbar__support img {
+  display: block;
+  width: 15px;
+  height: 15px;
 }
 /*----------------------------------------*/
-/*  Start page style
+/*  Content wrapper
 /*----------------------------------------*/
-.sp-woo-product-slider-help .spwps-start-page-wrap {
-  display: flex;
-  gap: 40px;
-  margin-top: 50px;
-}
-.sp-woo-product-slider-help .spwps-video-area {
-  background: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 0 6px 0 rgb(0 0 0 / 6%);
+/* Border-box with an explicit width, not the shrink-to-fit an auto-margined
+   flex item would take: the top bar and footer rows size themselves off the
+   same box, and they can only line up with it if it is deterministic. */
+.sp-woo-product-slider-help .spwps-help-content {
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 48px 48px 60px;
 }
 .sp-woo-product-slider-help #about-us-tab,
 .sp-woo-product-slider-help #recommended-tab,
 .sp-woo-product-slider-help #lite-to-pro-tab {
   display: none;
 }
-
-.sp-woo-product-slider-help .spwps-video-area span,
-.sp-woo-product-slider-help .spwps-video-area h2{
-  margin-bottom: 20px;
+.sp-woo-product-slider-help .spwps-help-content .spwps-call-to-action-top,
+.sp-woo-product-slider-help .spwps-help-content .spwps-about-box {
+  margin-top: 0;
 }
-.sp-woo-product-slider-help .spwps-video-area iframe {
-  border-radius: 6px;
-}
-
-.sp-woo-product-slider-help .spwps-video-area ul {
-  margin-top: 30px;
+/*----------------------------------------*/
+/*  Get started page style
+/*----------------------------------------*/
+.sp-woo-product-slider-help .spwps-start-page-wrap {
   display: flex;
+  align-items: stretch;
+  gap: 40px;
 }
-.sp-woo-product-slider-help .spwps-video-area ul li {
-  margin-right: 20px;
+.sp-woo-product-slider-help .spwps-welcome-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 0;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
 }
-.sp-woo-product-slider-help .spwps-video-area ul li:nth-child(1) a {
-  color: #fff;
-  background-color: #7728A8;
-  border-color: #7728A8;
+.sp-woo-product-slider-help .spwps-welcome-card__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.sp-woo-product-slider-help .spwps-about-btn a:hover:nth-child(1),
-.sp-woo-product-slider-help .spwps-video-area ul li:nth-child(1) a:hover {
-  background-color: #6624a0;
+.sp-woo-product-slider-help .spwps-welcome-card__intro p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #3c434a;
 }
-.sp-woo-product-slider-help .spwps-live-pro-demo,
-.sp-woo-product-slider-help .spwps-video-area ul li:nth-child(2) a {
-  color: #7728A8;
-  border-color: #7728A8;
+.sp-woo-product-slider-help .spwps-welcome-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
-.sp-woo-product-slider-help .spwps-big-btn-border:hover,
-.sp-woo-product-slider-help .spwps-medium-btn:hover,
-.sp-woo-product-slider-help .spwps-small-btn:hover,
-.sp-woo-product-slider-help .spwps-video-area ul li:nth-child(2) a:hover,
-.sp-woo-product-slider-help .spwps-video-area ul li:nth-child(3) a:hover {
-  color: #fff;
-  background-color: #7728A8;
-  border-color: transparent;
-}
-.sp-woo-product-slider-help .spwps-start-page-sidebar-info-box {
-  background: #fff;
-  padding: 30px;
+.sp-woo-product-slider-help .spwps-welcome-card__video {
   border-radius: 6px;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
-.sp-woo-product-slider-help .spwps-start-page-sidebar-info-box:not(:last-child){
-  margin-bottom: 40px;
+.sp-woo-product-slider-help .spwps-video-player {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #f5e5f2;
+  line-height: 0;
+  cursor: pointer;
 }
-.sp-woo-product-slider-help .spwps-start-page-sidebar-info-box .spwps-info-box-title {
-  margin-bottom: 12px;
+.sp-woo-product-slider-help .spwps-video-player__poster {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.sp-woo-product-slider-help .spwps-start-page-sidebar-info-box span {
-  margin-bottom: 20px;
+.sp-woo-product-slider-help .spwps-video-player::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: background-color .2s linear;
 }
-.sp-woo-product-slider-help .spwps-start-page-sidebar-info-box .spwps-info-box-title i{
-  color: #7728A8;
-  font-size: 24px;
+.sp-woo-product-slider-help .spwps-video-player__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 112px;
+  height: 112px;
+  transform: translate(-50%, -50%);
+  background: url(../img/video-play-button.svg) center center / contain no-repeat;
+  transition: transform .2s linear;
+}
+.sp-woo-product-slider-help .spwps-video-player:hover::after {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.sp-woo-product-slider-help .spwps-video-player:hover .spwps-video-player__play {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.sp-woo-product-slider-help .spwps-welcome-card__video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 804 / 452;
+  border: 0;
+}
+/*----------------------------------------*/
+/*  Get started CTA cards
+/*----------------------------------------*/
+.sp-woo-product-slider-help .spwps-cta-cards {
+  display: flex;
+  flex: 0 0 380px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 380px;
+}
+/* Cards keep their content height (min 216px as designed) and the column
+   distributes any leftover space into the gaps, so a longer description can
+   never push the button past the card padding. */
+.sp-woo-product-slider-help .spwps-cta-card {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 216px;
+  padding: 28px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.sp-woo-product-slider-help .spwps-cta-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.sp-woo-product-slider-help .spwps-cta-card__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sp-woo-product-slider-help .spwps-cta-card__title img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.sp-woo-product-slider-help .spwps-cta-card__title h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #2f2f2f;
+}
+.sp-woo-product-slider-help .spwps-cta-card__body p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #2f2f2f;
 }
 /*----------------------------------------*/
 /*  Lite vs Pro style
@@ -477,7 +698,7 @@
 /*  Recommended page style
 /*----------------------------------------*/
 .sp-woo-product-slider-help .spwps-recommended-page h2{
-  margin: 50px 0px 40px 8px;
+  margin: 0 0 40px 8px;
 }
 /*----------------------------------------*/
 /*  About us page style
@@ -593,38 +814,135 @@
 }
 
 /*----------------------------------------*/
-/*  Footer page style
+/*  Footer style
 /*----------------------------------------*/
-.sp-woo-product-slider-help .spwps-footer-top {
-  text-align: center;
-  margin-top: 80px;
+/* Admin CSS puts padding on the bare <footer> element; zero it so the row
+   inside is what positions the content. */
+.sp-woo-product-slider-help .spwps-footer {
+  padding: 0;
 }
-.sp-woo-product-slider-help .spwps-footer-top span i {
-  color: #E57373;
-}
-.sp-woo-product-slider-help .spwps-footer-top ul{
+.sp-woo-product-slider-help .spwps-footer__inner {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 48px;
 }
-.sp-woo-product-slider-help .spwps-footer-top p,
-.sp-woo-product-slider-help .spwps-footer-top a {
-  color: #6D6B6A;
-  margin: 5px 0;
+.sp-woo-product-slider-help .spwps-footer span,
+.sp-woo-product-slider-help .spwps-footer a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
 }
-.sp-woo-product-slider-help .spwps-footer-top ul li a{
-  color: #969392;
-  font-size: 18px;
-  margin-right: 3px;
+.sp-woo-product-slider-help .spwps-footer a {
+  color: #2271b1;
+  transition: color .2s linear;
 }
-.sp-woo-product-slider-help .spwps-footer-top a:hover,
-.sp-woo-product-slider-help .spwps-footer-top ul li a:hover{
-  color: #7728A8;
+.sp-woo-product-slider-help .spwps-footer a:hover {
+  color: #135e96;
+}
+.sp-woo-product-slider-help .spwps-footer__credit,
+.sp-woo-product-slider-help .spwps-footer__social,
+.sp-woo-product-slider-help .spwps-footer__rating {
+  display: flex;
+  align-items: center;
+}
+.sp-woo-product-slider-help .spwps-footer__credit {
+  gap: 4px;
+}
+.sp-woo-product-slider-help .spwps-footer__credit span {
+  color: #6e6a69;
+}
+.sp-woo-product-slider-help .spwps-footer__credit img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.sp-woo-product-slider-help .spwps-footer__social {
+  gap: 8px;
+}
+.sp-woo-product-slider-help .spwps-footer__social > span {
+  color: #6c6a6d;
+}
+.sp-woo-product-slider-help .spwps-footer__social ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.sp-woo-product-slider-help .spwps-footer__social ul li {
+  line-height: 0;
+}
+.sp-woo-product-slider-help .spwps-footer__social ul a {
+  display: inline-flex;
+  align-items: center;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1;
+}
+.sp-woo-product-slider-help .spwps-footer__social ul a:hover {
+  color: #a82899;
+}
+.sp-woo-product-slider-help .spwps-footer__social ul a i {
+  width: 1em;
+  margin: 0;
+}
+.sp-woo-product-slider-help .spwps-icon-linkedin {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  -webkit-mask: url(../img/footer-linkedin.svg) center center / contain no-repeat;
+  mask: url(../img/footer-linkedin.svg) center center / contain no-repeat;
+}
+.sp-woo-product-slider-help .spwps-footer__rating {
+  gap: 2px;
+}
+.sp-woo-product-slider-help .spwps-footer__rating > span {
+  color: #757575;
+}
+.sp-woo-product-slider-help .spwps-footer__rating strong {
+  font-weight: 600;
+}
+.sp-woo-product-slider-help .spwps-footer__stars {
+  display: inline-flex;
+  line-height: 0;
+}
+.sp-woo-product-slider-help .spwps-footer__stars img {
+  display: block;
+  width: 74px;
+  height: 14px;
 }
 
 /* Responsive Css */
-@media only screen and (max-width: 1240px) {
-  .sp-woo-product-slider-help .spwps-video-area iframe{
-    width: 100%;
+@media only screen and (max-width: 1500px) {
+  .sp-woo-product-slider-help .spwps-help-content {
+    padding: 32px 24px 40px;
+  }
+  .sp-woo-product-slider-help .spwps-topbar__inner {
+    padding: 0 24px;
+  }
+  .sp-woo-product-slider-help .spwps-footer__inner {
+    padding: 20px 24px;
+  }
+  .sp-woo-product-slider-help .spwps-start-page-wrap {
+    gap: 24px;
+  }
+  .sp-woo-product-slider-help .spwps-cta-cards {
+    gap: 24px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .sp-woo-product-slider-help .spwps-topbar__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 24px;
+  }
+  .sp-woo-product-slider-help .spwps-header-nav-menu ul li a {
+    height: 40px;
   }
 }
 @media only screen and (max-width: 960px) {
@@ -632,9 +950,12 @@
   .sp-woo-product-slider-help .spwps-start-page-wrap {
     flex-direction: column;
   }
-  .sp-woo-product-slider-help .spwps-start-page-sidebar {
-    max-width: 500px;
-    margin: auto;
+  .sp-woo-product-slider-help .spwps-cta-cards {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .sp-woo-product-slider-help .spwps-welcome-card {
+    padding: 24px;
   }
   .sp-woo-product-slider-help .spwps-about-img {
     width: 100%;
@@ -646,15 +967,19 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .sp-woo-product-slider-help .spwps-header-nav-menu ul li a{
-    padding: 8px 8px;
-    font-size: 12px;
+  .sp-woo-product-slider-help .spwps-header-nav-menu ul {
+    flex-wrap: wrap;
+    gap: 16px;
   }
-  .sp-woo-product-slider-help .spwps-header-nav-menu ul li a i {
+  .sp-woo-product-slider-help .spwps-header-nav-menu ul li a {
+    font-size: 14px;
+  }
+  .sp-woo-product-slider-help .spwps-header-nav-menu__separator {
     display: none;
   }
-  .sp-woo-product-slider-help .spwps-header-logo-shape{
-    display: none;
+  .sp-woo-product-slider-help .spwps-video-player__play {
+    width: 72px;
+    height: 72px;
   }
   .sp-woo-product-slider-help .spwps-our-plugin-list-wrap,
   .sp-woo-product-slider-help .spwps-testimonial-wrap{

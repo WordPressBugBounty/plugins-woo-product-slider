@@ -5,8 +5,8 @@
  * @link http://shapedplugin.com
  * @since 2.0.0
  *
- * @package Woo_Product_Slider.
- * @subpackage Woo_Product_Slider/Includes.
+ * @package Reno_Product_Slider.
+ * @subpackage Reno_Product_Slider/Includes.
  */
 
 namespace ShapedPlugin\WooProductSlider\Includes;

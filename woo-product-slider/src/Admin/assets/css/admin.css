@@ -246,7 +246,7 @@ div#spwps-preview-box {
 	font-weight: 700;
 } */
 
-#adminmenu #menu-posts-sp_wps_shortcodes li:nth-child(8) a {
+#adminmenu #menu-posts-sp_wps_shortcodes li.spwps-menu-lite-vs-pro a {
 	color: #f9be48;
 }
 
@@ -261,21 +261,15 @@ div#spwps-preview-box {
 	margin-top: -1px;
 }
 
-a.sp_woo_product_slider_block_edit_button {
-	font-size: 16px;
-	margin: 10px 0;
-	display: inline-block;
-}
-
-.block-editor-page>.wps-product-section .wps-pagination {
-	pointer-events: none;
-}
-
-.block-editor-page .sp-wpsp-gutenberg-shortcode.editor-styles-wrapper {
+/* Keep editor canvas selectors out of this admin stylesheet: WordPress copies
+   any admin sheet that targets the canvas wrapper into the editor iframe and
+   warns about it. The canvas gets its own copy of the block preview rules from
+   the block initializer instead. */
+.block-editor-page .sp-wpsp-gutenberg-shortcode {
 	padding-bottom: 0;
 }
 
-.sp-wpsp-gutenberg-shortcode.editor-styles-wrapper:after {
+.sp-wpsp-gutenberg-shortcode:after {
 	display: none;
 }
 

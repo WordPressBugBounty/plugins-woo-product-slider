@@ -2,8 +2,8 @@
 /**
  * Dynamic Style.
  *
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Frontend/views
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Frontend/views
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 

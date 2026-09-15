@@ -5,8 +5,8 @@
  * @link https://shapedplugin.com
  * @since 2.0.0
  *
- * @package Woo_Product_Slider.
- * @subpackage Woo_Product_Slider/Admin/views.
+ * @package Reno_Product_Slider.
+ * @subpackage Reno_Product_Slider/Admin/views.
  */
 
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;
@@ -515,7 +515,7 @@ if ( ! class_exists( 'SPF_WPSP_Metabox' ) ) {
 						admin_url( 'plugin-install.php' )
 					)
 				);
-				echo '<div class="error"><p>You must install and activate <a class="thickbox open-plugin-details-modal" href="' . $link . '"><strong>WooCommerce</strong></a> plugin to make the <strong>Product Slider for WooCommerce</strong> work.</p></div>'; // phpcs:ignore
+				echo '<div class="error"><p>You must install and activate <a class="thickbox open-plugin-details-modal" href="' . $link . '"><strong>WooCommerce</strong></a> plugin to make the <strong>Reno Product Slider</strong> work.</p></div>'; // phpcs:ignore
 				die();
 			}
 			$count   = 1;

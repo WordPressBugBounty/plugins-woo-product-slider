@@ -2,8 +2,8 @@
 /**
  * The framework shortcode fields file.
  *
- * @package Woo_Product_Slider.
- * @subpackage Woo_Product_Slider/models.
+ * @package Reno_Product_Slider.
+ * @subpackage Reno_Product_Slider/models.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,7 +36,7 @@ if ( ! class_exists( 'SPF_WPSP_Fields_shortcode' ) ) {
 			// Get the Post ID.
 			$post_id = get_the_ID();
 			if ( ! empty( $this->field['shortcode'] ) && 'shortcode' === $this->field['shortcode'] ) {
-				echo ( ! empty( $post_id ) ) ? '<div class="spwps-scode-wrap-side"><p>To display your product slider, add the following shortcode into your post, custom post types, page, widget or block editor. If adding the slider to your theme files, additionally include the surrounding PHP code, <a href="https://docs.shapedplugin.com/docs/woocommerce-product-slider-pro/faq/how-to-use-product-slider-shortcode-to-your-theme-files-or-php-templates/" target="_blank">see how</a>.‎</p><span class="spwps-shortcode-selectable">[woo_product_slider id="' . esc_attr( $post_id ) . '"]</span></div><div class="wpspro-after-copy-text"><i class="fa fa-check-circle"></i> Shortcode Copied to Clipboard! </div>' : '';
+				echo ( ! empty( $post_id ) ) ? '<div class="spwps-scode-wrap-side"><p>To display your product slider, add the following shortcode into your post, custom post types, page, widget or block editor. If adding the slider to your theme files, additionally include the surrounding PHP code, <a href="https://docs.renoproductslider.com/guide/faqs/how-to-use-shortcode-in-php-templates" target="_blank">see how</a>.‎</p><span class="spwps-shortcode-selectable">[reno_product_slider id="' . esc_attr( $post_id ) . '"]</span></div><div class="wpspro-after-copy-text"><i class="fa fa-check-circle"></i> Shortcode Copied to Clipboard! </div>' : '';
 			} elseif ( ! empty( $this->field['shortcode'] ) && 'pro_notice' === $this->field['shortcode'] ) {
 				if ( ! empty( $post_id ) ) {
 					echo '<div class="sp_wpsp_shortcode-area sp_wpsp-notice-wrapper">';
@@ -68,14 +68,14 @@ if ( ! class_exists( 'SPF_WPSP_Fields_shortcode' ) ) {
 					echo '</ul>';
 
 					echo '<div class="sp_wpsp-notice-button">';
-					echo '<a class="sp_wpsp-open-live-demo" href="https://wooproductslider.io/pricing/?ref=1" target="_blank">';
+					echo '<a class="sp_wpsp-open-live-demo" href="https://renoproductslider.com/pricing/?ref=1" target="_blank">';
 					echo esc_html__( 'Upgrade to Pro Now', 'woo-product-slider' ) . ' <i class="sp-wps-icon-shuttle_2285485-1"></i>';
 					echo '</a>';
 					echo '</div>';
 					echo '</div>';
 				}
 			} else {
-				echo ( ! empty( $post_id ) ) ? '<div class="spwps-scode-wrap-side"><p>Woo Product Slider has seamless integration with Gutenberg, Classic Editor, <strong>Elementor, Divi,</strong> Bricks, Beaver, Oxygen, WPBakery Builder, etc.</p></div>' : '';
+				echo ( ! empty( $post_id ) ) ? '<div class="spwps-scode-wrap-side"><p>Reno Product Slider has seamless integration with Gutenberg, Classic Editor, <strong>Elementor, Divi,</strong> Bricks, Beaver, Oxygen, WPBakery Builder, etc.</p></div>' : '';
 			}
 		}
 	}

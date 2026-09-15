@@ -1,12 +1,12 @@
-=== Product Slider, Product Carousel and Product Grid Gallery for WooCommerce – WooProduct Slider ===
+=== Product Slider, Product Carousel and Product Grid Gallery for WooCommerce – Reno Product Slider (formerly Product Slider for WooCommerce)===
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, product grid, product carousel, product table, product gallery
 Requires at least: 5.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 10.9.1
-Stable tag: 2.8.13
+WC tested up to: 11.1.0
+Stable tag: 2.9.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,23 +16,23 @@ Display your WooCommerce products in a responsive Product Slider, Product Carous
 
 ### Responsive Product Slider, Carousel & Product Grid Gallery ###
 
-**Product Slider for WooCommerce** is a responsive and easy-to-use plugin that lets you display WooCommerce products in sliders, carousels, or grid galleries. You can place product sliders or grids anywhere on your site using a shortcode—inside pages, posts, custom templates, or widget areas.
+**Reno Product Slider** is a responsive and easy-to-use plugin that lets you display WooCommerce products in sliders, carousels, or grid galleries. You can place product sliders or grids anywhere on your site using a shortcode—inside pages, posts, custom templates, or widget areas.
 
 The plugin includes a built-in Shortcode Generator with a user-friendly interface, so you can quickly create and customize product sliders without coding.
 
 [youtube https://www.youtube.com/watch?v=GAxIh2a22r8&list=PLoUb-7uG-5jM6fpnrjHGUXkA9W6M2rzCG]
 
 
-[__Live Demo__](https://wooproductslider.io/lite-version-demo/) | [__Documentation__](https://docs.shapedplugin.com/docs/woocommerce-product-slider/overview/) | [__Support__](https://shapedplugin.com/create-new-ticket) | [__Upgrade to Pro!__](https://wooproductslider.io/pricing/?ref=1)
+[__Live Demo__](https://demo.renoproductslider.com/lite-version-demo/) | [__Documentation__](https://docs.renoproductslider.com/guide/getting-started/introduction) | [__Support__](https://shapedplugin.com/create-new-ticket) | [__Upgrade to Pro!__](https://renoproductslider.com/pricing/?ref=1)
 
 
-= Why use Product Slider for WooCommerce? =
+= Why use Reno Product Slider? =
 
 Product sliders help you present more products in less space while keeping your shop organized and visually appealing. They can highlight featured or new products in key areas of your site, improving navigation and user experience.
 
 ### MAIN FEATURES ###
 
-**Responsive and Mobile-Friendly:** The Product Slider for WooCommerce plugin is fully responsive and works seamlessly on all devices and screen sizes.
+**Responsive and Mobile-Friendly:** The Reno Product Slider plugin is fully responsive and works seamlessly on all devices and screen sizes.
 
 **Beautiful Product Templates to Start:** The plugin has 3 beautiful pre-designed product templates to set up product sliders and grids quickly. You can also create your own custom template.
 
@@ -68,11 +68,11 @@ Product sliders help you present more products in less space while keeping your 
 If you need help, have a feature suggestion, or want to report a bug, please reach out to our [Support](https://shapedplugin.com/create-new-ticket). We’re happy to assist.
 
 
-= Product Slider for WooCommerce – Pro =
+= Reno Product Slider – Pro =
 
->[__Product Slider for WooCommerce – Pro__](https://wooproductslider.io/?ref=1) is the premium version of the Product Slider for WooCommerce plugin, adding additional features and functionality. It includes a product ticker carousel, multi-row carousel, product category live filter, product list, masonry, advanced product grid gallery with AJAX load more, product table, and more.
+>[__Reno Product Slider – Pro__](https://renoproductslider.com/?ref=1) is the premium version of the Reno Product Slider plugin, adding additional features and functionality. It includes a product ticker carousel, multi-row carousel, product category live filter, product list, masonry, advanced product grid gallery with AJAX load more, product table, and more.
 
->The plugin supports 15+ additional modern layouts, offers extended customization and styling options, and includes 30+ pre-designed product templates. Learn more about [__Product Slider for WooCommerce Features__](https://wooproductslider.io/#features).
+>The plugin supports 15+ additional modern layouts, offers extended customization and styling options, and includes 30+ pre-designed product templates. Learn more about [__Reno Product Slider Features__](https://renoproductslider.com/#features).
 
 
 = Multilingual Ready =
@@ -98,7 +98,7 @@ If you need help, have a feature suggestion, or want to report a bug, please rea
 
 = AUTHOR =
 
-The **Woo Product Slider** plugin is developed and maintained by [__ShapedPlugin LLC__](https://shapedplugin.com/)
+The **Reno Product Slider** plugin is developed and maintained by [__ShapedPlugin LLC__](https://shapedplugin.com/)
 
 
 
@@ -108,8 +108,8 @@ The **Woo Product Slider** plugin is developed and maintained by [__ShapedPlugin
 
 = AUTOMATIC INSTALLATION (EASIEST WAY) =
 
-To do an automatic install of Product Slider for WooCommerce, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
-In the search field type "Product Slider for WooCommerce" by ShapedPlugin. Once you have found it you can install it by simply clicking "Install Now" and then "Activate".
+To do an automatic install of Reno Product Slider, log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
+In the search field type "Reno Product Slider" by ShapedPlugin. Once you have found it you can install it by simply clicking "Install Now" and then "Activate".
 
 = MANUAL INSTALLATION =
 
@@ -147,10 +147,10 @@ The generator fields are highly customizable. Customize the carousel and publish
 For including on the template, copy and paste the PHP code into your template file.
 
 = Is the plugin compatible with all WordPress themes? =
-Product Slider for WooCommerce works with any theme if themes are developed according to WordPress standard and WooCommerce guidelines.
+Reno Product Slider works with any theme if themes are developed according to WordPress standard and WooCommerce guidelines.
 
 = How to Upgrade to PRO version? =
-Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
+Go to <a href="https://renoproductslider.com/pricing/?ref=1">PRO Version</a> page.
 
 
 
@@ -168,6 +168,17 @@ Go to <a href="https://wooproductslider.io/pricing/?ref=1">PRO Version</a> page.
 
 
 == Changelog ==
+
+= 2.9.0 - Sep 15, 2026 =
+* New: The plugin has been rebranded from "Woo Product Slider" to "Reno Product Slider".
+* New: The `[reno_product_slider]` shortcode added.
+* New: The "Add Gallery Images" option in the product variation panel to set up per-variation galleries with the free Reno Product Gallery plugin.
+* New: A dismissible notice on the plugin admin screens announcing the rebranding.
+* Improved: The plugin security has been enhanced.
+* Updated: The translation (POT) file with the rebranded strings.
+* Fixed: The Reno Product Slider block now works correctly in WordPress 7.1 iframed editor.
+* Tested: Compatibility confirmed with WooCommerce 11.1.0.
+* Dev: The legacy shortcode `[woo_product_slider]` remains fully supported.
 
 = 2.8.13 – Jul 03, 2026 =
 * Improved: The recommended plugins section now uses the plugins_api function for more reliable data.

@@ -45,7 +45,7 @@ class Shortcode_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Woo Product Slider', 'woo-product-slider' );
+		return __( 'Reno Product Slider', 'woo-product-slider' );
 	}
 
 	/**
@@ -112,7 +112,7 @@ class Shortcode_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'sp_product_slider_pro_shortcode',
 			array(
-				'label'       => __( 'Woo Product Slider Shortcode(s)', 'woo-product-slider' ),
+				'label'       => __( 'Reno Product Slider Shortcode(s)', 'woo-product-slider' ),
 				'type'        => \Elementor\Controls_Manager::SELECT2,
 				'label_block' => true,
 				'default'     => '',
@@ -153,7 +153,7 @@ class Shortcode_Widget extends \Elementor\Widget_Base {
 			?>
 			<?php
 		} else {
-			echo do_shortcode( '[woo_product_slider id="' . $post_id . '"]' );
+			echo do_shortcode( '[reno_product_slider id="' . $post_id . '"]' );
 		}
 	}
 }

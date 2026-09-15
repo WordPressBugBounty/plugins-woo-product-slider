@@ -2,8 +2,8 @@
 /**
  * Replace Layout Configs.
  *
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Admin/view
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Admin/view
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 
@@ -56,7 +56,7 @@ SPF_WPSP::createSection(
 				'type'    => 'notice',
 				'class'   => 'replace-layout-pro-notice',
 				/* translators: %1$s: link tag start %2$s: link tag end */
-				'content' => sprintf( __( 'Want to Redesign or Replace the existing WooCommerce Shop/Archive, Category, Tag, and Search Pages layout with an attractive Woo Product Slider Layout? %1$sUpgrade To Pro!%2$s', 'woo-product-slider' ), '<a  href="https://wooproductslider.io/pricing/?ref=1" target="_blank"><b>', '</b></a>' ),
+				'content' => sprintf( __( 'Want to Redesign or Replace the existing WooCommerce Shop/Archive, Category, Tag, and Search Pages layout with an attractive Reno Product Slider Layout? %1$sUpgrade To Pro!%2$s', 'woo-product-slider' ), '<a  href="https://renoproductslider.com/pricing/?ref=1" target="_blank"><b>', '</b></a>' ),
 			),
 			array(
 				'type'           => 'subheading',

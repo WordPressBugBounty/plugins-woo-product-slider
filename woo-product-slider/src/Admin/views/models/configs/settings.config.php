@@ -3,8 +3,8 @@
  * Settings page configuration.
  *
  * @since      2.2.0
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Admin/view
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Admin/view
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 

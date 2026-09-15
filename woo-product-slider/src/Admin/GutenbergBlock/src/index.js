@@ -2,20 +2,34 @@ import icons from "./shortcode/blockIcon";
 import DynamicShortcodeInput from "./shortcode/dynamicShortcode";
 import { escapeAttribute, escapeHTML } from "@wordpress/escape-html";
 import { __ } from '@wordpress/i18n';
-import { registerBlockType } from '@wordpress/blocks';
+import { createBlock, registerBlockType } from '@wordpress/blocks';
 import { PanelBody, PanelRow } from '@wordpress/components';
-import { Fragment, createElement } from '@wordpress/element';
-import { InspectorControls } from '@wordpress/block-editor';
-const ServerSideRender = wp.serverSideRender;
+import { createElement, useEffect, useRef } from '@wordpress/element';
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import ServerSideRender from '@wordpress/server-side-render';
 const el = createElement;
+
+/**
+ * `useBlockProps` was introduced with Block API v2 in WordPress 5.6. Older
+ * releases still wrap the block themselves, so fall back to empty props there.
+ */
+const useBlockPropsCompat = 'function' === typeof useBlockProps ? useBlockProps : () => ({});
+
+/**
+ * Matches `[woo_product_slider id="123"]` so legacy Shortcode blocks can be converted.
+ */
+const SHORTCODE_PATTERN = /\[woo_product_slider[^\]]*\bid=["']?(\d+)/;
 
 /**
  * Register: Woo Product Slider Gutenberg Block.
  */
 registerBlockType("woo-product-slider-pro/shortcode", {
-  title: escapeHTML( __("Woo Product Slider", "woo-product-slider") ),
+  // Block API v3 marks the block as compatible with the iframed editor canvas,
+  // which WordPress 7.1 uses for every editor.
+  apiVersion: 3,
+  title: escapeHTML( __("Reno Product Slider", "woo-product-slider") ),
   description: escapeHTML( __(
-    "Use Woo Product Slider to insert a shortcode in your page.",
+    "Use Reno Product Slider to insert a shortcode in your page.",
     "woo-product-slider"
   )),
   icon: icons.spwpspIcon,
@@ -23,31 +37,96 @@ registerBlockType("woo-product-slider-pro/shortcode", {
   supports: {
     html: true,
   },
+  transforms: {
+    from: [
+      {
+        type: "block",
+        blocks: ["core/shortcode"],
+        isMatch: ({ text }) => !! text && SHORTCODE_PATTERN.test(text),
+        transform: ({ text }) => createBlock("woo-product-slider-pro/shortcode", {
+          shortcode: SHORTCODE_PATTERN.exec(text)[1],
+        }),
+      },
+    ],
+    to: [
+      {
+        type: "block",
+        blocks: ["core/shortcode"],
+        transform: ({ shortcode }) => createBlock("core/shortcode", {
+          text: '[woo_product_slider id="' + shortcode + '"]',
+        }),
+      },
+    ],
+  },
   edit: (props) => {
     const { attributes, setAttributes } = props;
-    var shortCodeList = sp_wps_load_script.shortCodeList;
+    const shortCodeList = sp_wps_load_script.shortCodeList;
+    const isPreview = !! attributes.preview;
+    const hasSelection = !! attributes.shortcode && 0 != attributes.shortcode;
+    const previewRef = useRef(null);
+    const blockProps = useBlockPropsCompat(
+      isPreview ? { className: 'sp_wpsp_shortcode_block_preview_image' } : {}
+    );
 
-    let scriptLoad = ( shortcodeId ) => {
-      let sp_wpsp_BlockLoaded = false;
-      let sp_wpsp_BlockLoadedInterval = setInterval(function () {
-        let uniqId = jQuery("#sp-woo-product-slider-" + shortcodeId).parents().parents().attr('id');
-        if (document.getElementById(uniqId)) {
-          // Preloader JS
-          jQuery('#wpspro-preloader-' + shortcodeId).css({ 'opacity' : 0, 'display' : 'none'});
-          jQuery('#wpspro-preloader-' + shortcodeId).animate({ opacity: 1 }, 600);
+    /**
+     * Initialize the slider that `ServerSideRender` just rendered.
+     *
+     * Since WordPress 6.3 the block canvas is an iframe, so the rendered markup,
+     * jQuery and Swiper all live in `ownerDocument.defaultView` and not in the
+     * editor window. The canvas document and the server-side render both settle
+     * asynchronously, so wait for this block's own wrapper and for the canvas
+     * scripts, then hand over to the front-end initializer.
+     */
+    useEffect(() => {
+      if (isPreview || ! hasSelection) {
+        return;
+      }
 
-          jQuery.getScript(sp_wps_load_script.loadScript);
-          sp_wpsp_BlockLoaded = true;
-          uniqId = '';
+      // `ServerSideRender` keeps the previous markup on screen while it reloads,
+      // so match this block's own wrapper instead of any slider.
+      const wrapperSelector = '#sp-woo-product-slider-' + String(attributes.shortcode).replace(/[^0-9]/g, '');
+      const interval = 150;
+      let attempts = 0;
+      let waitedForScripts = 0;
+
+      const timer = setInterval(() => {
+        attempts++;
+
+        // Bail out rather than polling forever when the render never arrives.
+        if (attempts > 400) {
+          clearInterval(timer);
+          return;
         }
-        if (sp_wpsp_BlockLoaded) {
-          clearInterval(sp_wpsp_BlockLoadedInterval);
+
+        const node = previewRef.current;
+        const view = node && node.ownerDocument ? node.ownerDocument.defaultView : null;
+
+        if (! node || ! view || ! view.jQuery || ! node.querySelector(wrapperSelector)) {
+          return;
         }
-        if ( 0 == shortcodeId ) {
-          clearInterval(sp_wpsp_BlockLoadedInterval);
+
+        // The canvas scripts are parsed while the blocks mount, so make sure they
+        // arrived before initializing. Stop waiting after five seconds and run
+        // whatever is available in case a site filtered one of the handles out.
+        const scriptsReady = view.Swiper && 'function' === typeof view.SP_WPS_CarouselInit;
+
+        if (! scriptsReady) {
+          waitedForScripts += interval;
+
+          if (waitedForScripts < 5000) {
+            return;
+          }
         }
-      }, 10);
-    }
+
+        clearInterval(timer);
+
+        if ('function' === typeof view.SP_WPS_CarouselInit) {
+          view.SP_WPS_CarouselInit();
+        }
+      }, interval);
+
+      return () => clearInterval(timer);
+    }, [isPreview, hasSelection, attributes.shortcode]);
 
     let updateShortcode = ( updateShortcode ) => {
       setAttributes({shortcode: escapeAttribute( updateShortcode.target.value )});
@@ -55,25 +134,11 @@ registerBlockType("woo-product-slider-pro/shortcode", {
 
     let shortcodeUpdate = (e) => {
       updateShortcode(e);
-      let shortcodeId = escapeAttribute( e.target.value );
-      scriptLoad(shortcodeId);	
     }
 
-    document.addEventListener('readystatechange', event => {
-      if (event.target.readyState === "complete") {
-        let shortcodeId = escapeAttribute( attributes.shortcode );
-        scriptLoad(shortcodeId);
-      }
-    });
-
-	if (jQuery('.wps-slider-section:not(.wps-slider-section-loaded)').length > 0) {
-		let shortcodeId = escapeAttribute(attributes.shortcode);
-		scriptLoad(shortcodeId);
-	}
-
-    if( attributes.preview ) {
+    if( isPreview ) {
       return (
-        el('div', {className: 'sp_wpsp_shortcode_block_preview_image'},
+        el('div', blockProps,
           el('img', { src: escapeAttribute( sp_wps_load_script.path + "Admin/GutenbergBlock/assets/wps-block-preview.svg" )})
         )
       )
@@ -81,28 +146,26 @@ registerBlockType("woo-product-slider-pro/shortcode", {
 
     if ( shortCodeList.length === 0 ) {
       return (
-        <Fragment>
-          {
-            el('div', {className: 'components-placeholder components-placeholder is-large'}, 
-              el('div', {className: 'components-placeholder__label'}, 
+        el('div', blockProps,
+          el('div', {className: 'components-placeholder components-placeholder is-large'},
+            el('div', {className: 'components-placeholder__label'},
               el('img', {className: 'block-editor-block-icon', src: escapeAttribute( sp_wps_load_script.path + '/Admin/GutenbergBlock/assets/wps-block.svg' )}),
-                escapeHTML( __("Woo Product Slider", "woo-product-slider") )
-              ),
-              el('div', {className: 'components-placeholder__instructions'}, 
-                escapeHTML( __("No shortcode found. ", "woo-product-slider") ),
-                el('a', {href: escapeAttribute( sp_wps_load_script.url )}, 
-                  escapeHTML( __("Create a shortcode now!", "woo-product-slider") )
-                )
+              escapeHTML( __("Reno Product Slider", "woo-product-slider") )
+            ),
+            el('div', {className: 'components-placeholder__instructions'},
+              escapeHTML( __("No shortcode found. ", "woo-product-slider") ),
+              el('a', {href: escapeAttribute( sp_wps_load_script.url )},
+                escapeHTML( __("Create a shortcode now!", "woo-product-slider") )
               )
             )
-          }
-        </Fragment>
+          )
+        )
       );
     }
 
-    if ( ! attributes.shortcode || attributes.shortcode == 0 ) {
+    if ( ! hasSelection ) {
       return (
-        <Fragment>
+        el('div', blockProps,
           <InspectorControls>
             <PanelBody title="Select a shortcode">
                 <PanelRow>
@@ -113,27 +176,25 @@ registerBlockType("woo-product-slider-pro/shortcode", {
                   />
                 </PanelRow>
             </PanelBody>
-          </InspectorControls>
-          {
-            el('div', {className: 'components-placeholder components-placeholder is-large'}, 
-              el('div', {className: 'components-placeholder__label'},
+          </InspectorControls>,
+          el('div', {className: 'components-placeholder components-placeholder is-large'},
+            el('div', {className: 'components-placeholder__label'},
               el('img', {className: 'block-editor-block-icon', src: escapeAttribute( sp_wps_load_script.path + '/Admin/GutenbergBlock/assets/wps-block.svg' )}),
-                escapeHTML( __("Woo Product Slider", "woo-product-slider") )
-              ),
-              el('div', {className: 'components-placeholder__instructions'}, escapeHTML( __("Select a shortcode", "woo-product-slider") ) ),
-              <DynamicShortcodeInput
-                attributes={attributes}
-                shortCodeList={shortCodeList}
-                shortcodeUpdate={shortcodeUpdate}
-              />
-            )
-          }
-        </Fragment>
+              escapeHTML( __("Reno Product Slider", "woo-product-slider") )
+            ),
+            el('div', {className: 'components-placeholder__instructions'}, escapeHTML( __("Select a shortcode", "woo-product-slider") ) ),
+            <DynamicShortcodeInput
+              attributes={attributes}
+              shortCodeList={shortCodeList}
+              shortcodeUpdate={shortcodeUpdate}
+            />
+          )
+        )
       );
     }
 
     return (
-      <Fragment>
+      el('div', blockProps,
         <InspectorControls>
             <PanelBody title="Select a shortcode">
                 <PanelRow>
@@ -144,9 +205,11 @@ registerBlockType("woo-product-slider-pro/shortcode", {
                   />
                 </PanelRow>
             </PanelBody>
-        </InspectorControls>
-        <ServerSideRender block="woo-product-slider-pro/shortcode" attributes={attributes} />
-      </Fragment>
+        </InspectorControls>,
+        el('div', { ref: previewRef, className: 'sp-wpsp-block-preview' },
+          <ServerSideRender block="woo-product-slider-pro/shortcode" attributes={attributes} />
+        )
+      )
     );
   },
   save() {

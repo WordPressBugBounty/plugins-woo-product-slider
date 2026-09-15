@@ -5,8 +5,8 @@
  * @link https://shapedplugin.com
  * @since 2.0.0
  *
- * @package Woo_Product_Slider
- * @subpackage Woo_Product_Slider/models.
+ * @package Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/models.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

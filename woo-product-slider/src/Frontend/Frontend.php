@@ -28,6 +28,7 @@ class Frontend {
 		add_action( 'wp_enqueue_scripts', array( $this, 'front_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		add_shortcode( 'woo_product_slider', array( $this, 'wps_shortcode' ) );
+		add_shortcode( 'reno_product_slider', array( $this, 'wps_shortcode' ) );
 		add_action( 'save_post', array( $this, 'delete_page_product_option_on_save' ) );
 	}
 
@@ -222,14 +223,14 @@ class Frontend {
 	 */
 	public function wps_shortcode( $attributes ) {
 		if ( ! is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) && ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ), true ) ) {
-			return '<div class="error"><p>You must install and activate <a target="_blank" href="https://wordpress.org/plugins/woocommerce/"><strong>WooCommerce</strong></a> plugin to make the <strong>Product Slider for WooCommerce</strong> work.</p></div>';
+			return '<div class="error"><p>You must install and activate <a target="_blank" href="https://wordpress.org/plugins/woocommerce/"><strong>WooCommerce</strong></a> plugin to make the <strong>Reno Product Slider</strong> work.</p></div>';
 		}
 		shortcode_atts(
 			array(
 				'id' => '',
 			),
 			$attributes,
-			'woo_product_slider'
+			'reno_product_slider'
 		);
 		if ( empty( $attributes['id'] ) || 'sp_wps_shortcodes' !== get_post_type( $attributes['id'] ) || 'trash' === get_post_status( $attributes['id'] ) ) {
 			return;

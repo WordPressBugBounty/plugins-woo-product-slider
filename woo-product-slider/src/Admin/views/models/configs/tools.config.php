@@ -4,7 +4,7 @@
  *
  * @link http://shapedplugin.com
  * @since 2.0.0
- * @package Woo_Product_Slider.
+ * @package Reno_Product_Slider.
  */
 
 use ShapedPlugin\WooProductSlider\Admin\views\models\classes\SPF_WPSP;

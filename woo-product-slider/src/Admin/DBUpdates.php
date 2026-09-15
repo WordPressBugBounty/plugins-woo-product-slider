@@ -5,8 +5,8 @@
  * This class defines all code necessary to run during the plugin's updates.
  *
  * @since      2.2.0
- * @package    Woo_Product_Slider
- * @subpackage Woo_Product_Slider/Admin
+ * @package    Reno_Product_Slider
+ * @subpackage Reno_Product_Slider/Admin
  * @author     ShapedPlugin <support@shapedplugin.com>
  */
 

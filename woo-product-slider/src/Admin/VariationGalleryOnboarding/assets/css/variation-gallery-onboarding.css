@@ -1,0 +1,380 @@
+/**
+ * Variation Gallery Onboarding styles.
+ *
+ * @package ShapedPlugin\VariationGalleryOnboarding
+ */
+
+/* Variation panel entry point. The top separator matches the rest of the
+ * WooCommerce variation rows; this module owns the styling outright, as the
+ * block carries no WooGallery classes. */
+.sp-vgo-variation-gallery {
+	border-top: 1px solid #eee;
+}
+
+/* -- Modal shell ------------------------------------------------------------ */
+.sp-vgo-modal-open {
+	overflow: hidden;
+}
+
+.sp-vgo-modal-wrap {
+	position: fixed;
+	inset: 0;
+	z-index: 160000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sp-vgo-modal-wrap[hidden] {
+	display: none;
+}
+
+.sp-vgo-modal-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.sp-vgo-modal {
+	position: relative;
+	z-index: 1;
+	width: 496px;
+	max-width: calc(100vw - 40px);
+	max-height: calc(100vh - 40px);
+	overflow: auto;
+	background: #fff;
+	border-radius: 24px;
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.sp-vgo-modal-close {
+	position: absolute;
+	top: 20px;
+    right: 22px;
+	z-index: 8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.72);
+	cursor: pointer;
+	transition: background 0.15s ease;
+}
+
+.sp-vgo-modal-close:hover,
+.sp-vgo-modal-close:focus {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.sp-vgo-modal-close .dashicons {
+	color: #4b5563;
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+}
+
+/* -- Hero (animated variation-gallery preview) ----------------------------- */
+.sp-vgo-modal-media {
+	position: relative;
+	height: 180px;
+	padding: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: linear-gradient(125deg, #dbe7f6 0%, #e7eef1 55%, #f7f1dc 100%);
+}
+
+.sp-vgo-vg-card {
+	display: flex;
+	gap: 12px;
+	width: 400px;
+	padding: 12px;
+	background: #fff;
+	border: 1px solid #e4e6e9;
+	border-radius: 10px;
+	box-shadow: 0 10px 26px rgba(30, 45, 80, 0.14);
+}
+
+.sp-vgo-vg-left {
+	flex: 0 0 200px;
+	width: 200px;
+}
+
+.sp-vgo-vg-feature {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	border-radius: 8px;
+	background: #eef0f3;
+	overflow: hidden;
+}
+
+.sp-vgo-vg-thumbs {
+	display: flex;
+	gap: 6px;
+	margin-top: 6px;
+}
+
+.sp-vgo-vg-thumb {
+	position: relative;
+	flex: 1;
+	height: 40px;
+	border-radius: 6px;
+	background: #eef0f3;
+	overflow: hidden;
+}
+
+.sp-vgo-vg-right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding-top: 2px;
+}
+
+.sp-vgo-vg-line {
+	height: 11px;
+	border-radius: 3px;
+	background: #e7ebf0;
+}
+
+.sp-vgo-vg-line--title {
+	height: 15px;
+	background: #c9ced6;
+}
+
+.sp-vgo-vg-swatches {
+	position: relative;
+	display: flex;
+	gap: 9px;
+	margin-top: 16px;
+}
+
+.sp-vgo-vg-swatch {
+	position: relative;
+	width: 22px;
+	height: 22px;
+}
+
+.sp-vgo-vg-cart {
+	margin-top: auto;
+	height: 34px;
+	border-radius: 6px;
+	background: #e2e6ec;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #9aa2af;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* Hero motion — variation selection swaps the gallery (image → video → image)
+ * while a cursor moves between the colour swatches. Timings are tuned to the
+ * card geometry above; keep them in lockstep with any layout change. */
+@keyframes vg2c-entry { 0% { transform: translate(104px, 14px) scale(1); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(34px, 4px) scale(1); opacity: 1; } }
+@keyframes vg2c-loop {
+	0% { transform: translate(34px, 4px) scale(1); }
+	2% { transform: translate(34px, 4px) scale(0.82); }
+	5% { transform: translate(34px, 4px) scale(1); }
+	15% { transform: translate(34px, 4px) scale(1); }
+	21% { transform: translate(65px, 4px) scale(1); }
+	23% { transform: translate(65px, 4px) scale(0.82); }
+	26% { transform: translate(65px, 4px) scale(1); }
+	36% { transform: translate(65px, 4px) scale(1); }
+	42% { transform: translate(-32px, -19px) scale(1); }
+	44% { transform: translate(-32px, -19px) scale(0.82); }
+	47% { transform: translate(-32px, -19px) scale(1); }
+	56% { transform: translate(-32px, -19px) scale(1); }
+	58% { transform: translate(-32px, -19px) scale(0.82); }
+	61% { transform: translate(-32px, -19px) scale(1); }
+	72% { transform: translate(-32px, -19px) scale(1); }
+	78% { transform: translate(3px, 4px) scale(1); }
+	80% { transform: translate(3px, 4px) scale(0.82); }
+	83% { transform: translate(3px, 4px) scale(1); }
+	90% { transform: translate(3px, 4px) scale(1); }
+	100% { transform: translate(34px, 4px) scale(1); }
+}
+@keyframes vg2c-blue { 0% { opacity: 1; } 4% { opacity: 1; } 6% { opacity: 0; } 82% { opacity: 0; } 84% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes vg2c-cyan { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-yellow { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 45% { opacity: 1; } 47% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-feat2 { 0% { opacity: 0; } 45% { opacity: 0; } 47% { opacity: 1; } 59% { opacity: 1; } 61% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-feat3 { 0% { opacity: 0; } 59% { opacity: 0; } 61% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-nav { 0% { opacity: 0; } 38% { opacity: 0; } 42% { opacity: 1; } 72% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-act2 { 0% { opacity: 0; } 45% { opacity: 0; } 47% { opacity: 1; } 59% { opacity: 1; } 61% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-act3 { 0% { opacity: 0; } 59% { opacity: 0; } 61% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-r1 { 0% { opacity: 1; } 4% { opacity: 1; } 6% { opacity: 0; } 82% { opacity: 0; } 84% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes vg2c-r2 { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-r3 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-bt { 0% { opacity: 1; } 4% { opacity: 1; } 6% { opacity: 0; } 82% { opacity: 0; } 84% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes vg2c-t1 { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-t2 { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-t3 { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-t4 { 0% { opacity: 0; } 4% { opacity: 0; } 6% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-y1 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-y2 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-y3 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-y4 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes vg2c-vid3 { 0% { opacity: 1; } 24% { opacity: 1; } 26% { opacity: 0; } 81% { opacity: 0; } 83% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes vg2c-vid2 { 0% { opacity: 0; } 24% { opacity: 0; } 26% { opacity: 1; } 81% { opacity: 1; } 83% { opacity: 0; } 100% { opacity: 0; } }
+
+/* Respect reduced-motion: freeze on the first ("blue" variation) frame. */
+@media (prefers-reduced-motion: reduce) {
+	.sp-vgo-vg * {
+		animation: none !important;
+	}
+}
+
+/* -- Body / copy ----------------------------------------------------------- */
+.sp-vgo-modal-body {
+	padding: 28px 30px 26px;
+}
+
+.sp-vgo-modal-title {
+	margin: 0 0 12px;
+	text-align: center;
+	color: #16233a;
+	font-size: 27px;
+	font-weight: 700;
+	line-height: 1.16;
+	letter-spacing: -0.01em;
+}
+
+.sp-vgo-modal-subtitle {
+	margin: 0 0 16px;
+	text-align: center;
+	color: #5b6470;
+	font-size: 15px;
+	line-height: 1.55;
+}
+
+.sp-vgo-benefits {
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+}
+
+.sp-vgo-benefits li {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 11px 0;
+	border-bottom: 1px solid #eef0f2;
+}
+
+.sp-vgo-benefits li:last-child {
+	border-bottom: 0;
+}
+
+.sp-vgo-benefit-icon {
+	flex: none;
+	width: 26px;
+	height: 26px;
+	border-radius: 8px;
+	background: #dff3e4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sp-vgo-benefit-icon .dashicons {
+	color: #22a447;
+	font-size: 17px;
+	width: 17px;
+	height: 17px;
+	line-height: 17px;
+}
+
+.sp-vgo-benefit-text {
+	color: #1f2937;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* -- Status (error only) --------------------------------------------------- */
+.sp-vgo-status {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 16px;
+	padding: 10px 12px;
+	border-radius: 6px;
+	font-size: 13px;
+	background: #fcf0f1;
+	border: 1px solid #f0b8bc;
+	color: #8a1f11;
+}
+
+.sp-vgo-status[hidden] {
+	display: none;
+}
+
+/* -- Primary action -------------------------------------------------------- */
+.sp-vgo-actions {
+	margin-top: 6px;
+}
+
+.sp-vgo-modal-body .sp-vgo-create-gallery {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	height: auto;
+	padding: 16px;
+	border: none;
+	border-radius: 13px;
+	background: #2f52f0;
+	color: #fff;
+	font-size: 15.5px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-shadow: none;
+	cursor: pointer;
+	box-shadow: 0 10px 22px rgba(47, 82, 240, 0.32);
+}
+
+.sp-vgo-modal-body .sp-vgo-create-gallery:hover,
+.sp-vgo-modal-body .sp-vgo-create-gallery:focus {
+	background: #274bdd;
+	color: #fff;
+}
+
+.sp-vgo-modal-body .sp-vgo-create-gallery[disabled] {
+	opacity: 0.7;
+	cursor: default;
+}
+
+/* In-button loading spinner (WP-native primary-button feel). Hidden until the
+ * install/activate flow runs; `currentColor` inherits the button's white text
+ * so the ring reads cleanly on the primary background. */
+.sp-vgo-create-gallery .sp-vgo-spinner {
+	display: none;
+}
+
+.sp-vgo-create-gallery.is-loading .sp-vgo-spinner {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.sp-vgo-spinner {
+	flex: 0 0 auto;
+	width: 16px;
+	height: 16px;
+	border: 2px solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: sp-vgo-spin 0.7s linear infinite;
+}
+
+@keyframes sp-vgo-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
