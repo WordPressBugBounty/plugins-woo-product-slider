@@ -148,10 +148,11 @@ SPF_WPSP::createSection(
 				),
 			),
 			array(
-				'id'       => 'custom_js',
-				'type'     => 'code_editor',
-				'title'    => __( 'Custom JS', 'woo-product-slider' ),
-				'settings' => array(
+				'id'         => 'custom_js',
+				'type'       => 'code_editor',
+				'title'      => __( 'Custom JS', 'woo-product-slider' ),
+				'capability' => 'unfiltered_html',
+				'settings'   => array(
 					'theme' => 'default',
 					'mode'  => 'javascript',
 				),

@@ -239,21 +239,22 @@ class WooProductSlider {
 		}
 
 		/**
-		 * Nonce verification
-		 */
-		if ( ! isset( $_GET['sp_wps_duplicate_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['sp_wps_duplicate_nonce'] ) ), basename( __FILE__ ) ) ) {
-			return;
+		* Get the original shortcode id
+		*/
+		$post_id = isset( $_GET['post'] ) ? absint( $_GET['post'] ) : ( isset( $_POST['post'] ) ? absint( $_POST['post'] ) : 0 ); // phpcs:ignore WordPress.Security.NonceVerification -- verified below.
+		if ( ! $post_id ) {
+			wp_die( esc_html__( 'No shortcode to duplicate has been supplied!', 'woo-product-slider' ) );
 		}
 
 		/**
-		* Get the original shortcode id
-		*/
-		$post_id = isset( $_GET['post'] ) ? absint( $_GET['post'] ) : absint( $_POST['post'] );
+		 * Nonce verification, bound to the post id.
+		 */
+		check_admin_referer( 'sp_wps_duplicate_' . $post_id, 'sp_wps_duplicate_nonce' );
 
 		$capability = apply_filters( 'sp_wps_shortcodes_ui_permission', 'manage_options' );
 		$show_ui    = current_user_can( $capability ) ? true : false;
 
-		if ( ! $show_ui && get_post_type( $post_id ) !== 'sp_wps_shortcodes' ) {
+		if ( ! $show_ui || 'sp_wps_shortcodes' !== get_post_type( $post_id ) || ! current_user_can( 'edit_post', $post_id ) ) {
 			wp_die( esc_html__( 'No shortcode to duplicate has been supplied!', 'woo-product-slider' ) );
 		}
 
@@ -332,7 +333,7 @@ class WooProductSlider {
 		$capability = apply_filters( 'sp_wps_shortcodes_ui_permission', 'manage_options' );
 		$show_ui    = current_user_can( $capability ) ? true : false;
 		if ( $show_ui && 'sp_wps_shortcodes' === $post->post_type ) {
-			$actions['duplicate'] = '<a href="' . wp_nonce_url( 'admin.php?action=sp_wps_duplicate_shortcode&post=' . $post->ID, basename( __FILE__ ), 'sp_wps_duplicate_nonce' ) . '" rel="permalink">' . __( 'Duplicate', 'woo-product-slider' ) . '</a>';
+			$actions['duplicate'] = '<a href="' . wp_nonce_url( 'admin.php?action=sp_wps_duplicate_shortcode&post=' . $post->ID, 'sp_wps_duplicate_' . $post->ID, 'sp_wps_duplicate_nonce' ) . '" rel="permalink">' . __( 'Duplicate', 'woo-product-slider' ) . '</a>';
 		}
 		return $actions;
 	}

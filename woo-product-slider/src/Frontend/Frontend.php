@@ -101,7 +101,7 @@ class Frontend {
 		}
 		wp_register_script( 'sp-wps-scripts', esc_url( SP_WPS_URL . 'Frontend/assets/js/scripts.min.js' ), array( 'jquery' ), SP_WPS_VERSION, false );
 
-		$custom_js = isset( $setting_options['custom_js'] ) ? html_entity_decode( $setting_options['custom_js'] ) : '';
+		$custom_js = isset( $setting_options['custom_js'] ) ? html_entity_decode( $setting_options['custom_js'], ENT_QUOTES, 'UTF-8' ) : '';
 		if ( ! empty( $custom_js ) ) {
 			wp_add_inline_script( 'sp-wps-scripts', $custom_js );
 		}

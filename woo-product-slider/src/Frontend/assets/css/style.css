@@ -230,6 +230,12 @@
 	display: none;
 }
 
+/* Swiper 11+ injects its own SVG navigation icon; keep the FontAwesome icon only. */
+#wps-slider-section .wps-product-section .wpsp-nav .swiper-navigation-icon,
+#wps-slider-section .wps-product-section .wpsp-nav svg {
+	display: none;
+}
+
 #wps-slider-section .wps-product-section h2.sp-not-found-any-product-f {
 	font-size: 15px;
 	margin-left: 15px;

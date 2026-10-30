@@ -16,15 +16,18 @@
 					autoplay: sliderData.autoplay ? ({ delay: sliderData.autoplaySpeed, disableOnInteraction: false, }) : false,
 					allowTouchMove: sliderData.swipe,
 					simulateTouch: sliderData.draggable,
-					freeMode: sliderData.freeMode,
-					mousewheel: sliderData.mousewheel,
+					freeMode: {
+						enabled: sliderData.freeMode,
+					},
+					mousewheel: {
+						enabled: sliderData.mousewheel,
+					},
 					autoHeight: sliderData.adaptiveHeight,
 					keyboard: {
 						enabled: sliderData.carousel_accessibility,
 					},
 					grabCursor: true,
 					fadeEffect: { crossFade: true },
-					updateOnWindowResize: true,
 					// Responsive breakpoints
 					breakpoints: {
 						// when window width is >= 576px

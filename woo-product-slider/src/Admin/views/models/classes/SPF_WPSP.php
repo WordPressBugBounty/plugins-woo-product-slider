@@ -36,7 +36,7 @@ class SPF_WPSP {
 	 *
 	 * @var string
 	 */
-	public static $version = '2.9.0'; // It must be same as plugin version.
+	public static $version = '2.9.1'; // It must be same as plugin version.
 	/**
 	 * Dir.
 	 *
@@ -612,6 +612,11 @@ class SPF_WPSP {
 	 * @return void
 	 */
 	public static function field( $field = array(), $value = '', $unique = '', $where = '', $parent = '' ) {
+
+		// Do not render fields the current user lacks the required capability for.
+		if ( ! empty( $field['capability'] ) && ! current_user_can( $field['capability'] ) ) {
+			return;
+		}
 
 		// Check for not allowed fields.
 		if ( ! empty( $field['_notice'] ) ) {

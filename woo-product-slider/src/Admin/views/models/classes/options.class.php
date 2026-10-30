@@ -538,6 +538,13 @@ if ( ! class_exists( 'SPF_WPSP_Options' ) ) {
 				}
 			}
 
+			// Preserve fields the current user lacks the capability to edit (e.g. custom_js requires unfiltered_html).
+			foreach ( $this->pre_fields as $field ) {
+				if ( ! empty( $field['id'] ) && ! empty( $field['capability'] ) && ! current_user_can( $field['capability'] ) ) {
+					$data[ $field['id'] ] = isset( $this->options[ $field['id'] ] ) ? $this->options[ $field['id'] ] : '';
+				}
+			}
+
 			$data = apply_filters( "spwps_{$this->unique}_save", $data, $this );
 			do_action( "spwps_{$this->unique}_save_before", $data, $this );
 

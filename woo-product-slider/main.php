@@ -3,7 +3,7 @@
  * Plugin Name:     Reno Product Slider (formerly Product Slider for WooCommerce)
  * Plugin URI:      https://renoproductslider.com/?ref=1
  * Description:     Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator.
- * Version:         2.9.0
+ * Version:         2.9.1
  * Author:          ShapedPlugin LLC
  * Author URI:      https://shapedplugin.com/
  * License:         GPLv3
@@ -12,7 +12,7 @@
  * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * WC requires at least: 4.5
- * WC tested up to: 11.1.0
+ * WC tested up to: 11.2.1
  * Text Domain:     woo-product-slider
  * Domain Path:     /languages
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'SP_WPS_NAME' ) ) {
 	define( 'SP_WPS_NAME', 'woo-product-slider' );
 }
 if ( ! defined( 'SP_WPS_VERSION' ) ) {
-	define( 'SP_WPS_VERSION', '2.9.0' );
+	define( 'SP_WPS_VERSION', '2.9.1' );
 }
 if ( ! defined( 'SP_WPS_PATH' ) ) {
 	define( 'SP_WPS_PATH', plugin_dir_path( __FILE__ ) . 'src/' );
