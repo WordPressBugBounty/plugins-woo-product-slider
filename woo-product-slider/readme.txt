@@ -1,12 +1,12 @@
 === Product Slider, Product Carousel and Product Grid Gallery for WooCommerce – Reno Product Slider (formerly Product Slider for WooCommerce)===
 Contributors: shapedplugin, rubel_miah, shamimmiashuhagh, khalilu
 Tags: woocommerce product slider, product grid, product carousel, product table, product gallery
-Requires at least: 5.0
+Requires at least: 5.3
 Tested up to: 7.1
 Requires PHP: 7.0
 WC requires at least: 4.5
-WC tested up to: 11.2.1
-Stable tag: 2.9.1
+WC tested up to: 11.2.2
+Stable tag: 2.9.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,10 @@ Go to <a href="https://renoproductslider.com/pricing/?ref=1">PRO Version</a> pag
 
 
 == Changelog ==
+
+= 2.9.2 - Nov 09, 2026 =
+* Fixed: The slider navigation, pagination, and RTL styles were not applying in older browsers, such as Safari before 17.2.
+* Tested: Compatibility confirmed with WooCommerce 11.2.2.
 
 = 2.9.1 - Oct 30, 2026 =
 * Improved: The Custom JS option is now available only to users who can add unfiltered HTML.

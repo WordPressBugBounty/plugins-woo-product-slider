@@ -3,16 +3,16 @@
  * Plugin Name:     Reno Product Slider (formerly Product Slider for WooCommerce)
  * Plugin URI:      https://renoproductslider.com/?ref=1
  * Description:     Slide your WooCommerce Products in a tidy and professional slider or carousel with an easy-to-use and intuitive Shortcode Generator.
- * Version:         2.9.1
+ * Version:         2.9.2
  * Author:          ShapedPlugin LLC
  * Author URI:      https://shapedplugin.com/
  * License:         GPLv3
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
- * Requires at least: 5.0
+ * Requires at least: 5.3
  * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * WC requires at least: 4.5
- * WC tested up to: 11.2.1
+ * WC tested up to: 11.2.2
  * Text Domain:     woo-product-slider
  * Domain Path:     /languages
  *
@@ -27,7 +27,7 @@ if ( ! defined( 'SP_WPS_NAME' ) ) {
 	define( 'SP_WPS_NAME', 'woo-product-slider' );
 }
 if ( ! defined( 'SP_WPS_VERSION' ) ) {
-	define( 'SP_WPS_VERSION', '2.9.1' );
+	define( 'SP_WPS_VERSION', '2.9.2' );
 }
 if ( ! defined( 'SP_WPS_PATH' ) ) {
 	define( 'SP_WPS_PATH', plugin_dir_path( __FILE__ ) . 'src/' );
@@ -121,10 +121,22 @@ add_action(
  * @return WooProductSlider
  */
 function sp_woo_product_slider() {
-	if ( ! defined( 'SHAPEDPLIUGIN_OFFER_BANNER_LOADED' ) ) {
-		define( 'SHAPEDPLIUGIN_OFFER_BANNER_LOADED', true );
+	if ( is_admin() ) {
+		/**
+		 * Shared ShapedPlugin BFCM notice. Only one notice renders even when
+		 * several ShapedPlugin free plugins are active.
+		 */
+		require_once SP_WPS_PATH . 'Admin/Notices/shapedplugin-bfcm-notice.php';
 
-		ShapedPlugin\WooProductSlider\Admin\Notices\ShapedPlugin_Offer_Banner::instance();
+		ShapedPlugin_BFCM_Notice_2026::register(
+			array(
+				'slug'       => 'woo-product-slider',
+				'name'       => 'Reno Product Slider Pro',
+				'image'      => SP_WPS_URL . 'Admin/assets/images/offer-banner/bfcm-notice-2026.webp',
+				'link'       => 'https://renoproductslider.com/pricing/?utm_source=dashboard&utm_medium=rps_dealbutton&utm_campaign=bfcm26',
+				'post_types' => array( 'sp_wps_shortcodes' ),
+			)
+		);
 	}
 
 	return ShapedPlugin\WooProductSlider\Includes\WooProductSlider::instance();
